@@ -938,7 +938,7 @@ VALUES(60, 'Mario', 'Gómez', TO_DATE('1988-12-22', 'YYYY-MM-DD'), 'mario.gomez@e
 -- Registros 61-80
 INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
 Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
-VALUES(61, 'Lucía', 'Martín', TO_DATE('1991-04-13', 'YYYY-MM-DD'), 'lucia.martin@example.com', 
+VALUES(61, 'Lucia', 'Martin', TO_DATE('1991-04-13', 'YYYY-MM-DD'), 'lucia.martin@example.com', 
 '88905145', 2, 2, 1, NULL, NULL, NULL, NULL, NULL)
 
 INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
