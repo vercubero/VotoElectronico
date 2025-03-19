@@ -632,227 +632,1017 @@ VALUES (20, 7, 78, 78, NULL, NULL, NULL, NULL, NULL);
 /
 
 
-INSERT INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
-VALUES
--- Registros 1-20
-(1, 'Juan', 'Pérez', TO_DATE('1990-05-15', 'YYYY-MM-DD'), 'juan.perez@example.com', '88881111', 1, 1, 1, NULL, NULL, NULL, NULL, NULL),
-(2, 'María', 'Gómez', TO_DATE('1985-08-22', 'YYYY-MM-DD'), 'maria.gomez@example.com', '88882222', 2, 2, 1, NULL, NULL, NULL, NULL, NULL),
-(3, 'Carlos', 'López', TO_DATE('1992-03-10', 'YYYY-MM-DD'), 'carlos.lopez@example.com', '88883333', 1, 3, 1, NULL, NULL, NULL, NULL, NULL),
-(4, 'Ana', 'Rodríguez', TO_DATE('1988-11-05', 'YYYY-MM-DD'), 'ana.rodriguez@example.com', '88884444', 2, 4, 1, NULL, NULL, NULL, NULL, NULL),
-(5, 'Luis', 'Martínez', TO_DATE('1995-07-19', 'YYYY-MM-DD'), 'luis.martinez@example.com', '88885555', 1, 5, 1, NULL, NULL, NULL, NULL, NULL),
-(6, 'Sofía', 'Chaves', TO_DATE('1991-09-30', 'YYYY-MM-DD'), 'sofia.chaves@example.com', '88886666', 2, 6, 1, NULL, NULL, NULL, NULL, NULL),
-(7, 'Pedro', 'Sánchez', TO_DATE('1987-12-25', 'YYYY-MM-DD'), 'pedro.sanchez@example.com', '88887777', 1, 7, 1, NULL, NULL, NULL, NULL, NULL),
-(8, 'Laura', 'Fernández', TO_DATE('1993-04-12', 'YYYY-MM-DD'), 'laura.fernandez@example.com', '88888888', 2, 8, 1, NULL, NULL, NULL, NULL, NULL),
-(9, 'Diego', 'Ramírez', TO_DATE('1989-06-08', 'YYYY-MM-DD'), 'diego.ramirez@example.com', '88889999', 1, 9, 1, NULL, NULL, NULL, NULL, NULL),
-(10, 'Carmen', 'Vargas', TO_DATE('1994-02-14', 'YYYY-MM-DD'), 'carmen.vargas@example.com', '88880000', 2, 10, 1, NULL, NULL, NULL, NULL, NULL),
-(11, 'Alejandro', 'Hernández', TO_DATE('1990-01-01', 'YYYY-MM-DD'), 'alejandro.hernandez@example.com', '88881112', 1, 11, 1, NULL, NULL, NULL, NULL, NULL),
-(12, 'Isabel', 'Morales', TO_DATE('1986-02-02', 'YYYY-MM-DD'), 'isabel.morales@example.com', '88882223', 2, 12, 1, NULL, NULL, NULL, NULL, NULL),
-(13, 'Jorge', 'Gutiérrez', TO_DATE('1992-03-03', 'YYYY-MM-DD'), 'jorge.gutierrez@example.com', '88883334', 1, 13, 1, NULL, NULL, NULL, NULL, NULL),
-(14, 'Patricia', 'Díaz', TO_DATE('1987-04-04', 'YYYY-MM-DD'), 'patricia.diaz@example.com', '88884445', 2, 14, 1, NULL, NULL, NULL, NULL, NULL),
-(15, 'Ricardo', 'Méndez', TO_DATE('1993-05-05', 'YYYY-MM-DD'), 'ricardo.mendez@example.com', '88885556', 1, 15, 1, NULL, NULL, NULL, NULL, NULL),
-(16, 'Lucía', 'Rojas', TO_DATE('1989-06-06', 'YYYY-MM-DD'), 'lucia.rojas@example.com', '88886667', 2, 16, 1, NULL, NULL, NULL, NULL, NULL),
-(17, 'Fernando', 'Castro', TO_DATE('1991-07-07', 'YYYY-MM-DD'), 'fernando.castro@example.com', '88887778', 1, 17, 1, NULL, NULL, NULL, NULL, NULL),
-(18, 'Gabriela', 'Romero', TO_DATE('1988-08-08', 'YYYY-MM-DD'), 'gabriela.romero@example.com', '88888889', 2, 18, 1, NULL, NULL, NULL, NULL, NULL),
-(19, 'Roberto', 'Alvarado', TO_DATE('1994-09-09', 'YYYY-MM-DD'), 'roberto.alvarado@example.com', '88889990', 1, 19, 1, NULL, NULL, NULL, NULL, NULL),
-(20, 'Mónica', 'Vega', TO_DATE('1990-10-10', 'YYYY-MM-DD'), 'monica.vega@example.com', '88880001', 2, 20, 1, NULL, NULL, NULL, NULL, NULL),
+INSERT ALL
+INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
+Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
+VALUES(1, 'Juan', 'Pérez', TO_DATE('1990-05-15', 'YYYY-MM-DD'), 'juan.perez@example.com', 
+'88881111', 1, 1, 1, NULL, NULL, NULL, NULL, NULL)
+
+INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
+Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
+VALUES(2, 'María', 'Gómez', TO_DATE('1985-08-22', 'YYYY-MM-DD'), 'maria.gomez@example.com', 
+'88882222', 2, 2, 1, NULL, NULL, NULL, NULL, NULL)
+
+INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
+Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
+VALUES(3, 'Carlos', 'López', TO_DATE('1992-03-10', 'YYYY-MM-DD'), 'carlos.lopez@example.com', 
+'88883333', 1, 3, 1, NULL, NULL, NULL, NULL, NULL)
+
+INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
+Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
+VALUES(4, 'Ana', 'Rodríguez', TO_DATE('1988-11-05', 'YYYY-MM-DD'), 'ana.rodriguez@example.com', 
+'88884444', 2, 4, 1, NULL, NULL, NULL, NULL, NULL)
+
+INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
+Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
+VALUES(5, 'Luis', 'Martínez', TO_DATE('1995-07-19', 'YYYY-MM-DD'), 'luis.martinez@example.com', 
+'88885555', 1, 5, 1, NULL, NULL, NULL, NULL, NULL)
+
+INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
+Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
+VALUES(6, 'Sofía', 'Chaves', TO_DATE('1991-09-30', 'YYYY-MM-DD'), 'sofia.chaves@example.com', 
+'88886666', 2, 6, 1, NULL, NULL, NULL, NULL, NULL)
+
+INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
+Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
+VALUES(7, 'Pedro', 'Sánchez', TO_DATE('1987-12-25', 'YYYY-MM-DD'), 'pedro.sanchez@example.com', 
+'88887777', 1, 7, 1, NULL, NULL, NULL, NULL, NULL)
+
+INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
+Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
+VALUES(8, 'Laura', 'Fernández', TO_DATE('1993-04-12', 'YYYY-MM-DD'), 'laura.fernandez@example.com', 
+'88888888', 2, 8, 1, NULL, NULL, NULL, NULL, NULL)
+
+INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
+Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
+VALUES(9, 'Diego', 'Ramírez', TO_DATE('1989-06-08', 'YYYY-MM-DD'), 'diego.ramirez@example.com', 
+'88889999', 1, 9, 1, NULL, NULL, NULL, NULL, NULL)
+
+INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
+Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
+VALUES(10, 'Carmen', 'Vargas', TO_DATE('1994-02-14', 'YYYY-MM-DD'), 'carmen.vargas@example.com', 
+'88880000', 2, 10, 1, NULL, NULL, NULL, NULL, NULL)
+
+INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
+Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
+VALUES(11, 'Alejandro', 'Hernández', TO_DATE('1990-01-01', 'YYYY-MM-DD'), 'alejandro.hernandez@example.com', 
+'88881112', 1, 11, 1, NULL, NULL, NULL, NULL, NULL)
+
+INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
+Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
+VALUES(12, 'Isabel', 'Morales', TO_DATE('1986-02-02', 'YYYY-MM-DD'), 'isabel.morales@example.com', 
+'88882223', 2, 12, 1, NULL, NULL, NULL, NULL, NULL)
+
+INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
+Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
+VALUES(13, 'Jorge', 'Gutiérrez', TO_DATE('1992-03-03', 'YYYY-MM-DD'), 'jorge.gutierrez@example.com', 
+'88883334', 1, 13, 1, NULL, NULL, NULL, NULL, NULL)
+
+INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
+Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
+VALUES(14, 'Patricia', 'Díaz', TO_DATE('1987-04-04', 'YYYY-MM-DD'), 'patricia.diaz@example.com', 
+'88884445', 2, 14, 1, NULL, NULL, NULL, NULL, NULL)
+
+INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
+Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
+VALUES(15, 'Ricardo', 'Méndez', TO_DATE('1993-05-05', 'YYYY-MM-DD'), 'ricardo.mendez@example.com', 
+'88885556', 1, 15, 1, NULL, NULL, NULL, NULL, NULL)
+
+INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
+Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
+VALUES(16, 'Lucía', 'Rojas', TO_DATE('1989-06-06', 'YYYY-MM-DD'), 'lucia.rojas@example.com', 
+'88886667', 2, 16, 1, NULL, NULL, NULL, NULL, NULL)
+
+INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
+Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
+VALUES(17, 'Fernando', 'Castro', TO_DATE('1991-07-07', 'YYYY-MM-DD'), 'fernando.castro@example.com', 
+'88887778', 1, 17, 1, NULL, NULL, NULL, NULL, NULL)
+
+INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
+Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
+VALUES(18, 'Gabriela', 'Romero', TO_DATE('1988-08-08', 'YYYY-MM-DD'), 'gabriela.romero@example.com', 
+'88888889', 2, 18, 1, NULL, NULL, NULL, NULL, NULL)
+
+INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
+Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
+VALUES(19, 'Roberto', 'Alvarado', TO_DATE('1994-09-09', 'YYYY-MM-DD'), 'roberto.alvarado@example.com', 
+'88889990', 1, 19, 1, NULL, NULL, NULL, NULL, NULL)
+
+INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
+Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
+VALUES(20, 'Mónica', 'Vega', TO_DATE('1990-10-10', 'YYYY-MM-DD'), 'monica.vega@example.com', 
+'88880001', 2, 20, 1, NULL, NULL, NULL, NULL, NULL)
 
 -- Registros 21-40
-(21, 'José', 'Navarro', TO_DATE('1985-11-11', 'YYYY-MM-DD'), 'jose.navarro@example.com', '88881113', 1, 1, 1, NULL, NULL, NULL, NULL, NULL),
-(22, 'Adriana', 'Molina', TO_DATE('1992-12-12', 'YYYY-MM-DD'), 'adriana.molina@example.com', '88882224', 2, 2, 1, NULL, NULL, NULL, NULL, NULL),
-(23, 'Miguel', 'Ríos', TO_DATE('1988-01-13', 'YYYY-MM-DD'), 'miguel.rios@example.com', '88883335', 1, 3, 1, NULL, NULL, NULL, NULL, NULL),
-(24, 'Verónica', 'Silva', TO_DATE('1993-02-14', 'YYYY-MM-DD'), 'veronica.silva@example.com', '88884446', 2, 4, 1, NULL, NULL, NULL, NULL, NULL),
-(25, 'Francisco', 'Campos', TO_DATE('1989-03-15', 'YYYY-MM-DD'), 'francisco.campos@example.com', '88885557', 1, 5, 1, NULL, NULL, NULL, NULL, NULL),
-(26, 'Daniela', 'Guerrero', TO_DATE('1995-04-16', 'YYYY-MM-DD'), 'daniela.guerrero@example.com', '88886668', 2, 6, 1, NULL, NULL, NULL, NULL, NULL),
-(27, 'Andrés', 'Vargas', TO_DATE('1991-05-17', 'YYYY-MM-DD'), 'andres.vargas@example.com', '88887779', 1, 7, 1, NULL, NULL, NULL, NULL, NULL),
-(28, 'Sara', 'Cruz', TO_DATE('1987-06-18', 'YYYY-MM-DD'), 'sara.cruz@example.com', '88888890', 2, 8, 1, NULL, NULL, NULL, NULL, NULL),
-(29, 'Raúl', 'Ortiz', TO_DATE('1994-07-19', 'YYYY-MM-DD'), 'raul.ortiz@example.com', '88889991', 1, 9, 1, NULL, NULL, NULL, NULL, NULL),
-(30, 'Natalia', 'Flores', TO_DATE('1990-08-20', 'YYYY-MM-DD'), 'natalia.flores@example.com', '88880002', 2, 10, 1, NULL, NULL, NULL, NULL, NULL),
-(31, 'Eduardo', 'Soto', TO_DATE('1986-09-21', 'YYYY-MM-DD'), 'eduardo.soto@example.com', '88881114', 1, 11, 1, NULL, NULL, NULL, NULL, NULL),
-(32, 'Marina', 'Cortés', TO_DATE('1992-10-22', 'YYYY-MM-DD'), 'marina.cortes@example.com', '88882225', 2, 12, 1, NULL, NULL, NULL, NULL, NULL),
-(33, 'Héctor', 'Guzmán', TO_DATE('1988-11-23', 'YYYY-MM-DD'), 'hector.guzman@example.com', '88883336', 1, 13, 1, NULL, NULL, NULL, NULL, NULL),
-(34, 'Claudia', 'Reyes', TO_DATE('1993-12-24', 'YYYY-MM-DD'), 'claudia.reyes@example.com', '88884447', 2, 14, 1, NULL, NULL, NULL, NULL, NULL),
-(35, 'Javier', 'Aguilar', TO_DATE('1989-01-25', 'YYYY-MM-DD'), 'javier.aguilar@example.com', '88885558', 1, 15, 1, NULL, NULL, NULL, NULL, NULL),
-(36, 'Valeria', 'Méndez', TO_DATE('1995-02-26', 'YYYY-MM-DD'), 'valeria.mendez@example.com', '88886669', 2, 16, 1, NULL, NULL, NULL, NULL, NULL),
-(37, 'Oscar', 'Fuentes', TO_DATE('1991-03-27', 'YYYY-MM-DD'), 'oscar.fuentes@example.com', '88887780', 1, 17, 1, NULL, NULL, NULL, NULL, NULL),
-(38, 'Lorena', 'Santos', TO_DATE('1987-04-28', 'YYYY-MM-DD'), 'lorena.santos@example.com', '88888891', 2, 18, 1, NULL, NULL, NULL, NULL, NULL),
-(39, 'Manuel', 'Jiménez', TO_DATE('1994-05-29', 'YYYY-MM-DD'), 'manuel.jimenez@example.com', '88889992', 1, 19, 1, NULL, NULL, NULL, NULL, NULL),
-(40, 'Camila', 'Ortega', TO_DATE('1990-06-30', 'YYYY-MM-DD'), 'camila.ortega@example.com', '88880003', 2, 20, 1, NULL, NULL, NULL, NULL, NULL),
+INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
+Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
+VALUES(21, 'José', 'Navarro', TO_DATE('1985-11-11', 'YYYY-MM-DD'), 'jose.navarro@example.com', 
+'88881113', 1, 1, 1, NULL, NULL, NULL, NULL, NULL)
+
+INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
+Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
+VALUES(22, 'Adriana', 'Molina', TO_DATE('1992-12-12', 'YYYY-MM-DD'), 'adriana.molina@example.com', 
+'88882224', 2, 2, 1, NULL, NULL, NULL, NULL, NULL)
+
+INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
+Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
+VALUES(23, 'Miguel', 'Ríos', TO_DATE('1988-01-13', 'YYYY-MM-DD'), 'miguel.rios@example.com', 
+'88883335', 1, 3, 1, NULL, NULL, NULL, NULL, NULL)
+
+INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
+Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
+VALUES(24, 'Verónica', 'Silva', TO_DATE('1993-02-14', 'YYYY-MM-DD'), 'veronica.silva@example.com', 
+'88884446', 2, 4, 1, NULL, NULL, NULL, NULL, NULL)
+
+INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
+Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
+VALUES(25, 'Francisco', 'Campos', TO_DATE('1989-03-15', 'YYYY-MM-DD'), 'francisco.campos@example.com', 
+'88885557', 1, 5, 1, NULL, NULL, NULL, NULL, NULL)
+
+INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
+Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
+VALUES(26, 'Daniela', 'Guerrero', TO_DATE('1995-04-16', 'YYYY-MM-DD'), 'daniela.guerrero@example.com', 
+'88886668', 2, 6, 1, NULL, NULL, NULL, NULL, NULL)
+
+INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
+Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
+VALUES(27, 'Andrés', 'Vargas', TO_DATE('1991-05-17', 'YYYY-MM-DD'), 'andres.vargas@example.com', 
+'88887779', 1, 7, 1, NULL, NULL, NULL, NULL, NULL)
+
+INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
+Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
+VALUES(28, 'Sara', 'Cruz', TO_DATE('1987-06-18', 'YYYY-MM-DD'), 'sara.cruz@example.com', 
+'88888890', 2, 8, 1, NULL, NULL, NULL, NULL, NULL)
+
+INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
+Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
+VALUES(29, 'Raúl', 'Ortiz', TO_DATE('1994-07-19', 'YYYY-MM-DD'), 'raul.ortiz@example.com', 
+'88889991', 1, 9, 1, NULL, NULL, NULL, NULL, NULL)
+
+INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
+Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
+VALUES(30, 'Natalia', 'Flores', TO_DATE('1990-08-20', 'YYYY-MM-DD'), 'natalia.flores@example.com', 
+'88880002', 2, 10, 1, NULL, NULL, NULL, NULL, NULL)
+
+INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
+Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
+VALUES(31, 'Eduardo', 'Soto', TO_DATE('1986-09-21', 'YYYY-MM-DD'), 'eduardo.soto@example.com', 
+'88881114', 1, 11, 1, NULL, NULL, NULL, NULL, NULL)
+
+INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
+Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
+VALUES(32, 'Marina', 'Cortés', TO_DATE('1992-10-22', 'YYYY-MM-DD'), 'marina.cortes@example.com', 
+'88882225', 2, 12, 1, NULL, NULL, NULL, NULL, NULL)
+
+INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
+Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
+VALUES(33, 'Héctor', 'Guzmán', TO_DATE('1988-11-23', 'YYYY-MM-DD'), 'hector.guzman@example.com', 
+'88883336', 1, 13, 1, NULL, NULL, NULL, NULL, NULL)
+
+INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
+Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
+VALUES(34, 'Claudia', 'Reyes', TO_DATE('1993-12-24', 'YYYY-MM-DD'), 'claudia.reyes@example.com', 
+'88884447', 2, 14, 1, NULL, NULL, NULL, NULL, NULL)
+
+INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
+Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
+VALUES(35, 'Javier', 'Aguilar', TO_DATE('1989-01-25', 'YYYY-MM-DD'), 'javier.aguilar@example.com', 
+'88885558', 1, 15, 1, NULL, NULL, NULL, NULL, NULL)
+
+INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
+Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
+VALUES(36, 'Valeria', 'Méndez', TO_DATE('1995-02-26', 'YYYY-MM-DD'), 'valeria.mendez@example.com', 
+'88886669', 2, 16, 1, NULL, NULL, NULL, NULL, NULL)
+
+INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
+Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
+VALUES(37, 'Oscar', 'Fuentes', TO_DATE('1991-03-27', 'YYYY-MM-DD'), 'oscar.fuentes@example.com', 
+'88887780', 1, 17, 1, NULL, NULL, NULL, NULL, NULL)
+
+INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
+Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
+VALUES(38, 'Lorena', 'Santos', TO_DATE('1987-04-28', 'YYYY-MM-DD'), 'lorena.santos@example.com', 
+'88888891', 2, 18, 1, NULL, NULL, NULL, NULL, NULL)
+
+INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
+Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
+VALUES(39, 'Manuel', 'Jiménez', TO_DATE('1994-05-29', 'YYYY-MM-DD'), 'manuel.jimenez@example.com', 
+'88889992', 1, 19, 1, NULL, NULL, NULL, NULL, NULL)
+
+INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
+Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
+VALUES(40, 'Camila', 'Ortega', TO_DATE('1990-06-30', 'YYYY-MM-DD'), 'camila.ortega@example.com', 
+'88880003', 2, 20, 1, NULL, NULL, NULL, NULL, NULL)
 
 -- Registros 41-60
-(41, 'Ricardo', 'Méndez', TO_DATE('1998-12-31', 'YYYY-MM-DD'), 'ricardo.mendez@example.com', '88889998', 1, 20, 1, NULL, NULL, NULL, NULL, NULL);
-(42, 'Carlos', 'Pérez', TO_DATE('1987-06-23', 'YYYY-MM-DD'), 'carlos.perez@example.com', '88884256', 2, 1, 1, NULL, NULL, NULL, NULL, NULL),
-(43, 'Lucía', 'Gómez', TO_DATE('1990-07-30', 'YYYY-MM-DD'), 'lucia.gomez@example.com', '88885367', 1, 2, 1, NULL, NULL, NULL, NULL, NULL),
-(44, 'Raúl', 'Hernández', TO_DATE('1993-02-25', 'YYYY-MM-DD'), 'raul.hernandez@example.com', '88886478', 3, 3, 1, NULL, NULL, NULL, NULL, NULL),
-(45, 'Ana', 'Sánchez', TO_DATE('1989-05-18', 'YYYY-MM-DD'), 'ana.sanchez@example.com', '88887589', 2, 1, 1, NULL, NULL, NULL, NULL, NULL),
-(46, 'Pedro', 'Ramírez', TO_DATE('1985-09-14', 'YYYY-MM-DD'), 'pedro.ramirez@example.com', '88888690', 1, 2, 1, NULL, NULL, NULL, NULL, NULL),
-(47, 'Elena', 'Martínez', TO_DATE('1991-03-12', 'YYYY-MM-DD'), 'elena.martinez@example.com', '88889701', 3, 3, 1, NULL, NULL, NULL, NULL, NULL),
-(48, 'Ricardo', 'Vega', TO_DATE('1986-08-07', 'YYYY-MM-DD'), 'ricardo.vega@example.com', '88890812', 2, 1, 1, NULL, NULL, NULL, NULL, NULL),
-(49, 'Beatriz', 'García', TO_DATE('1994-10-21', 'YYYY-MM-DD'), 'beatriz.garcia@example.com', '88891923', 1, 2, 1, NULL, NULL, NULL, NULL, NULL),
-(50, 'Juan', 'López', TO_DATE('1988-11-16', 'YYYY-MM-DD'), 'juan.lopez@example.com', '88893034', 2, 3, 1, NULL, NULL, NULL, NULL, NULL),
-(51, 'Marta', 'Jiménez', TO_DATE('1995-01-25', 'YYYY-MM-DD'), 'marta.jimenez@example.com', '88894145', 1, 1, 1, NULL, NULL, NULL, NULL, NULL),
-(52, 'Fernando', 'Fernández', TO_DATE('1990-04-09', 'YYYY-MM-DD'), 'fernando.fernandez@example.com', '88895256', 3, 2, 1, NULL, NULL, NULL, NULL, NULL),
-(53, 'María', 'Álvarez', TO_DATE('1986-12-13', 'YYYY-MM-DD'), 'maria.alvarez@example.com', '88896367', 2, 1, 1, NULL, NULL, NULL, NULL, NULL),
-(54, 'José', 'Torres', TO_DATE('1992-07-29', 'YYYY-MM-DD'), 'jose.torres@example.com', '88897478', 1, 3, 1, NULL, NULL, NULL, NULL, NULL),
-(55, 'Carmen', 'Cruz', TO_DATE('1991-10-03', 'YYYY-MM-DD'), 'carmen.cruz@example.com', '88898589', 2, 2, 1, NULL, NULL, NULL, NULL, NULL),
-(56, 'David', 'Morales', TO_DATE('1989-01-06', 'YYYY-MM-DD'), 'david.morales@example.com', '88899690', 3, 1, 1, NULL, NULL, NULL, NULL, NULL),
-(57, 'Cristina', 'González', TO_DATE('1987-11-11', 'YYYY-MM-DD'), 'cristina.gonzalez@example.com', '88900701', 2, 3, 1, NULL, NULL, NULL, NULL, NULL),
-(58, 'José', 'Díaz', TO_DATE('1994-02-18', 'YYYY-MM-DD'), 'jose.diaz@example.com', '88901812', 1, 2, 1, NULL, NULL, NULL, NULL, NULL),
-(59, 'Laura', 'Ruiz', TO_DATE('1993-05-09', 'YYYY-MM-DD'), 'laura.ruiz@example.com', '88902923', 3, 3, 1, NULL, NULL, NULL, NULL, NULL),
-(60, 'Mario', 'Gómez', TO_DATE('1988-12-22', 'YYYY-MM-DD'), 'mario.gomez@example.com', '88904034', 1, 1, 1, NULL, NULL, NULL, NULL, NULL),
+INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
+Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
+VALUES(41, 'Ricardo', 'Méndez', TO_DATE('1998-12-31', 'YYYY-MM-DD'), 'ricardo.mendez@example.com', 
+'88889998', 1, 20, 1, NULL, NULL, NULL, NULL, NULL)
+
+INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
+Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
+VALUES(42, 'Carlos', 'Pérez', TO_DATE('1987-06-23', 'YYYY-MM-DD'), 'carlos.perez@example.com', 
+'88884256', 2, 1, 1, NULL, NULL, NULL, NULL, NULL)
+
+INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
+Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
+VALUES(43, 'Lucía', 'Gómez', TO_DATE('1990-07-30', 'YYYY-MM-DD'), 'lucia.gomez@example.com', 
+'88885367', 1, 2, 1, NULL, NULL, NULL, NULL, NULL)
+
+INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
+Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
+VALUES(44, 'Raúl', 'Hernández', TO_DATE('1993-02-25', 'YYYY-MM-DD'), 'raul.hernandez@example.com', 
+'88886478', 3, 3, 1, NULL, NULL, NULL, NULL, NULL)
+
+INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
+Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
+VALUES(45, 'Ana', 'Sánchez', TO_DATE('1989-05-18', 'YYYY-MM-DD'), 'ana.sanchez@example.com', 
+'88887589', 2, 1, 1, NULL, NULL, NULL, NULL, NULL)
+
+INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
+Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
+VALUES(46, 'Pedro', 'Ramírez', TO_DATE('1985-09-14', 'YYYY-MM-DD'), 'pedro.ramirez@example.com', 
+'88888690', 1, 2, 1, NULL, NULL, NULL, NULL, NULL)
+
+INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
+Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
+VALUES(47, 'Elena', 'Martínez', TO_DATE('1991-03-12', 'YYYY-MM-DD'), 'elena.martinez@example.com',
+'88889701', 3, 3, 1, NULL, NULL, NULL, NULL, NULL)
+
+INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
+Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
+VALUES(48, 'Ricardo', 'Vega', TO_DATE('1986-08-07', 'YYYY-MM-DD'), 'ricardo.vega@example.com',
+'88890812', 2, 1, 1, NULL, NULL, NULL, NULL, NULL)
+
+INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
+Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
+VALUES(49, 'Beatriz', 'García', TO_DATE('1994-10-21', 'YYYY-MM-DD'), 'beatriz.garcia@example.com', 
+'88891923', 1, 2, 1, NULL, NULL, NULL, NULL, NULL)
+
+INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
+Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
+VALUES(50, 'Juan', 'López', TO_DATE('1988-11-16', 'YYYY-MM-DD'), 'juan.lopez@example.com', 
+'88893034', 2, 3, 1, NULL, NULL, NULL, NULL, NULL)
+
+INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
+Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
+VALUES(51, 'Marta', 'Jiménez', TO_DATE('1995-01-25', 'YYYY-MM-DD'), 'marta.jimenez@example.com',
+'88894145', 1, 1, 1, NULL, NULL, NULL, NULL, NULL)
+
+INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
+Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
+VALUES(52, 'Fernando', 'Fernández', TO_DATE('1990-04-09', 'YYYY-MM-DD'), 'fernando.fernandez@example.com',
+'88895256', 3, 2, 1, NULL, NULL, NULL, NULL, NULL)
+
+INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
+Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
+VALUES(53, 'María', 'Álvarez', TO_DATE('1986-12-13', 'YYYY-MM-DD'), 'maria.alvarez@example.com',
+'88896367', 2, 1, 1, NULL, NULL, NULL, NULL, NULL)
+
+INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
+Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
+VALUES(54, 'José', 'Torres', TO_DATE('1992-07-29', 'YYYY-MM-DD'), 'jose.torres@example.com',
+'88897478', 1, 3, 1, NULL, NULL, NULL, NULL, NULL)
+
+INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
+Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
+VALUES(55, 'Carmen', 'Cruz', TO_DATE('1991-10-03', 'YYYY-MM-DD'), 'carmen.cruz@example.com',
+'88898589', 2, 2, 1, NULL, NULL, NULL, NULL, NULL)
+
+INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
+Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
+VALUES(56, 'David', 'Morales', TO_DATE('1989-01-06', 'YYYY-MM-DD'), 'david.morales@example.com',
+'88899690', 3, 1, 1, NULL, NULL, NULL, NULL, NULL)
+
+INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
+Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
+VALUES(57, 'Cristina', 'González', TO_DATE('1987-11-11', 'YYYY-MM-DD'), 'cristina.gonzalez@example.com', 
+'88900701', 2, 3, 1, NULL, NULL, NULL, NULL, NULL)
+
+INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
+Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
+VALUES(58, 'José', 'Díaz', TO_DATE('1994-02-18', 'YYYY-MM-DD'), 'jose.diaz@example.com',
+'88901812', 1, 2, 1, NULL, NULL, NULL, NULL, NULL)
+
+INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
+Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
+VALUES(59, 'Laura', 'Ruiz', TO_DATE('1993-05-09', 'YYYY-MM-DD'), 'laura.ruiz@example.com',
+'88902923', 3, 3, 1, NULL, NULL, NULL, NULL, NULL)
+
+INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
+Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
+VALUES(60, 'Mario', 'Gómez', TO_DATE('1988-12-22', 'YYYY-MM-DD'), 'mario.gomez@example.com', 
+'88904034', 1, 1, 1, NULL, NULL, NULL, NULL, NULL),
 
 -- Registros 61-80
-(61, 'Lucía', 'Martín', TO_DATE('1991-04-13', 'YYYY-MM-DD'), 'lucia.martin@example.com', '88905145', 2, 2, 1, NULL, NULL, NULL, NULL, NULL),
-(62, 'Carlos', 'Moreno', TO_DATE('1987-09-17', 'YYYY-MM-DD'), 'carlos.moreno@example.com', '88906256', 3, 1, 1, NULL, NULL, NULL, NULL, NULL),
-(63, 'Juan', 'Serrano', TO_DATE('1989-11-08', 'YYYY-MM-DD'), 'juan.serrano@example.com', '88907367', 2, 3, 1, NULL, NULL, NULL, NULL, NULL),
-(64, 'Sandra', 'González', TO_DATE('1992-10-25', 'YYYY-MM-DD'), 'sandra.gonzalez@example.com', '88908478', 1, 2, 1, NULL, NULL, NULL, NULL, NULL),
-(65, 'Javier', 'Hernández', TO_DATE('1990-02-20', 'YYYY-MM-DD'), 'javier.hernandez@example.com', '88909589', 2, 1, 1, NULL, NULL, NULL, NULL, NULL),
-(66, 'Sofía', 'López', TO_DATE('1993-08-14', 'YYYY-MM-DD'), 'sofia.lopez@example.com', '88910690', 1, 3, 1, NULL, NULL, NULL, NULL, NULL),
-(67, 'Rafael', 'Pérez', TO_DATE('1986-04-06', 'YYYY-MM-DD'), 'rafael.perez@example.com', '88911701', 3, 2, 1, NULL, NULL, NULL, NULL, NULL),
-(68, 'Bea', 'González', TO_DATE('1987-05-23', 'YYYY-MM-DD'), 'bea.gonzalez@example.com', '88912812', 2, 1, 1, NULL, NULL, NULL, NULL, NULL),
-(69, 'Ricardo', 'Vázquez', TO_DATE('1990-11-19', 'YYYY-MM-DD'), 'ricardo.vazquez@example.com', '88913923', 1, 2, 1, NULL, NULL, NULL, NULL, NULL),
-(70, 'Mónica', 'Martín', TO_DATE('1989-12-02', 'YYYY-MM-DD'), 'monica.martin@example.com', '88915034', 2, 3, 1, NULL, NULL, NULL, NULL, NULL),
-(71, 'Antonio', 'Cordero', TO_DATE('1992-03-13', 'YYYY-MM-DD'), 'antonio.cordero@example.com', '88916145', 1, 1, 1, NULL, NULL, NULL, NULL, NULL),
-(72, 'Esther', 'García', TO_DATE('1991-07-15', 'YYYY-MM-DD'), 'esther.garcia@example.com', '88917256', 3, 2, 1, NULL, NULL, NULL, NULL, NULL),
-(73, 'Pedro', 'Martínez', TO_DATE('1988-06-28', 'YYYY-MM-DD'), 'pedro.martinez@example.com', '88918367', 2, 1, 1, NULL, NULL, NULL, NULL, NULL),
-(74, 'Marina', 'López', TO_DATE('1990-05-19', 'YYYY-MM-DD'), 'marina.lopez@example.com', '88919478', 1, 3, 1, NULL, NULL, NULL, NULL, NULL),
-(75, 'Alberto', 'Romero', TO_DATE('1986-02-14', 'YYYY-MM-DD'), 'alberto.romero@example.com', '88920589', 3, 2, 1, NULL, NULL, NULL, NULL, NULL),
-(76, 'Victoria', 'Gutiérrez', TO_DATE('1993-11-27', 'YYYY-MM-DD'), 'victoria.gutierrez@example.com', '88921690', 2, 1, 1, NULL, NULL, NULL, NULL, NULL),
-(77, 'Andrés', 'Vega', TO_DATE('1992-09-06', 'YYYY-MM-DD'), 'andres.vega@example.com', '88922701', 1, 2, 1, NULL, NULL, NULL, NULL, NULL),
-(78, 'Patricia', 'Fernández', TO_DATE('1985-10-15', 'YYYY-MM-DD'), 'patricia.fernandez@example.com', '88923812', 2, 3, 1, NULL, NULL, NULL, NULL, NULL),
-(79, 'Fabiola', 'Díaz', TO_DATE('1994-04-10', 'YYYY-MM-DD'), 'fabiola.diaz@example.com', '88924923', 1, 1, 1, NULL, NULL, NULL, NULL, NULL),
-(80, 'José', 'Jiménez', TO_DATE('1987-02-27', 'YYYY-MM-DD'), 'jose.jimenez@example.com', '88926034', 2, 2, 1, NULL, NULL, NULL, NULL, NULL);
+INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
+Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
+VALUES(61, 'Lucía', 'Martín', TO_DATE('1991-04-13', 'YYYY-MM-DD'), 'lucia.martin@example.com', 
+'88905145', 2, 2, 1, NULL, NULL, NULL, NULL, NULL)
+
+INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
+Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
+VALUES(62, 'Carlos', 'Moreno', TO_DATE('1987-09-17', 'YYYY-MM-DD'), 'carlos.moreno@example.com', 
+'88906256', 3, 1, 1, NULL, NULL, NULL, NULL, NULL)
+
+INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
+Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
+VALUES(63, 'Juan', 'Serrano', TO_DATE('1989-11-08', 'YYYY-MM-DD'), 'juan.serrano@example.com', 
+'88907367', 2, 3, 1, NULL, NULL, NULL, NULL, NULL)
+
+INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
+Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
+VALUES(64, 'Sandra', 'González', TO_DATE('1992-10-25', 'YYYY-MM-DD'), 'sandra.gonzalez@example.com', 
+'88908478', 1, 2, 1, NULL, NULL, NULL, NULL, NULL)
+
+INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
+Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
+VALUES(65, 'Javier', 'Hernández', TO_DATE('1990-02-20', 'YYYY-MM-DD'), 'javier.hernandez@example.com', 
+'88909589', 2, 1, 1, NULL, NULL, NULL, NULL, NULL)
+
+INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
+Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
+VALUES(66, 'Sofía', 'López', TO_DATE('1993-08-14', 'YYYY-MM-DD'), 'sofia.lopez@example.com', 
+'88910690', 1, 3, 1, NULL, NULL, NULL, NULL, NULL)
+
+INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
+Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
+VALUES(67, 'Rafael', 'Pérez', TO_DATE('1986-04-06', 'YYYY-MM-DD'), 'rafael.perez@example.com',
+'88911701', 3, 2, 1, NULL, NULL, NULL, NULL, NULL)
+
+INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
+Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
+VALUES(68, 'Bea', 'González', TO_DATE('1987-05-23', 'YYYY-MM-DD'), 'bea.gonzalez@example.com', 
+'88912812', 2, 1, 1, NULL, NULL, NULL, NULL, NULL)
+
+INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
+Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
+VALUES(69, 'Ricardo', 'Vázquez', TO_DATE('1990-11-19', 'YYYY-MM-DD'), 'ricardo.vazquez@example.com', 
+'88913923', 1, 2, 1, NULL, NULL, NULL, NULL, NULL)
+
+INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
+Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
+VALUES(70, 'Mónica', 'Martín', TO_DATE('1989-12-02', 'YYYY-MM-DD'), 'monica.martin@example.com', 
+'88915034', 2, 3, 1, NULL, NULL, NULL, NULL, NULL)
+
+INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
+Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
+VALUES(71, 'Antonio', 'Cordero', TO_DATE('1992-03-13', 'YYYY-MM-DD'), 'antonio.cordero@example.com',
+'88916145', 1, 1, 1, NULL, NULL, NULL, NULL, NULL)
+
+INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
+Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
+VALUES(72, 'Esther', 'García', TO_DATE('1991-07-15', 'YYYY-MM-DD'), 'esther.garcia@example.com',
+'88917256', 3, 2, 1, NULL, NULL, NULL, NULL, NULL)
+
+INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
+Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
+VALUES(73, 'Pedro', 'Martínez', TO_DATE('1988-06-28', 'YYYY-MM-DD'), 'pedro.martinez@example.com',
+'88918367', 2, 1, 1, NULL, NULL, NULL, NULL, NULL)
+
+INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
+Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
+VALUES(74, 'Marina', 'López', TO_DATE('1990-05-19', 'YYYY-MM-DD'), 'marina.lopez@example.com',
+'88919478', 1, 3, 1, NULL, NULL, NULL, NULL, NULL)
+
+INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
+Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
+VALUES(75, 'Alberto', 'Romero', TO_DATE('1986-02-14', 'YYYY-MM-DD'), 'alberto.romero@example.com', 
+'88920589', 3, 2, 1, NULL, NULL, NULL, NULL, NULL)
+
+INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
+Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
+VALUES(76, 'Victoria', 'Gutiérrez', TO_DATE('1993-11-27', 'YYYY-MM-DD'), 'victoria.gutierrez@example.com', 
+'88921690', 2, 1, 1, NULL, NULL, NULL, NULL, NULL)
+
+INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
+Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
+VALUES(77, 'Andrés', 'Vega', TO_DATE('1992-09-06', 'YYYY-MM-DD'), 'andres.vega@example.com', 
+'88922701', 1, 2, 1, NULL, NULL, NULL, NULL, NULL)
+
+INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
+Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
+VALUES(78, 'Patricia', 'Fernández', TO_DATE('1985-10-15', 'YYYY-MM-DD'), 'patricia.fernandez@example.com', 
+'88923812', 2, 3, 1, NULL, NULL, NULL, NULL, NULL)
+
+INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
+Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
+VALUES(79, 'Fabiola', 'Díaz', TO_DATE('1994-04-10', 'YYYY-MM-DD'), 'fabiola.diaz@example.com', 
+'88924923', 1, 1, 1, NULL, NULL, NULL, NULL, NULL)
+
+INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
+Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
+VALUES(80, 'José', 'Jiménez', TO_DATE('1987-02-27', 'YYYY-MM-DD'), 'jose.jimenez@example.com', 
+'88926034', 2, 2, 1, NULL, NULL, NULL, NULL, NULL)
 
 -- Registros 81-100
-(81, 'Antonio', 'Ruiz', TO_DATE('1978-03-22', 'YYYY-MM-DD'), 'antonio.ruiz@example.com', '88927145', 1, 1, 1, NULL, NULL, NULL, NULL, NULL),
-(82, 'Mercedes', 'López', TO_DATE('1953-07-11', 'YYYY-MM-DD'), 'mercedes.lopez@example.com', '88928256', 2, 2, 1, NULL, NULL, NULL, NULL, NULL),
-(83, 'Ricardo', 'Castro', TO_DATE('1965-09-19', 'YYYY-MM-DD'), 'ricardo.castro@example.com', '88929367', 3, 1, 1, NULL, NULL, NULL, NULL, NULL),
-(84, 'Dolores', 'Ramírez', TO_DATE('1950-12-03', 'YYYY-MM-DD'), 'dolores.ramirez@example.com', '88930478', 2, 3, 1, NULL, NULL, NULL, NULL, NULL),
-(85, 'José', 'Gómez', TO_DATE('1972-04-26', 'YYYY-MM-DD'), 'jose.gomez@example.com', '88931589', 1, 2, 1, NULL, NULL, NULL, NULL, NULL),
-(86, 'Susana', 'González', TO_DATE('1968-06-10', 'YYYY-MM-DD'), 'susana.gonzalez@example.com', '88932690', 2, 1, 1, NULL, NULL, NULL, NULL, NULL),
-(87, 'Carlos', 'Álvarez', TO_DATE('1962-08-30', 'YYYY-MM-DD'), 'carlos.alvarez@example.com', '88933701', 3, 2, 1, NULL, NULL, NULL, NULL, NULL),
-(88, 'Alfonso', 'Martínez', TO_DATE('1981-01-14', 'YYYY-MM-DD'), 'alfonso.martinez@example.com', '88934812', 1, 3, 1, NULL, NULL, NULL, NULL, NULL),
-(89, 'Santiago', 'Hernández', TO_DATE('1975-10-07', 'YYYY-MM-DD'), 'santiago.hernandez@example.com', '88935923', 2, 1, 1, NULL, NULL, NULL, NULL, NULL),
-(90, 'María', 'Carmona', TO_DATE('1989-02-15', 'YYYY-MM-DD'), 'maria.carmona@example.com', '88937034', 1, 2, 1, NULL, NULL, NULL, NULL, NULL),
-(91, 'Francisco', 'Sánchez', TO_DATE('1961-05-02', 'YYYY-MM-DD'), 'francisco.sanchez@example.com', '88938145', 3, 3, 1, NULL, NULL, NULL, NULL, NULL),
-(92, 'Jesús', 'Jiménez', TO_DATE('1984-03-17', 'YYYY-MM-DD'), 'jesus.jimenez@example.com', '88939256', 2, 1, 1, NULL, NULL, NULL, NULL, NULL),
-(93, 'Rosa', 'Gutiérrez', TO_DATE('1979-11-09', 'YYYY-MM-DD'), 'rosa.gutierrez@example.com', '88940367', 1, 2, 1, NULL, NULL, NULL, NULL, NULL),
-(94, 'Jorge', 'Vázquez', TO_DATE('1956-06-30', 'YYYY-MM-DD'), 'jorge.vazquez@example.com', '88941478', 2, 3, 1, NULL, NULL, NULL, NULL, NULL),
-(95, 'Isabel', 'Fernández', TO_DATE('1993-09-25', 'YYYY-MM-DD'), 'isabel.fernandez@example.com', '88942589', 1, 1, 1, NULL, NULL, NULL, NULL, NULL),
-(96, 'Miguel', 'Navarro', TO_DATE('1986-07-13', 'YYYY-MM-DD'), 'miguel.navarro@example.com', '88943690', 3, 2, 1, NULL, NULL, NULL, NULL, NULL),
-(97, 'Sofía', 'Moreno', TO_DATE('1969-05-14', 'YYYY-MM-DD'), 'sofia.moreno@example.com', '88944701', 2, 1, 1, NULL, NULL, NULL, NULL, NULL),
-(98, 'Antonio', 'Lozano', TO_DATE('1983-04-18', 'YYYY-MM-DD'), 'antonio.lozano@example.com', '88945812', 1, 3, 1, NULL, NULL, NULL, NULL, NULL),
-(99, 'Alicia', 'Méndez', TO_DATE('1990-11-30', 'YYYY-MM-DD'), 'alicia.mendez@example.com', '88946923', 2, 2, 1, NULL, NULL, NULL, NULL, NULL),
-(100, 'Eduardo', 'Rodríguez', TO_DATE('1980-09-04', 'YYYY-MM-DD'), 'eduardo.rodriguez@example.com', '88948034', 3, 1, 1, NULL, NULL, NULL, NULL, NULL),
+INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
+Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
+VALUES(81, 'Antonio', 'Ruiz', TO_DATE('1978-03-22', 'YYYY-MM-DD'), 'antonio.ruiz@example.com',
+'88927145', 1, 1, 1, NULL, NULL, NULL, NULL, NULL)
+
+INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
+Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
+VALUES(82, 'Mercedes', 'López', TO_DATE('1953-07-11', 'YYYY-MM-DD'), 'mercedes.lopez@example.com',
+'88928256', 2, 2, 1, NULL, NULL, NULL, NULL, NULL)
+
+INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
+Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
+VALUES(83, 'Ricardo', 'Castro', TO_DATE('1965-09-19', 'YYYY-MM-DD'), 'ricardo.castro@example.com',
+'88929367', 3, 1, 1, NULL, NULL, NULL, NULL, NULL) 
+
+INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
+Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
+VALUES(84, 'Dolores', 'Ramírez', TO_DATE('1950-12-03', 'YYYY-MM-DD'), 'dolores.ramirez@example.com', 
+'88930478', 2, 3, 1, NULL, NULL, NULL, NULL, NULL)
+
+INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
+Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
+VALUES(85, 'José', 'Gómez', TO_DATE('1972-04-26', 'YYYY-MM-DD'), 'jose.gomez@example.com', 
+'88931589', 1, 2, 1, NULL, NULL, NULL, NULL, NULL)
+
+INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
+Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
+VALUES(86, 'Susana', 'González', TO_DATE('1968-06-10', 'YYYY-MM-DD'), 'susana.gonzalez@example.com', 
+'88932690', 2, 1, 1, NULL, NULL, NULL, NULL, NULL)
+
+INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
+Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
+VALUES(87, 'Carlos', 'Álvarez', TO_DATE('1962-08-30', 'YYYY-MM-DD'), 'carlos.alvarez@example.com', 
+'88933701', 3, 2, 1, NULL, NULL, NULL, NULL, NULL)
+
+INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
+Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
+VALUES(88, 'Alfonso', 'Martínez', TO_DATE('1981-01-14', 'YYYY-MM-DD'), 'alfonso.martinez@example.com', 
+'88934812', 1, 3, 1, NULL, NULL, NULL, NULL, NULL)
+
+INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
+Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
+VALUES(89, 'Santiago', 'Hernández', TO_DATE('1975-10-07', 'YYYY-MM-DD'), 'santiago.hernandez@example.com',
+'88935923', 2, 1, 1, NULL, NULL, NULL, NULL, NULL)
+
+INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
+Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
+VALUES(90, 'María', 'Carmona', TO_DATE('1989-02-15', 'YYYY-MM-DD'), 'maria.carmona@example.com', 
+'88937034', 1, 2, 1, NULL, NULL, NULL, NULL, NULL)
+
+INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
+Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
+VALUES(91, 'Francisco', 'Sánchez', TO_DATE('1961-05-02', 'YYYY-MM-DD'), 'francisco.sanchez@example.com',
+'88938145', 3, 3, 1, NULL, NULL, NULL, NULL, NULL)
+
+INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
+Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
+VALUES(92, 'Jesús', 'Jiménez', TO_DATE('1984-03-17', 'YYYY-MM-DD'), 'jesus.jimenez@example.com', 
+'88939256', 2, 1, 1, NULL, NULL, NULL, NULL, NULL)
+
+INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
+Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
+VALUES(93, 'Rosa', 'Gutiérrez', TO_DATE('1979-11-09', 'YYYY-MM-DD'), 'rosa.gutierrez@example.com', 
+'88940367', 1, 2, 1, NULL, NULL, NULL, NULL, NULL)
+
+INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
+Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
+VALUES(94, 'Jorge', 'Vázquez', TO_DATE('1956-06-30', 'YYYY-MM-DD'), 'jorge.vazquez@example.com', 
+'88941478', 2, 3, 1, NULL, NULL, NULL, NULL, NULL)
+
+INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
+Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
+VALUES(95, 'Isabel', 'Fernández', TO_DATE('1993-09-25', 'YYYY-MM-DD'), 'isabel.fernandez@example.com', 
+'88942589', 1, 1, 1, NULL, NULL, NULL, NULL, NULL)
+
+INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
+Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
+VALUES(96, 'Miguel', 'Navarro', TO_DATE('1986-07-13', 'YYYY-MM-DD'), 'miguel.navarro@example.com', 
+'88943690', 3, 2, 1, NULL, NULL, NULL, NULL, NULL)
+
+INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
+Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
+VALUES(97, 'Sofía', 'Moreno', TO_DATE('1969-05-14', 'YYYY-MM-DD'), 'sofia.moreno@example.com',
+'88944701', 2, 1, 1, NULL, NULL, NULL, NULL, NULL)
+
+INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
+Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
+VALUES(98, 'Antonio', 'Lozano', TO_DATE('1983-04-18', 'YYYY-MM-DD'), 'antonio.lozano@example.com', 
+'88945812', 1, 3, 1, NULL, NULL, NULL, NULL, NULL)
+
+INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
+Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
+VALUES(99, 'Alicia', 'Méndez', TO_DATE('1990-11-30', 'YYYY-MM-DD'), 'alicia.mendez@example.com', 
+'88946923', 2, 2, 1, NULL, NULL, NULL, NULL, NULL)
+
+INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
+Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
+VALUES(100, 'Eduardo', 'Rodríguez', TO_DATE('1980-09-04', 'YYYY-MM-DD'), 'eduardo.rodriguez@example.com', 
+'88948034', 3, 1, 1, NULL, NULL, NULL, NULL, NULL)
 
 -- Registros 101-120
-(101, 'Elena', 'Muñoz', TO_DATE('1973-02-21', 'YYYY-MM-DD'), 'elena.munoz@example.com', '88949145', 1, 2, 1, NULL, NULL, NULL, NULL, NULL),
-(102, 'Héctor', 'Blanco', TO_DATE('1964-11-02', 'YYYY-MM-DD'), 'hector.blanco@example.com', '88950256', 2, 3, 1, NULL, NULL, NULL, NULL, NULL),
-(103, 'Marta', 'Torres', TO_DATE('1992-06-28', 'YYYY-MM-DD'), 'marta.torres@example.com', '88951367', 1, 1, 1, NULL, NULL, NULL, NULL, NULL),
-(104, 'Roberto', 'Ortiz', TO_DATE('1971-08-25', 'YYYY-MM-DD'), 'roberto.ortiz@example.com', '88952478', 3, 2, 1, NULL, NULL, NULL, NULL, NULL),
-(105, 'Patricia', 'Vega', TO_DATE('1994-01-10', 'YYYY-MM-DD'), 'patricia.vega@example.com', '88953589', 2, 1, 1, NULL, NULL, NULL, NULL, NULL),
-(106, 'Luis', 'Pérez', TO_DATE('1988-03-22', 'YYYY-MM-DD'), 'luis.perez@example.com', '88954690', 1, 3, 1, NULL, NULL, NULL, NULL, NULL),
-(107, 'José', 'Herrera', TO_DATE('1960-10-04', 'YYYY-MM-DD'), 'jose.herrera@example.com', '88955701', 2, 2, 1, NULL, NULL, NULL, NULL, NULL),
-(108, 'Ana', 'Martínez', TO_DATE('1987-12-09', 'YYYY-MM-DD'), 'ana.martinez@example.com', '88956812', 1, 1, 1, NULL, NULL, NULL, NULL, NULL),
-(109, 'Óscar', 'García', TO_DATE('1977-05-19', 'YYYY-MM-DD'), 'oscar.garcia@example.com', '88957923', 3, 3, 1, NULL, NULL, NULL, NULL, NULL),
-(110, 'Lucía', 'Morales', TO_DATE('1991-11-17', 'YYYY-MM-DD'), 'lucia.morales@example.com', '88959034', 2, 1, 1, NULL, NULL, NULL, NULL, NULL),
-(111, 'Ricardo', 'Cabrera', TO_DATE('1984-12-13', 'YYYY-MM-DD'), 'ricardo.cabrera@example.com', '88960145', 1, 2, 1, NULL, NULL, NULL, NULL, NULL),
-(112, 'Ana', 'González', TO_DATE('1963-07-21', 'YYYY-MM-DD'), 'ana.gonzalez@example.com', '88961256', 2, 3, 1, NULL, NULL, NULL, NULL, NULL),
-(113, 'Manuel', 'Suárez', TO_DATE('1995-02-18', 'YYYY-MM-DD'), 'manuel.suarez@example.com', '88962367', 1, 1, 1, NULL, NULL, NULL, NULL, NULL),
-(114, 'Santiago', 'Vargas', TO_DATE('1974-06-09', 'YYYY-MM-DD'), 'santiago.vargas@example.com', '88963478', 3, 2, 1, NULL, NULL, NULL, NULL, NULL),
-(115, 'Teresa', 'Jiménez', TO_DATE('1985-11-28', 'YYYY-MM-DD'), 'teresa.jimenez@example.com', '88964589', 2, 1, 1, NULL, NULL, NULL, NULL, NULL),
-(116, 'Antonio', 'Castro', TO_DATE('1992-09-13', 'YYYY-MM-DD'), 'antonio.castro@example.com', '88965690', 1, 3, 1, NULL, NULL, NULL, NULL, NULL),
-(117, 'Fátima', 'García', TO_DATE('1994-08-14', 'YYYY-MM-DD'), 'fatima.garcia@example.com', '88966701', 2, 2, 1, NULL, NULL, NULL, NULL, NULL),
-(118, 'Cristina', 'Rodríguez', TO_DATE('1981-07-02', 'YYYY-MM-DD'), 'cristina.rodriguez@example.com', '88967812', 1, 1, 1, NULL, NULL, NULL, NULL, NULL),
-(119, 'David', 'Torres', TO_DATE('1990-03-04', 'YYYY-MM-DD'), 'david.torres@example.com', '88968923', 2, 3, 1, NULL, NULL, NULL, NULL, NULL),
-(120, 'Victoria', 'Ruiz', TO_DATE('1983-06-16', 'YYYY-MM-DD'), 'victoria.ruiz@example.com', '88970034', 1, 2, 1, NULL, NULL, NULL, NULL, NULL);
+INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
+Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
+VALUES(101, 'Elena', 'Muñoz', TO_DATE('1973-02-21', 'YYYY-MM-DD'), 'elena.munoz@example.com', 
+'88949145', 1, 2, 1, NULL, NULL, NULL, NULL, NULL)
+
+INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
+Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
+VALUES(102, 'Héctor', 'Blanco', TO_DATE('1964-11-02', 'YYYY-MM-DD'), 'hector.blanco@example.com', 
+'88950256', 2, 3, 1, NULL, NULL, NULL, NULL, NULL)
+
+INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
+Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
+VALUES(103, 'Marta', 'Torres', TO_DATE('1992-06-28', 'YYYY-MM-DD'), 'marta.torres@example.com', 
+'88951367', 1, 1, 1, NULL, NULL, NULL, NULL, NULL)
+
+INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
+Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
+VALUES(104, 'Roberto', 'Ortiz', TO_DATE('1971-08-25', 'YYYY-MM-DD'), 'roberto.ortiz@example.com', 
+'88952478', 3, 2, 1, NULL, NULL, NULL, NULL, NULL)
+
+INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
+Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
+VALUES(105, 'Patricia', 'Vega', TO_DATE('1994-01-10', 'YYYY-MM-DD'), 'patricia.vega@example.com',
+'88953589', 2, 1, 1, NULL, NULL, NULL, NULL, NULL)
+
+INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
+Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
+VALUES(106, 'Luis', 'Pérez', TO_DATE('1988-03-22', 'YYYY-MM-DD'), 'luis.perez@example.com', 
+'88954690', 1, 3, 1, NULL, NULL, NULL, NULL, NULL)
+
+INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
+Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
+VALUES(107, 'José', 'Herrera', TO_DATE('1960-10-04', 'YYYY-MM-DD'), 'jose.herrera@example.com',
+'88955701', 2, 2, 1, NULL, NULL, NULL, NULL, NULL)
+
+INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
+Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
+VALUES(108, 'Ana', 'Martínez', TO_DATE('1987-12-09', 'YYYY-MM-DD'), 'ana.martinez@example.com',
+'88956812', 1, 1, 1, NULL, NULL, NULL, NULL, NULL)
+
+INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
+Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
+VALUES(109, 'Óscar', 'García', TO_DATE('1977-05-19', 'YYYY-MM-DD'), 'oscar.garcia@example.com', 
+'88957923', 3, 3, 1, NULL, NULL, NULL, NULL, NULL)
+
+INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
+Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
+VALUES(110, 'Lucía', 'Morales', TO_DATE('1991-11-17', 'YYYY-MM-DD'), 'lucia.morales@example.com',
+'88959034', 2, 1, 1, NULL, NULL, NULL, NULL, NULL)
+
+INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
+Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
+VALUES(111, 'Ricardo', 'Cabrera', TO_DATE('1984-12-13', 'YYYY-MM-DD'), 'ricardo.cabrera@example.com', 
+'88960145', 1, 2, 1, NULL, NULL, NULL, NULL, NULL)
+
+INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
+Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
+VALUES(112, 'Ana', 'González', TO_DATE('1963-07-21', 'YYYY-MM-DD'), 'ana.gonzalez@example.com', 
+'88961256', 2, 3, 1, NULL, NULL, NULL, NULL, NULL)
+
+INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
+Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
+VALUES(113, 'Manuel', 'Suárez', TO_DATE('1995-02-18', 'YYYY-MM-DD'), 'manuel.suarez@example.com',
+'88962367', 1, 1, 1, NULL, NULL, NULL, NULL, NULL)
+
+INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
+Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
+VALUES(114, 'Santiago', 'Vargas', TO_DATE('1974-06-09', 'YYYY-MM-DD'), 'santiago.vargas@example.com', 
+'88963478', 3, 2, 1, NULL, NULL, NULL, NULL, NULL)
+
+INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
+Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
+VALUES(115, 'Teresa', 'Jiménez', TO_DATE('1985-11-28', 'YYYY-MM-DD'), 'teresa.jimenez@example.com', 
+'88964589', 2, 1, 1, NULL, NULL, NULL, NULL, NULL)
+
+INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
+Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
+VALUES(116, 'Antonio', 'Castro', TO_DATE('1992-09-13', 'YYYY-MM-DD'), 'antonio.castro@example.com', 
+'88965690', 1, 3, 1, NULL, NULL, NULL, NULL, NULL)
+
+INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
+Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
+VALUES(117, 'Fátima', 'García', TO_DATE('1994-08-14', 'YYYY-MM-DD'), 'fatima.garcia@example.com',
+'88966701', 2, 2, 1, NULL, NULL, NULL, NULL, NULL)
+
+INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
+Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
+VALUES(118, 'Cristina', 'Rodríguez', TO_DATE('1981-07-02', 'YYYY-MM-DD'), 'cristina.rodriguez@example.com',
+'88967812', 1, 1, 1, NULL, NULL, NULL, NULL, NULL)
+
+INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
+Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
+VALUES(119, 'David', 'Torres', TO_DATE('1990-03-04', 'YYYY-MM-DD'), 'david.torres@example.com',
+'88968923', 2, 3, 1, NULL, NULL, NULL, NULL, NULL)
+
+INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
+Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
+VALUES(120, 'Victoria', 'Ruiz', TO_DATE('1983-06-16', 'YYYY-MM-DD'), 'victoria.ruiz@example.com',
+'88970034', 1, 2, 1, NULL, NULL, NULL, NULL, NULL)
 
 -- Registros 121-140
-(121, 'Juan', 'Serrano', TO_DATE('1955-11-20', 'YYYY-MM-DD'), 'juan.serrano@example.com', '88971145', 2, 1, 1, NULL, NULL, NULL, NULL, NULL),
-(122, 'Teresa', 'Castro', TO_DATE('1948-02-17', 'YYYY-MM-DD'), 'teresa.castro@example.com', '88972256', 3, 2, 1, NULL, NULL, NULL, NULL, NULL),
-(123, 'Carlos', 'Vargas', TO_DATE('1953-03-30', 'YYYY-MM-DD'), 'carlos.vargas@example.com', '88973367', 1, 3, 1, NULL, NULL, NULL, NULL, NULL),
-(124, 'Lucía', 'Rodríguez', TO_DATE('1945-07-23', 'YYYY-MM-DD'), 'lucia.rodriguez@example.com', '88974478', 2, 1, 1, NULL, NULL, NULL, NULL, NULL),
-(125, 'Miguel', 'López', TO_DATE('1950-01-04', 'YYYY-MM-DD'), 'miguel.lopez@example.com', '88975589', 3, 2, 1, NULL, NULL, NULL, NULL, NULL),
-(126, 'Eva', 'Ramírez', TO_DATE('1938-04-29', 'YYYY-MM-DD'), 'eva.ramirez@example.com', '88976690', 1, 1, 1, NULL, NULL, NULL, NULL, NULL),
-(127, 'José', 'Gutiérrez', TO_DATE('1942-08-15', 'YYYY-MM-DD'), 'jose.gutierrez@example.com', '88977701', 2, 3, 1, NULL, NULL, NULL, NULL, NULL),
-(128, 'María', 'Álvarez', TO_DATE('1949-09-03', 'YYYY-MM-DD'), 'maria.alvarez@example.com', '88978812', 1, 2, 1, NULL, NULL, NULL, NULL, NULL),
-(129, 'Antonio', 'Martínez', TO_DATE('1957-06-11', 'YYYY-MM-DD'), 'antonio.martinez@example.com', '88979923', 3, 1, 1, NULL, NULL, NULL, NULL, NULL),
-(130, 'Ana', 'Fernández', TO_DATE('1946-05-12', 'YYYY-MM-DD'), 'ana.fernandez@example.com', '88981034', 2, 2, 1, NULL, NULL, NULL, NULL, NULL),
-(131, 'Carlos', 'García', TO_DATE('1951-03-25', 'YYYY-MM-DD'), 'carlos.garcia@example.com', '88982145', 1, 3, 1, NULL, NULL, NULL, NULL, NULL),
-(132, 'Marta', 'Jiménez', TO_DATE('1959-12-18', 'YYYY-MM-DD'), 'marta.jimenez@example.com', '88983256', 2, 1, 1, NULL, NULL, NULL, NULL, NULL),
-(133, 'Luis', 'Torres', TO_DATE('1950-07-05', 'YYYY-MM-DD'), 'luis.torres@example.com', '88984367', 1, 2, 1, NULL, NULL, NULL, NULL, NULL),
-(134, 'Jesús', 'Moreno', TO_DATE('1940-11-11', 'YYYY-MM-DD'), 'jesus.moreno@example.com', '88985478', 3, 3, 1, NULL, NULL, NULL, NULL, NULL),
-(135, 'Beatriz', 'Vega', TO_DATE('1954-02-26', 'YYYY-MM-DD'), 'beatriz.vega@example.com', '88986589', 2, 1, 1, NULL, NULL, NULL, NULL, NULL),
-(136, 'Rosa', 'Hernández', TO_DATE('1952-06-19', 'YYYY-MM-DD'), 'rosa.hernandez@example.com', '88987690', 1, 3, 1, NULL, NULL, NULL, NULL, NULL),
-(137, 'Juan', 'Martínez', TO_DATE('1948-12-12', 'YYYY-MM-DD'), 'juan.martinez@example.com', '88988701', 2, 2, 1, NULL, NULL, NULL, NULL, NULL),
-(138, 'José', 'Gómez', TO_DATE('1956-04-14', 'YYYY-MM-DD'), 'jose.gomez@example.com', '88989812', 1, 1, 1, NULL, NULL, NULL, NULL, NULL),
-(139, 'Raquel', 'Sánchez', TO_DATE('1944-10-25', 'YYYY-MM-DD'), 'raquel.sanchez@example.com', '88990923', 2, 3, 1, NULL, NULL, NULL, NULL, NULL),
-(140, 'Antonio', 'Cabrera', TO_DATE('1958-05-01', 'YYYY-MM-DD'), 'antonio.cabrera@example.com', '88992034', 3, 2, 1, NULL, NULL, NULL, NULL, NULL);
+INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
+Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
+VALUES(121, 'Juan', 'Serrano', TO_DATE('1955-11-20', 'YYYY-MM-DD'), 'juan.serrano@example.com', 
+'88971145', 2, 1, 1, NULL, NULL, NULL, NULL, NULL)
+
+INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
+Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
+VALUES(122, 'Teresa', 'Castro', TO_DATE('1948-02-17', 'YYYY-MM-DD'), 'teresa.castro@example.com', 
+'88972256', 3, 2, 1, NULL, NULL, NULL, NULL, NULL)
+
+INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
+Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
+VALUES(123, 'Carlos', 'Vargas', TO_DATE('1953-03-30', 'YYYY-MM-DD'), 'carlos.vargas@example.com', 
+'88973367', 1, 3, 1, NULL, NULL, NULL, NULL, NULL)
+
+INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
+Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
+VALUES(124, 'Lucía', 'Rodríguez', TO_DATE('1945-07-23', 'YYYY-MM-DD'), 'lucia.rodriguez@example.com',
+'88974478', 2, 1, 1, NULL, NULL, NULL, NULL, NULL)
+
+INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
+Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
+VALUES(125, 'Miguel', 'López', TO_DATE('1950-01-04', 'YYYY-MM-DD'), 'miguel.lopez@example.com', 
+'88975589', 3, 2, 1, NULL, NULL, NULL, NULL, NULL)
+
+INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
+Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
+VALUES(126, 'Eva', 'Ramírez', TO_DATE('1938-04-29', 'YYYY-MM-DD'), 'eva.ramirez@example.com', 
+'88976690', 1, 1, 1, NULL, NULL, NULL, NULL, NULL)
+
+INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
+Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
+VALUES(127, 'José', 'Gutiérrez', TO_DATE('1942-08-15', 'YYYY-MM-DD'), 'jose.gutierrez@example.com', 
+'88977701', 2, 3, 1, NULL, NULL, NULL, NULL, NULL)
+
+INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
+Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
+VALUES(128, 'María', 'Álvarez', TO_DATE('1949-09-03', 'YYYY-MM-DD'), 'maria.alvarez@example.com',
+'88978812', 1, 2, 1, NULL, NULL, NULL, NULL, NULL)
+
+INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
+Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
+VALUES(129, 'Antonio', 'Martínez', TO_DATE('1957-06-11', 'YYYY-MM-DD'), 'antonio.martinez@example.com',
+'88979923', 3, 1, 1, NULL, NULL, NULL, NULL, NULL)
+
+INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
+Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
+VALUES(130, 'Ana', 'Fernández', TO_DATE('1946-05-12', 'YYYY-MM-DD'), 'ana.fernandez@example.com',
+'88981034', 2, 2, 1, NULL, NULL, NULL, NULL, NULL)
+
+INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
+Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
+VALUES(131, 'Carlos', 'García', TO_DATE('1951-03-25', 'YYYY-MM-DD'), 'carlos.garcia@example.com', 
+'88982145', 1, 3, 1, NULL, NULL, NULL, NULL, NULL)
+
+INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
+Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
+VALUES(132, 'Marta', 'Jiménez', TO_DATE('1959-12-18', 'YYYY-MM-DD'), 'marta.jimenez@example.com', 
+'88983256', 2, 1, 1, NULL, NULL, NULL, NULL, NULL)
+
+INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
+Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
+VALUES(133, 'Luis', 'Torres', TO_DATE('1950-07-05', 'YYYY-MM-DD'), 'luis.torres@example.com',
+'88984367', 1, 2, 1, NULL, NULL, NULL, NULL, NULL)
+
+INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
+Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
+VALUES(134, 'Jesús', 'Moreno', TO_DATE('1940-11-11', 'YYYY-MM-DD'), 'jesus.moreno@example.com', 
+'88985478', 3, 3, 1, NULL, NULL, NULL, NULL, NULL)
+
+INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
+Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
+VALUES(135, 'Beatriz', 'Vega', TO_DATE('1954-02-26', 'YYYY-MM-DD'), 'beatriz.vega@example.com', 
+'88986589', 2, 1, 1, NULL, NULL, NULL, NULL, NULL)
+
+INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
+Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
+VALUES(136, 'Rosa', 'Hernández', TO_DATE('1952-06-19', 'YYYY-MM-DD'), 'rosa.hernandez@example.com', 
+'88987690', 1, 3, 1, NULL, NULL, NULL, NULL, NULL)
+
+INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
+Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
+VALUES(137, 'Juan', 'Martínez', TO_DATE('1948-12-12', 'YYYY-MM-DD'), 'juan.martinez@example.com', 
+'88988701', 2, 2, 1, NULL, NULL, NULL, NULL, NULL)
+
+INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
+Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
+VALUES(138, 'José', 'Gómez', TO_DATE('1956-04-14', 'YYYY-MM-DD'), 'jose.gomez@example.com', 
+'88989812', 1, 1, 1, NULL, NULL, NULL, NULL, NULL)
+
+INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
+Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
+VALUES(139, 'Raquel', 'Sánchez', TO_DATE('1944-10-25', 'YYYY-MM-DD'), 'raquel.sanchez@example.com', 
+'88990923', 2, 3, 1, NULL, NULL, NULL, NULL, NULL)
+
+INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
+Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
+VALUES(140, 'Antonio', 'Cabrera', TO_DATE('1958-05-01', 'YYYY-MM-DD'), 'antonio.cabrera@example.com', 
+'88992034', 3, 2, 1, NULL, NULL, NULL, NULL, NULL)
 
 -- Registros 141-160
-(141, 'Laura', 'Pérez', TO_DATE('2003-07-15', 'YYYY-MM-DD'), 'laura.perez@example.com', '88993145', 1, 2, 1, NULL, NULL, NULL, NULL, NULL),
-(142, 'Daniel', 'Ramírez', TO_DATE('2000-05-30', 'YYYY-MM-DD'), 'daniel.ramirez@example.com', '88994256', 2, 3, 1, NULL, NULL, NULL, NULL, NULL),
-(143, 'Valeria', 'Sánchez', TO_DATE('1999-10-09', 'YYYY-MM-DD'), 'valeria.sanchez@example.com', '88995367', 3, 1, 1, NULL, NULL, NULL, NULL, NULL),
-(144, 'Tomás', 'Torres', TO_DATE('2004-01-21', 'YYYY-MM-DD'), 'tomas.torres@example.com', '88996478', 1, 2, 1, NULL, NULL, NULL, NULL, NULL),
-(145, 'Paula', 'García', TO_DATE('1998-09-11', 'YYYY-MM-DD'), 'paula.garcia@example.com', '88997589', 2, 3, 1, NULL, NULL, NULL, NULL, NULL),
-(146, 'Mateo', 'Martínez', TO_DATE('2001-06-25', 'YYYY-MM-DD'), 'mateo.martinez@example.com', '88998690', 1, 1, 1, NULL, NULL, NULL, NULL, NULL),
-(147, 'Carmen', 'López', TO_DATE('2002-11-02', 'YYYY-MM-DD'), 'carmen.lopez@example.com', '88999701', 2, 2, 1, NULL, NULL, NULL, NULL, NULL),
-(148, 'Iván', 'Hernández', TO_DATE('1997-04-06', 'YYYY-MM-DD'), 'ivan.hernandez@example.com', '89000812', 3, 1, 1, NULL, NULL, NULL, NULL, NULL),
-(149, 'Lucía', 'González', TO_DATE('1996-08-19', 'YYYY-MM-DD'), 'lucia.gonzalez@example.com', '89001923', 1, 3, 1, NULL, NULL, NULL, NULL, NULL),
-(150, 'David', 'Suárez', TO_DATE('2005-02-13', 'YYYY-MM-DD'), 'david.suarez@example.com', '89003034', 2, 1, 1, NULL, NULL, NULL, NULL, NULL),
-(151, 'Javier', 'Blanco', TO_DATE('1999-01-10', 'YYYY-MM-DD'), 'javier.blanco@example.com', '89004145', 3, 2, 1, NULL, NULL, NULL, NULL, NULL),
-(152, 'Raúl', 'Vega', TO_DATE('2000-12-24', 'YYYY-MM-DD'), 'raul.vega@example.com', '89005256', 1, 2, 1, NULL, NULL, NULL, NULL, NULL),
-(153, 'Isabel', 'Jiménez', TO_DATE('2003-05-03', 'YYYY-MM-DD'), 'isabel.jimenez@example.com', '89006367', 2, 3, 1, NULL, NULL, NULL, NULL, NULL),
-(154, 'Alba', 'González', TO_DATE('2002-02-22', 'YYYY-MM-DD'), 'alba.gonzalez@example.com', '89007478', 1, 1, 1, NULL, NULL, NULL, NULL, NULL),
-(155, 'Óscar', 'Cabrera', TO_DATE('2004-09-12', 'YYYY-MM-DD'), 'oscar.cabrera@example.com', '89008589', 3, 2, 1, NULL, NULL, NULL, NULL, NULL),
-(156, 'Andrea', 'López', TO_DATE('1997-11-01', 'YYYY-MM-DD'), 'andrea.lopez@example.com', '89009690', 2, 1, 1, NULL, NULL, NULL, NULL, NULL),
-(157, 'Luis', 'Vázquez', TO_DATE('2001-08-14', 'YYYY-MM-DD'), 'luis.vazquez@example.com', '89010701', 1, 3, 1, NULL, NULL, NULL, NULL, NULL),
-(158, 'Martín', 'Pérez', TO_DATE('1998-04-04', 'YYYY-MM-DD'), 'martin.perez@example.com', '89011812', 2, 2, 1, NULL, NULL, NULL, NULL, NULL),
-(159, 'Sofía', 'Gutiérrez', TO_DATE('2000-03-13', 'YYYY-MM-DD'), 'sofia.gutierrez@example.com', '89012923', 1, 1, 1, NULL, NULL, NULL, NULL, NULL),
-(160, 'Alfredo', 'Ramírez', TO_DATE('1999-07-07', 'YYYY-MM-DD'), 'alfredo.ramirez@example.com', '89014034', 3, 2, 1, NULL, NULL, NULL, NULL, NULL),
+INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
+Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
+VALUES(141, 'Laura', 'Pérez', TO_DATE('2003-07-15', 'YYYY-MM-DD'), 'laura.perez@example.com', 
+'88993145', 1, 2, 1, NULL, NULL, NULL, NULL, NULL)
+
+INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
+Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
+VALUES(142, 'Daniel', 'Ramírez', TO_DATE('2000-05-30', 'YYYY-MM-DD'), 'daniel.ramirez@example.com', 
+'88994256', 2, 3, 1, NULL, NULL, NULL, NULL, NULL)
+
+INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
+Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
+VALUES(143, 'Valeria', 'Sánchez', TO_DATE('1999-10-09', 'YYYY-MM-DD'), 'valeria.sanchez@example.com', 
+'88995367', 3, 1, 1, NULL, NULL, NULL, NULL, NULL)
+
+INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
+Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
+VALUES(144, 'Tomás', 'Torres', TO_DATE('2004-01-21', 'YYYY-MM-DD'), 'tomas.torres@example.com', 
+'88996478', 1, 2, 1, NULL, NULL, NULL, NULL, NULL)
+
+INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
+Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
+VALUES(145, 'Paula', 'García', TO_DATE('1998-09-11', 'YYYY-MM-DD'), 'paula.garcia@example.com', 
+'88997589', 2, 3, 1, NULL, NULL, NULL, NULL, NULL)
+
+INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
+Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
+VALUES(146, 'Mateo', 'Martínez', TO_DATE('2001-06-25', 'YYYY-MM-DD'), 'mateo.martinez@example.com', 
+'88998690', 1, 1, 1, NULL, NULL, NULL, NULL, NULL)
+
+INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
+Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
+VALUES(147, 'Carmen', 'López', TO_DATE('2002-11-02', 'YYYY-MM-DD'), 'carmen.lopez@example.com', 
+'88999701', 2, 2, 1, NULL, NULL, NULL, NULL, NULL)
+
+INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
+Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
+VALUES(148, 'Iván', 'Hernández', TO_DATE('1997-04-06', 'YYYY-MM-DD'), 'ivan.hernandez@example.com', 
+'89000812', 3, 1, 1, NULL, NULL, NULL, NULL, NULL)
+
+INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
+Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
+VALUES(149, 'Lucía', 'González', TO_DATE('1996-08-19', 'YYYY-MM-DD'), 'lucia.gonzalez@example.com', 
+'89001923', 1, 3, 1, NULL, NULL, NULL, NULL, NULL)
+
+INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
+Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
+VALUES(150, 'David', 'Suárez', TO_DATE('2005-02-13', 'YYYY-MM-DD'), 'david.suarez@example.com', 
+'89003034', 2, 1, 1, NULL, NULL, NULL, NULL, NULL)
+
+INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
+Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
+VALUES(151, 'Javier', 'Blanco', TO_DATE('1999-01-10', 'YYYY-MM-DD'), 'javier.blanco@example.com', 
+'89004145', 3, 2, 1, NULL, NULL, NULL, NULL, NULL)
+
+INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
+Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
+VALUES(152, 'Raúl', 'Vega', TO_DATE('2000-12-24', 'YYYY-MM-DD'), 'raul.vega@example.com', 
+'89005256', 1, 2, 1, NULL, NULL, NULL, NULL, NULL)
+
+INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
+Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
+VALUES(153, 'Isabel', 'Jiménez', TO_DATE('2003-05-03', 'YYYY-MM-DD'), 'isabel.jimenez@example.com', 
+'89006367', 2, 3, 1, NULL, NULL, NULL, NULL, NULL)
+
+INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
+Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
+VALUES(154, 'Alba', 'González', TO_DATE('2002-02-22', 'YYYY-MM-DD'), 'alba.gonzalez@example.com', 
+'89007478', 1, 1, 1, NULL, NULL, NULL, NULL, NULL)
+
+INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
+Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
+VALUES(155, 'Óscar', 'Cabrera', TO_DATE('2004-09-12', 'YYYY-MM-DD'), 'oscar.cabrera@example.com', 
+'89008589', 3, 2, 1, NULL, NULL, NULL, NULL, NULL)
+
+INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
+Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
+VALUES(156, 'Andrea', 'López', TO_DATE('1997-11-01', 'YYYY-MM-DD'), 'andrea.lopez@example.com', 
+'89009690', 2, 1, 1, NULL, NULL, NULL, NULL, NULL)
+
+INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
+Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
+VALUES(157, 'Luis', 'Vázquez', TO_DATE('2001-08-14', 'YYYY-MM-DD'), 'luis.vazquez@example.com', 
+'89010701', 1, 3, 1, NULL, NULL, NULL, NULL, NULL)
+
+INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
+Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
+VALUES(158, 'Martín', 'Pérez', TO_DATE('1998-04-04', 'YYYY-MM-DD'), 'martin.perez@example.com',
+'89011812', 2, 2, 1, NULL, NULL, NULL, NULL, NULL)
+
+INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
+Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
+VALUES(159, 'Sofía', 'Gutiérrez', TO_DATE('2000-03-13', 'YYYY-MM-DD'), 'sofia.gutierrez@example.com', 
+'89012923', 1, 1, 1, NULL, NULL, NULL, NULL, NULL)
+
+INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
+Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
+VALUES(160, 'Alfredo', 'Ramírez', TO_DATE('1999-07-07', 'YYYY-MM-DD'), 'alfredo.ramirez@example.com', 
+'89014034', 3, 2, 1, NULL, NULL, NULL, NULL, NULL)
 
 -- Registros 161-180
-(161, 'Elena', 'Suárez', TO_DATE('2003-04-02', 'YYYY-MM-DD'), 'elena.suarez@example.com', '89015145', 2, 1, 1, NULL, NULL, NULL, NULL, NULL),
-(162, 'Beatriz', 'Hernández', TO_DATE('2001-10-29', 'YYYY-MM-DD'), 'beatriz.hernandez@example.com', '89016256', 1, 2, 1, NULL, NULL, NULL, NULL, NULL),
-(163, 'Pedro', 'Castaño', TO_DATE('1997-06-13', 'YYYY-MM-DD'), 'pedro.castano@example.com', '89017367', 2, 3, 1, NULL, NULL, NULL, NULL, NULL),
-(164, 'Marcos', 'Torres', TO_DATE('1996-12-25', 'YYYY-MM-DD'), 'marcos.torres@example.com', '89018478', 1, 1, 1, NULL, NULL, NULL, NULL, NULL),
-(165, 'Paula', 'González', TO_DATE('2002-05-20', 'YYYY-MM-DD'), 'paula.gonzalez@example.com', '89019589', 3, 2, 1, NULL, NULL, NULL, NULL, NULL),
-(166, 'Raquel', 'Martínez', TO_DATE('2004-04-18', 'YYYY-MM-DD'), 'raquel.martinez@example.com', '89020690', 1, 3, 1, NULL, NULL, NULL, NULL, NULL),
-(167, 'Iván', 'Suárez', TO_DATE('2005-07-06', 'YYYY-MM-DD'), 'ivan.suarez@example.com', '89021701', 2, 1, 1, NULL, NULL, NULL, NULL, NULL),
-(168, 'Celia', 'López', TO_DATE('2001-12-14', 'YYYY-MM-DD'), 'celia.lopez@example.com', '89022812', 3, 2, 1, NULL, NULL, NULL, NULL, NULL),
-(169, 'Nicolás', 'Pérez', TO_DATE('1999-09-19', 'YYYY-MM-DD'), 'nicolas.perez@example.com', '89023923', 1, 1, 1, NULL, NULL, NULL, NULL, NULL),
-(170, 'Paola', 'García', TO_DATE('2002-01-03', 'YYYY-MM-DD'), 'paola.garcia@example.com', '89025034', 2, 3, 1, NULL, NULL, NULL, NULL, NULL),
-(171, 'Claudia', 'Vega', TO_DATE('2005-11-22', 'YYYY-MM-DD'), 'claudia.vega@example.com', '89026145', 1, 2, 1, NULL, NULL, NULL, NULL, NULL),
-(172, 'Emilio', 'Torres', TO_DATE('2000-06-17', 'YYYY-MM-DD'), 'emilio.torres@example.com', '89027256', 3, 1, 1, NULL, NULL, NULL, NULL, NULL),
-(173, 'Mercedes', 'Hernández', TO_DATE('1997-05-09', 'YYYY-MM-DD'), 'mercedes.hernandez@example.com', '89028367', 2, 2, 1, NULL, NULL, NULL, NULL, NULL),
-(174, 'Raúl', 'Vázquez', TO_DATE('2003-02-12', 'YYYY-MM-DD'), 'raul.vazquez@example.com', '89029478', 1, 3, 1, NULL, NULL, NULL, NULL, NULL),
-(175, 'Lidia', 'Cabrera', TO_DATE('1998-10-23', 'YYYY-MM-DD'), 'lidia.cabrera@example.com', '89030589', 2, 1, 1, NULL, NULL, NULL, NULL, NULL),
-(176, 'Ángel', 'Gutiérrez', TO_DATE('2001-04-15', 'YYYY-MM-DD'), 'angel.gutierrez@example.com', '89031690', 3, 2, 1, NULL, NULL, NULL, NULL, NULL),
-(177, 'Andrea', 'Jiménez', TO_DATE('1996-11-09', 'YYYY-MM-DD'), 'andrea.jimenez@example.com', '89032701', 1, 1, 1, NULL, NULL, NULL, NULL, NULL),
-(178, 'Felipe', 'Sánchez', TO_DATE('2004-03-19', 'YYYY-MM-DD'), 'felipe.sanchez@example.com', '89033812', 2, 3, 1, NULL, NULL, NULL, NULL, NULL),
-(179, 'Cristina', 'Vega', TO_DATE('2002-06-30', 'YYYY-MM-DD'), 'cristina.vega@example.com', '89034923', 1, 2, 1, NULL, NULL, NULL, NULL, NULL);
-(180, 'Alejandro', 'Herrera', TO_DATE('1990-01-01', 'YYYY-MM-DD'), 'alejandro.herrera@example.com', '88881115', 1, 1, 1, NULL, NULL, NULL, NULL, NULL),
+INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
+Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
+VALUES(161, 'Elena', 'Suárez', TO_DATE('2003-04-02', 'YYYY-MM-DD'), 'elena.suarez@example.com', 
+'89015145', 2, 1, 1, NULL, NULL, NULL, NULL, NULL)
+
+INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
+Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
+VALUES(162, 'Beatriz', 'Hernández', TO_DATE('2001-10-29', 'YYYY-MM-DD'), 'beatriz.hernandez@example.com', 
+'89016256', 1, 2, 1, NULL, NULL, NULL, NULL, NULL)
+
+INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
+Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
+VALUES(163, 'Pedro', 'Castaño', TO_DATE('1997-06-13', 'YYYY-MM-DD'), 'pedro.castano@example.com', 
+'89017367', 2, 3, 1, NULL, NULL, NULL, NULL, NULL)
+
+INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
+Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
+VALUES(164, 'Marcos', 'Torres', TO_DATE('1996-12-25', 'YYYY-MM-DD'), 'marcos.torres@example.com', 
+'89018478', 1, 1, 1, NULL, NULL, NULL, NULL, NULL)
+
+INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
+Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
+VALUES(165, 'Paula', 'González', TO_DATE('2002-05-20', 'YYYY-MM-DD'), 'paula.gonzalez@example.com', 
+'89019589', 3, 2, 1, NULL, NULL, NULL, NULL, NULL)
+
+INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
+Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
+VALUES(166, 'Raquel', 'Martínez', TO_DATE('2004-04-18', 'YYYY-MM-DD'), 'raquel.martinez@example.com',
+'89020690', 1, 3, 1, NULL, NULL, NULL, NULL, NULL)
+
+INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
+Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
+VALUES(167, 'Iván', 'Suárez', TO_DATE('2005-07-06', 'YYYY-MM-DD'), 'ivan.suarez@example.com', 
+'89021701', 2, 1, 1, NULL, NULL, NULL, NULL, NULL)
+
+INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
+Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
+VALUES(168, 'Celia', 'López', TO_DATE('2001-12-14', 'YYYY-MM-DD'), 'celia.lopez@example.com', 
+'89022812', 3, 2, 1, NULL, NULL, NULL, NULL, NULL)
+
+INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
+Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
+VALUES(169, 'Nicolás', 'Pérez', TO_DATE('1999-09-19', 'YYYY-MM-DD'), 'nicolas.perez@example.com', 
+'89023923', 1, 1, 1, NULL, NULL, NULL, NULL, NULL)
+
+INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
+Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
+VALUES(170, 'Paola', 'García', TO_DATE('2002-01-03', 'YYYY-MM-DD'), 'paola.garcia@example.com', 
+'89025034', 2, 3, 1, NULL, NULL, NULL, NULL, NULL)
+
+INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
+Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
+VALUES(171, 'Claudia', 'Vega', TO_DATE('2005-11-22', 'YYYY-MM-DD'), 'claudia.vega@example.com', 
+'89026145', 1, 2, 1, NULL, NULL, NULL, NULL, NULL)
+
+INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
+Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
+VALUES(172, 'Emilio', 'Torres', TO_DATE('2000-06-17', 'YYYY-MM-DD'), 'emilio.torres@example.com', 
+'89027256', 3, 1, 1, NULL, NULL, NULL, NULL, NULL)
+
+INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
+Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
+VALUES(173, 'Mercedes', 'Hernández', TO_DATE('1997-05-09', 'YYYY-MM-DD'), 'mercedes.hernandez@example.com', 
+'89028367', 2, 2, 1, NULL, NULL, NULL, NULL, NULL)
+
+INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
+Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
+VALUES(174, 'Raúl', 'Vázquez', TO_DATE('2003-02-12', 'YYYY-MM-DD'), 'raul.vazquez@example.com', 
+'89029478', 1, 3, 1, NULL, NULL, NULL, NULL, NULL)
+
+INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
+Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
+VALUES(175, 'Lidia', 'Cabrera', TO_DATE('1998-10-23', 'YYYY-MM-DD'), 'lidia.cabrera@example.com', 
+'89030589', 2, 1, 1, NULL, NULL, NULL, NULL, NULL)
+
+INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
+Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
+VALUES(176, 'Ángel', 'Gutiérrez', TO_DATE('2001-04-15', 'YYYY-MM-DD'), 'angel.gutierrez@example.com', 
+'89031690', 3, 2, 1, NULL, NULL, NULL, NULL, NULL)
+
+INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
+Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
+VALUES(177, 'Andrea', 'Jiménez', TO_DATE('1996-11-09', 'YYYY-MM-DD'), 'andrea.jimenez@example.com', 
+'89032701', 1, 1, 1, NULL, NULL, NULL, NULL, NULL)
+
+INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
+Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
+VALUES(178, 'Felipe', 'Sánchez', TO_DATE('2004-03-19', 'YYYY-MM-DD'), 'felipe.sanchez@example.com', 
+'89033812', 2, 3, 1, NULL, NULL, NULL, NULL, NULL)
+
+INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
+Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
+VALUES(179, 'Cristina', 'Vega', TO_DATE('2002-06-30', 'YYYY-MM-DD'), 'cristina.vega@example.com',
+'89034923', 1, 2, 1, NULL, NULL, NULL, NULL, NULL)
+
+INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
+Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
+VALUES(180, 'Alejandro', 'Herrera', TO_DATE('1990-01-01', 'YYYY-MM-DD'), 'alejandro.herrera@example.com',
+'88881115', 1, 1, 1, NULL, NULL, NULL, NULL, NULL)
 
 -- Registros 180-200
-(181, 'Isabel', 'Morales', TO_DATE('1986-02-02', 'YYYY-MM-DD'), 'isabel.morales@example.com', '88882226', 2, 2, 1, NULL, NULL, NULL, NULL, NULL),
-(182, 'Jorge', 'Gutiérrez', TO_DATE('1992-03-03', 'YYYY-MM-DD'), 'jorge.gutierrez@example.com', '88883337', 1, 3, 1, NULL, NULL, NULL, NULL, NULL),
-(183, 'Patricia', 'Díaz', TO_DATE('1987-04-04', 'YYYY-MM-DD'), 'patricia.diaz@example.com', '88884448', 2, 4, 1, NULL, NULL, NULL, NULL, NULL),
-(184, 'Ricardo', 'Méndez', TO_DATE('1993-05-05', 'YYYY-MM-DD'), 'ricardo.mendez@example.com', '88885559', 1, 5, 1, NULL, NULL, NULL, NULL, NULL),
-(185, 'Lucía', 'Rojas', TO_DATE('1989-06-06', 'YYYY-MM-DD'), 'lucia.rojas@example.com', '88886670', 2, 6, 1, NULL, NULL, NULL, NULL, NULL),
-(186, 'Fernando', 'Castro', TO_DATE('1991-07-07', 'YYYY-MM-DD'), 'fernando.castro@example.com', '88887781', 1, 7, 1, NULL, NULL, NULL, NULL, NULL),
-(187, 'Gabriela', 'Romero', TO_DATE('1988-08-08', 'YYYY-MM-DD'), 'gabriela.romero@example.com', '88888892', 2, 8, 1, NULL, NULL, NULL, NULL, NULL),
-(188, 'Roberto', 'Alvarado', TO_DATE('1994-09-09', 'YYYY-MM-DD'), 'roberto.alvarado@example.com', '88889993', 1, 9, 1, NULL, NULL, NULL, NULL, NULL),
-(189, 'Mónica', 'Vega', TO_DATE('1990-10-10', 'YYYY-MM-DD'), 'monica.vega@example.com', '88880004', 2, 10, 1, NULL, NULL, NULL, NULL, NULL),
-(190, 'José', 'Navarro', TO_DATE('1985-11-11', 'YYYY-MM-DD'), 'jose.navarro@example.com', '88881116', 1, 11, 1, NULL, NULL, NULL, NULL, NULL),
-(191, 'Adriana', 'Molina', TO_DATE('1992-12-12', 'YYYY-MM-DD'), 'adriana.molina@example.com', '88882227', 2, 12, 1, NULL, NULL, NULL, NULL, NULL),
-(192, 'Miguel', 'Ríos', TO_DATE('1988-01-13', 'YYYY-MM-DD'), 'miguel.rios@example.com', '88883338', 1, 13, 1, NULL, NULL, NULL, NULL, NULL),
-(193, 'Verónica', 'Silva', TO_DATE('1993-02-14', 'YYYY-MM-DD'), 'veronica.silva@example.com', '88884449', 2, 14, 1, NULL, NULL, NULL, NULL, NULL),
-(194, 'Francisco', 'Campos', TO_DATE('1989-03-15', 'YYYY-MM-DD'), 'francisco.campos@example.com', '88885560', 1, 15, 1, NULL, NULL, NULL, NULL, NULL),
-(195, 'Daniela', 'Guerrero', TO_DATE('1995-04-16', 'YYYY-MM-DD'), 'daniela.guerrero@example.com', '88886671', 2, 16, 1, NULL, NULL, NULL, NULL, NULL),
-(196, 'Andrés', 'Vargas', TO_DATE('1991-05-17', 'YYYY-MM-DD'), 'andres.vargas@example.com', '88887782', 1, 17, 1, NULL, NULL, NULL, NULL, NULL),
-(197, 'Sara', 'Cruz', TO_DATE('1987-06-18', 'YYYY-MM-DD'), 'sara.cruz@example.com', '88888893', 2, 18, 1, NULL, NULL, NULL, NULL, NULL),
-(198, 'Raúl', 'Ortiz', TO_DATE('1994-07-19', 'YYYY-MM-DD'), 'raul.ortiz@example.com', '88889994', 1, 19, 1, NULL, NULL, NULL, NULL, NULL),
-(199, 'Natalia', 'Flores', TO_DATE('1990-08-20', 'YYYY-MM-DD'), 'natalia.flores@example.com', '88880005', 2, 20, 1, NULL, NULL, NULL, NULL, NULL),
-(200, 'Eduardo', 'Soto', TO_DATE('1986-09-21', 'YYYY-MM-DD'), 'eduardo.soto@example.com', '88881117', 1, 1, 1, NULL, NULL, NULL, NULL, NULL);
+INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
+Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
+VALUES(181, 'Isabel', 'Morales', TO_DATE('1986-02-02', 'YYYY-MM-DD'), 'isabel.morales@example.com', 
+'88882226', 2, 2, 1, NULL, NULL, NULL, NULL, NULL)
+
+INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
+Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
+VALUES(182, 'Jorge', 'Gutiérrez', TO_DATE('1992-03-03', 'YYYY-MM-DD'), 'jorge.gutierrez@example.com', 
+'88883337', 1, 3, 1, NULL, NULL, NULL, NULL, NULL)
+
+INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
+Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
+VALUES(183, 'Patricia', 'Díaz', TO_DATE('1987-04-04', 'YYYY-MM-DD'), 'patricia.diaz@example.com', 
+'88884448', 2, 4, 1, NULL, NULL, NULL, NULL, NULL)
+
+INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
+Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
+VALUES(184, 'Ricardo', 'Méndez', TO_DATE('1993-05-05', 'YYYY-MM-DD'), 'ricardo.mendez@example.com',
+'88885559', 1, 5, 1, NULL, NULL, NULL, NULL, NULL)
+
+INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
+Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
+VALUES(185, 'Lucía', 'Rojas', TO_DATE('1989-06-06', 'YYYY-MM-DD'), 'lucia.rojas@example.com', 
+'88886670', 2, 6, 1, NULL, NULL, NULL, NULL, NULL)
+
+INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
+Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
+VALUES(186, 'Fernando', 'Castro', TO_DATE('1991-07-07', 'YYYY-MM-DD'), 'fernando.castro@example.com', 
+'88887781', 1, 7, 1, NULL, NULL, NULL, NULL, NULL)
+
+INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
+Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
+VALUES(187, 'Gabriela', 'Romero', TO_DATE('1988-08-08', 'YYYY-MM-DD'), 'gabriela.romero@example.com', 
+'88888892', 2, 8, 1, NULL, NULL, NULL, NULL, NULL)
+
+INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
+Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
+VALUES(188, 'Roberto', 'Alvarado', TO_DATE('1994-09-09', 'YYYY-MM-DD'), 'roberto.alvarado@example.com', 
+'88889993', 1, 9, 1, NULL, NULL, NULL, NULL, NULL)
+
+INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
+Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
+VALUES(189, 'Mónica', 'Vega', TO_DATE('1990-10-10', 'YYYY-MM-DD'), 'monica.vega@example.com', 
+'88880004', 2, 10, 1, NULL, NULL, NULL, NULL, NULL)
+
+INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
+Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
+VALUES(190, 'José', 'Navarro', TO_DATE('1985-11-11', 'YYYY-MM-DD'), 'jose.navarro@example.com', 
+'88881116', 1, 11, 1, NULL, NULL, NULL, NULL, NULL)
+
+INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
+Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
+VALUES(191, 'Adriana', 'Molina', TO_DATE('1992-12-12', 'YYYY-MM-DD'), 'adriana.molina@example.com', 
+'88882227', 2, 12, 1, NULL, NULL, NULL, NULL, NULL)
+
+INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
+Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
+VALUES(192, 'Miguel', 'Ríos', TO_DATE('1988-01-13', 'YYYY-MM-DD'), 'miguel.rios@example.com', 
+'88883338', 1, 13, 1, NULL, NULL, NULL, NULL, NULL)
+
+INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
+Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
+VALUES(193, 'Verónica', 'Silva', TO_DATE('1993-02-14', 'YYYY-MM-DD'), 'veronica.silva@example.com', 
+'88884449', 2, 14, 1, NULL, NULL, NULL, NULL, NULL)
+
+INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
+Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
+VALUES(194, 'Francisco', 'Campos', TO_DATE('1989-03-15', 'YYYY-MM-DD'), 'francisco.campos@example.com', 
+'88885560', 1, 15, 1, NULL, NULL, NULL, NULL, NULL)
+
+INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
+Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
+VALUES(195, 'Daniela', 'Guerrero', TO_DATE('1995-04-16', 'YYYY-MM-DD'), 'daniela.guerrero@example.com', 
+'88886671', 2, 16, 1, NULL, NULL, NULL, NULL, NULL)
+
+INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
+Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
+VALUES(196, 'Andrés', 'Vargas', TO_DATE('1991-05-17', 'YYYY-MM-DD'), 'andres.vargas@example.com',
+'88887782', 1, 17, 1, NULL, NULL, NULL, NULL, NULL)
+
+INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
+Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
+VALUES(197, 'Sara', 'Cruz', TO_DATE('1987-06-18', 'YYYY-MM-DD'), 'sara.cruz@example.com', 
+'88888893', 2, 18, 1, NULL, NULL, NULL, NULL, NULL)
+
+INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
+Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
+VALUES(198, 'Raúl', 'Ortiz', TO_DATE('1994-07-19', 'YYYY-MM-DD'), 'raul.ortiz@example.com', 
+'88889994', 1, 19, 1, NULL, NULL, NULL, NULL, NULL)
+
+INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
+Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
+VALUES(199, 'Natalia', 'Flores', TO_DATE('1990-08-20', 'YYYY-MM-DD'), 'natalia.flores@example.com', 
+'88880005', 2, 20, 1, NULL, NULL, NULL, NULL, NULL)
+
+INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
+Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
+VALUES(200, 'Eduardo', 'Soto', TO_DATE('1986-09-21', 'YYYY-MM-DD'), 'eduardo.soto@example.com', 
+'88881117', 1, 1, 1, NULL, NULL, NULL, NULL, NULL)
+
+SELECT 1 FROM DUAL;
 /
 
 
