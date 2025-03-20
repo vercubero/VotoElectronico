@@ -42,10 +42,10 @@ VALUES (7, 'Limï¿½n', NULL, NULL, NULL, NULL, NULL);
 
 -- Provincia: San Josï¿½ (Provincia_ID: 1)
 INSERT INTO FIDE_CANTONES_TB (Canton_ID, Nombre, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
-VALUES (1, 'San Josï¿½', NULL, NULL, NULL, NULL, NULL);
+VALUES (1, 'San Jose', NULL, NULL, NULL, NULL, NULL);
 
 INSERT INTO FIDE_CANTONES_TB (Canton_ID, Nombre, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
-VALUES (2, 'Escazï¿½', NULL, NULL, NULL, NULL, NULL);
+VALUES (2, 'Escazu', NULL, NULL, NULL, NULL, NULL);
 
 INSERT INTO FIDE_CANTONES_TB (Canton_ID, Nombre, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
 VALUES (3, 'Desamparados', NULL, NULL, NULL, NULL, NULL);
@@ -54,10 +54,10 @@ INSERT INTO FIDE_CANTONES_TB (Canton_ID, Nombre, creado_por, modificado_por, fec
 VALUES (4, 'Puriscal', NULL, NULL, NULL, NULL, NULL);
 
 INSERT INTO FIDE_CANTONES_TB (Canton_ID, Nombre, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
-VALUES (5, 'Tarrazï¿½', NULL, NULL, NULL, NULL, NULL);
+VALUES (5, 'Tarrazu', NULL, NULL, NULL, NULL, NULL);
 
 INSERT INTO FIDE_CANTONES_TB (Canton_ID, Nombre, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
-VALUES (6, 'Aserrï¿½', NULL, NULL, NULL, NULL, NULL);
+VALUES (6, 'Aserri', NULL, NULL, NULL, NULL, NULL);
 
 INSERT INTO FIDE_CANTONES_TB (Canton_ID, Nombre, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
 VALUES (7, 'Mora', NULL, NULL, NULL, NULL, NULL);
@@ -72,13 +72,13 @@ INSERT INTO FIDE_CANTONES_TB (Canton_ID, Nombre, creado_por, modificado_por, fec
 VALUES (10, 'Alajuelita', NULL, NULL, NULL, NULL, NULL);
 
 INSERT INTO FIDE_CANTONES_TB (Canton_ID, Nombre, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
-VALUES (11, 'Vï¿½zquezdeCoronado', NULL, NULL, NULL, NULL, NULL);
+VALUES (11, 'VazquezdeCoronado', NULL, NULL, NULL, NULL, NULL);
 
 INSERT INTO FIDE_CANTONES_TB (Canton_ID, Nombre, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
 VALUES (12, 'Acosta', NULL, NULL, NULL, NULL, NULL);
 
 INSERT INTO FIDE_CANTONES_TB (Canton_ID, Nombre, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
-VALUES (13, 'Tibï¿½s', NULL, NULL, NULL, NULL, NULL);
+VALUES (13, 'Tibas', NULL, NULL, NULL, NULL, NULL);
 
 INSERT INTO FIDE_CANTONES_TB (Canton_ID, Nombre, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
 VALUES (14, 'Moravia', NULL, NULL, NULL, NULL, NULL);
@@ -96,17 +96,17 @@ INSERT INTO FIDE_CANTONES_TB (Canton_ID, Nombre, creado_por, modificado_por, fec
 VALUES (18, 'Curridabat', NULL, NULL, NULL, NULL, NULL);
 
 INSERT INTO FIDE_CANTONES_TB (Canton_ID, Nombre, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
-VALUES (19, 'Pï¿½rez Zeledï¿½n', NULL, NULL, NULL, NULL, NULL);
+VALUES (19, 'Perez Zeledon', NULL, NULL, NULL, NULL, NULL);
 
 INSERT INTO FIDE_CANTONES_TB (Canton_ID, Nombre, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
-VALUES (20, 'Leï¿½n Cortï¿½s', NULL, NULL, NULL, NULL, NULL);
+VALUES (20, 'Leon Cortes', NULL, NULL, NULL, NULL, NULL);
 
 -- Provincia: Alajuela (Provincia_ID: 2)
 INSERT INTO FIDE_CANTONES_TB (Canton_ID, Nombre, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
 VALUES (21, 'Alajuela', NULL, NULL, NULL, NULL, NULL);
 
 INSERT INTO FIDE_CANTONES_TB (Canton_ID, Nombre, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
-VALUES (22, 'San Ramï¿½n', NULL, NULL, NULL, NULL, NULL);
+VALUES (22, 'San Ramon', NULL, NULL, NULL, NULL, NULL);
 
 INSERT INTO FIDE_CANTONES_TB (Canton_ID, Nombre, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
 VALUES (23, 'Grecia', NULL, NULL, NULL, NULL, NULL);
@@ -124,7 +124,7 @@ INSERT INTO FIDE_CANTONES_TB (Canton_ID, Nombre, creado_por, modificado_por, fec
 VALUES (27, 'Palmares', NULL, NULL, NULL, NULL, NULL);
 
 INSERT INTO FIDE_CANTONES_TB (Canton_ID, Nombre, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
-VALUES (28, 'Poï¿½s', NULL, NULL, NULL, NULL, NULL);
+VALUES (28, 'Poas', NULL, NULL, NULL, NULL, NULL);
 
 INSERT INTO FIDE_CANTONES_TB (Canton_ID, Nombre, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
 VALUES (29, 'Orotina', NULL, NULL, NULL, NULL, NULL);
@@ -152,13 +152,13 @@ INSERT INTO FIDE_CANTONES_TB (Canton_ID, Nombre, creado_por, modificado_por, fec
 VALUES (36, 'Cartago', NULL, NULL, NULL, NULL, NULL);
 
 INSERT INTO FIDE_CANTONES_TB (Canton_ID, Nombre, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
-VALUES (37, 'Paraï¿½so', NULL, NULL, NULL, NULL, NULL);
+VALUES (37, 'Paraiso', NULL, NULL, NULL, NULL, NULL);
 
 INSERT INTO FIDE_CANTONES_TB (Canton_ID, Nombre, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
-VALUES (38, 'La Uniï¿½n', NULL, NULL, NULL, NULL, NULL);
+VALUES (38, 'La Union', NULL, NULL, NULL, NULL, NULL);
 
 INSERT INTO FIDE_CANTONES_TB (Canton_ID, Nombre, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
-VALUES (39, 'Jimï¿½nez', NULL, NULL, NULL, NULL, NULL);
+VALUES (39, 'Jimenez', NULL, NULL, NULL, NULL, NULL);
 
 INSERT INTO FIDE_CANTONES_TB (Canton_ID, Nombre, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
 VALUES (40, 'Turrialba', NULL, NULL, NULL, NULL, NULL);
@@ -183,7 +183,7 @@ INSERT INTO FIDE_CANTONES_TB (Canton_ID, Nombre, creado_por, modificado_por, fec
 VALUES (46, 'Santo Domingo', NULL, NULL, NULL, NULL, NULL);
 
 INSERT INTO FIDE_CANTONES_TB (Canton_ID, Nombre, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
-VALUES (47, 'Santa Bï¿½rbara', NULL, NULL, NULL, NULL, NULL);
+VALUES (47, 'Santa Barbara', NULL, NULL, NULL, NULL, NULL);
 
 INSERT INTO FIDE_CANTONES_TB (Canton_ID, Nombre, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
 VALUES (48, 'San Rafael', NULL, NULL, NULL, NULL, NULL);
@@ -192,7 +192,7 @@ INSERT INTO FIDE_CANTONES_TB (Canton_ID, Nombre, creado_por, modificado_por, fec
 VALUES (49, 'San Isidro', NULL, NULL, NULL, NULL, NULL);
 
 INSERT INTO FIDE_CANTONES_TB (Canton_ID, Nombre, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
-VALUES (50, 'Belï¿½n', NULL, NULL, NULL, NULL, NULL);
+VALUES (50, 'Belen', NULL, NULL, NULL, NULL, NULL);
 
 INSERT INTO FIDE_CANTONES_TB (Canton_ID, Nombre, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
 VALUES (51, 'Flores', NULL, NULL, NULL, NULL, NULL);
@@ -201,7 +201,7 @@ INSERT INTO FIDE_CANTONES_TB (Canton_ID, Nombre, creado_por, modificado_por, fec
 VALUES (52, 'San Pablo', NULL, NULL, NULL, NULL, NULL);
 
 INSERT INTO FIDE_CANTONES_TB (Canton_ID, Nombre, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
-VALUES (53, 'Sarapiquï¿½', NULL, NULL, NULL, NULL, NULL);
+VALUES (53, 'Sarapiqui', NULL, NULL, NULL, NULL, NULL);
 
 -- Provincia: Guanacaste (Provincia_ID: 5)
 INSERT INTO FIDE_CANTONES_TB (Canton_ID, Nombre, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
@@ -220,13 +220,13 @@ INSERT INTO FIDE_CANTONES_TB (Canton_ID, Nombre, creado_por, modificado_por, fec
 VALUES (58, 'Carrillo', NULL, NULL, NULL, NULL, NULL);
 
 INSERT INTO FIDE_CANTONES_TB (Canton_ID, Nombre, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
-VALUES (59, 'Caï¿½as', NULL, NULL, NULL, NULL, NULL);
+VALUES (59, 'Cañas', NULL, NULL, NULL, NULL, NULL);
 
 INSERT INTO FIDE_CANTONES_TB (Canton_ID, Nombre, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
 VALUES (60, 'Abangares', NULL, NULL, NULL, NULL, NULL);
 
 INSERT INTO FIDE_CANTONES_TB (Canton_ID, Nombre, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
-VALUES (61, 'Tilarï¿½n', NULL, NULL, NULL, NULL, NULL);
+VALUES (61, 'Tilaran', NULL, NULL, NULL, NULL, NULL);
 
 INSERT INTO FIDE_CANTONES_TB (Canton_ID, Nombre, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
 VALUES (62, 'Nandayure', NULL, NULL, NULL, NULL, NULL);
@@ -273,10 +273,10 @@ VALUES (75, 'Garabito', NULL, NULL, NULL, NULL, NULL);
 
 -- Provincia: Limï¿½n (Provincia_ID: 7)
 INSERT INTO FIDE_CANTONES_TB (Canton_ID, Nombre, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
-VALUES (76, 'Limï¿½n', NULL, NULL, NULL, NULL, NULL);
+VALUES (76, 'Limon', NULL, NULL, NULL, NULL, NULL);
 
 INSERT INTO FIDE_CANTONES_TB (Canton_ID, Nombre, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
-VALUES (77, 'Pococï¿½', NULL, NULL, NULL, NULL, NULL);
+VALUES (77, 'Pococi', NULL, NULL, NULL, NULL, NULL);
 
 INSERT INTO FIDE_CANTONES_TB (Canton_ID, Nombre, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
 VALUES (78, 'Siquirres', NULL, NULL, NULL, NULL, NULL);
@@ -288,10 +288,10 @@ INSERT INTO FIDE_CANTONES_TB (Canton_ID, Nombre, creado_por, modificado_por, fec
 VALUES (80, 'Matina', NULL, NULL, NULL, NULL, NULL);
 
 INSERT INTO FIDE_CANTONES_TB (Canton_ID, Nombre, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
-VALUES (81, 'Guï¿½cimo', NULL, NULL, NULL, NULL, NULL);
+VALUES (81, 'Guacimo', NULL, NULL, NULL, NULL, NULL);
 
 INSERT INTO FIDE_CANTONES_TB (Canton_ID, Nombre, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
-VALUES (82, 'Rï¿½o Cuarto', NULL, NULL, NULL, NULL, NULL);
+VALUES (82, 'Rio Cuarto', NULL, NULL, NULL, NULL, NULL);
 /
 
 
@@ -300,7 +300,7 @@ INSERT INTO FIDE_DISTRITOS_TB (Distrito_ID, Nombre, creado_por, modificado_por, 
 VALUES (1, 'Carmen', NULL, NULL, NULL, NULL, NULL); -- Cantï¿½n: San Josï¿½ (Canton_ID: 1)
 
 INSERT INTO FIDE_DISTRITOS_TB (Distrito_ID, Nombre, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
-VALUES (2, 'Escazï¿½', NULL, NULL, NULL, NULL, NULL); -- Cantï¿½n: Escazï¿½ (Canton_ID: 2)
+VALUES (2, 'Escazu', NULL, NULL, NULL, NULL, NULL); -- Cantï¿½n: Escazï¿½ (Canton_ID: 2)
 
 INSERT INTO FIDE_DISTRITOS_TB (Distrito_ID, Nombre, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
 VALUES (3, 'Desamparados', NULL, NULL, NULL, NULL, NULL); -- Cantï¿½n: Desamparados (Canton_ID: 3)
@@ -312,10 +312,10 @@ INSERT INTO FIDE_DISTRITOS_TB (Distrito_ID, Nombre, creado_por, modificado_por, 
 VALUES (5, 'San Marcos', NULL, NULL, NULL, NULL, NULL); -- Cantï¿½n: Tarrazï¿½ (Canton_ID: 5)
 
 INSERT INTO FIDE_DISTRITOS_TB (Distrito_ID, Nombre, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
-VALUES (6, 'Aserrï¿½', NULL, NULL, NULL, NULL, NULL); -- Cantï¿½n: Aserrï¿½ (Canton_ID: 6)
+VALUES (6, 'Aserri', NULL, NULL, NULL, NULL, NULL); -- Cantï¿½n: Aserrï¿½ (Canton_ID: 6)
 
 INSERT INTO FIDE_DISTRITOS_TB (Distrito_ID, Nombre, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
-VALUES (7, 'Ciudad Colï¿½n', NULL, NULL, NULL, NULL, NULL); -- Cantï¿½n: Mora (Canton_ID: 7)
+VALUES (7, 'Ciudad Colon', NULL, NULL, NULL, NULL, NULL); -- Cantï¿½n: Mora (Canton_ID: 7)
 
 INSERT INTO FIDE_DISTRITOS_TB (Distrito_ID, Nombre, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
 VALUES (8, 'Guadalupe', NULL, NULL, NULL, NULL, NULL); -- Cantï¿½n: Goicoechea (Canton_ID: 8)
@@ -345,7 +345,7 @@ INSERT INTO FIDE_DISTRITOS_TB (Distrito_ID, Nombre, creado_por, modificado_por, 
 VALUES (16, 'San Pablo', NULL, NULL, NULL, NULL, NULL); -- Cantï¿½n: Turrubares (Canton_ID: 16)
 
 INSERT INTO FIDE_DISTRITOS_TB (Distrito_ID, Nombre, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
-VALUES (17, 'Santa Marï¿½a', NULL, NULL, NULL, NULL, NULL); -- Cantï¿½n: Dota (Canton_ID: 17)
+VALUES (17, 'Santa Maria', NULL, NULL, NULL, NULL, NULL); -- Cantï¿½n: Dota (Canton_ID: 17)
 
 INSERT INTO FIDE_DISTRITOS_TB (Distrito_ID, Nombre, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
 VALUES (18, 'Curridabat', NULL, NULL, NULL, NULL, NULL); -- Cantï¿½n: Curridabat (Canton_ID: 18)
@@ -361,7 +361,7 @@ INSERT INTO FIDE_DISTRITOS_TB (Distrito_ID, Nombre, creado_por, modificado_por, 
 VALUES (21, 'Alajuela', NULL, NULL, NULL, NULL, NULL); -- Cantï¿½n: Alajuela (Canton_ID: 21)
 
 INSERT INTO FIDE_DISTRITOS_TB (Distrito_ID, Nombre, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
-VALUES (22, 'San Ramï¿½n', NULL, NULL, NULL, NULL, NULL); -- Cantï¿½n: San Ramï¿½n (Canton_ID: 22)
+VALUES (22, 'San Ramon', NULL, NULL, NULL, NULL, NULL); -- Cantï¿½n: San Ramï¿½n (Canton_ID: 22)
 
 INSERT INTO FIDE_DISTRITOS_TB (Distrito_ID, Nombre, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
 VALUES (23, 'Grecia', NULL, NULL, NULL, NULL, NULL); -- Cantï¿½n: Grecia (Canton_ID: 23)
@@ -379,7 +379,7 @@ INSERT INTO FIDE_DISTRITOS_TB (Distrito_ID, Nombre, creado_por, modificado_por, 
 VALUES (27, 'Palmares', NULL, NULL, NULL, NULL, NULL); -- Cantï¿½n: Palmares (Canton_ID: 27)
 
 INSERT INTO FIDE_DISTRITOS_TB (Distrito_ID, Nombre, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
-VALUES (28, 'Poï¿½s', NULL, NULL, NULL, NULL, NULL); -- Cantï¿½n: Poï¿½s (Canton_ID: 28)
+VALUES (28, 'Poas', NULL, NULL, NULL, NULL, NULL); -- Cantï¿½n: Poï¿½s (Canton_ID: 28)
 
 INSERT INTO FIDE_DISTRITOS_TB (Distrito_ID, Nombre, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
 VALUES (29, 'Orotina', NULL, NULL, NULL, NULL, NULL); -- Cantï¿½n: Orotina (Canton_ID: 29)
@@ -391,7 +391,7 @@ INSERT INTO FIDE_DISTRITOS_TB (Distrito_ID, Nombre, creado_por, modificado_por, 
 VALUES (31, 'Zarcero', NULL, NULL, NULL, NULL, NULL); -- Cantï¿½n: Zarcero (Canton_ID: 31)
 
 INSERT INTO FIDE_DISTRITOS_TB (Distrito_ID, Nombre, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
-VALUES (32, 'Sarchï¿½', NULL, NULL, NULL, NULL, NULL); -- Cantï¿½n: Valverde Vega (Canton_ID: 32)
+VALUES (32, 'Sarchi', NULL, NULL, NULL, NULL, NULL); -- Cantï¿½n: Valverde Vega (Canton_ID: 32)
 
 INSERT INTO FIDE_DISTRITOS_TB (Distrito_ID, Nombre, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
 VALUES (33, 'Upala', NULL, NULL, NULL, NULL, NULL); -- Cantï¿½n: Upala (Canton_ID: 33)
@@ -407,13 +407,13 @@ INSERT INTO FIDE_DISTRITOS_TB (Distrito_ID, Nombre, creado_por, modificado_por, 
 VALUES (36, 'Oriental', NULL, NULL, NULL, NULL, NULL); -- Cantï¿½n: Cartago (Canton_ID: 36)
 
 INSERT INTO FIDE_DISTRITOS_TB (Distrito_ID, Nombre, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
-VALUES (37, 'Paraï¿½so', NULL, NULL, NULL, NULL, NULL); -- Cantï¿½n: Paraï¿½so (Canton_ID: 37)
+VALUES (37, 'Paraiso', NULL, NULL, NULL, NULL, NULL); -- Cantï¿½n: Paraï¿½so (Canton_ID: 37)
 
 INSERT INTO FIDE_DISTRITOS_TB (Distrito_ID, Nombre, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
-VALUES (38, 'La Uniï¿½n', NULL, NULL, NULL, NULL, NULL); -- Cantï¿½n: La Uniï¿½n (Canton_ID: 38)
+VALUES (38, 'La Union', NULL, NULL, NULL, NULL, NULL); -- Cantï¿½n: La Uniï¿½n (Canton_ID: 38)
 
 INSERT INTO FIDE_DISTRITOS_TB (Distrito_ID, Nombre, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
-VALUES (39, 'Jimï¿½nez', NULL, NULL, NULL, NULL, NULL); -- Cantï¿½n: Jimï¿½nez (Canton_ID: 39)
+VALUES (39, 'Jimenez', NULL, NULL, NULL, NULL, NULL); -- Cantï¿½n: Jimï¿½nez (Canton_ID: 39)
 
 INSERT INTO FIDE_DISTRITOS_TB (Distrito_ID, Nombre, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
 VALUES (40, 'Turrialba', NULL, NULL, NULL, NULL, NULL); -- Cantï¿½n: Turrialba (Canton_ID: 40)
@@ -438,7 +438,7 @@ INSERT INTO FIDE_DISTRITOS_TB (Distrito_ID, Nombre, creado_por, modificado_por, 
 VALUES (46, 'Santo Domingo', NULL, NULL, NULL, NULL, NULL); -- Cantï¿½n: Santo Domingo (Canton_ID: 46)
 
 INSERT INTO FIDE_DISTRITOS_TB (Distrito_ID, Nombre, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
-VALUES (47, 'Santa Bï¿½rbara', NULL, NULL, NULL, NULL, NULL); -- Cantï¿½n: Santa Bï¿½rbara (Canton_ID: 47)
+VALUES (47, 'Santa Barbara', NULL, NULL, NULL, NULL, NULL); -- Cantï¿½n: Santa Bï¿½rbara (Canton_ID: 47)
 
 INSERT INTO FIDE_DISTRITOS_TB (Distrito_ID, Nombre, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
 VALUES (48, 'San Rafael', NULL, NULL, NULL, NULL, NULL); -- Cantï¿½n: San Rafael (Canton_ID: 48)
@@ -447,7 +447,7 @@ INSERT INTO FIDE_DISTRITOS_TB (Distrito_ID, Nombre, creado_por, modificado_por, 
 VALUES (49, 'SanIsidro', NULL, NULL, NULL, NULL, NULL); -- Cantï¿½n: San Isidro (Canton_ID: 49)
 
 INSERT INTO FIDE_DISTRITOS_TB (Distrito_ID, Nombre, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
-VALUES (50, 'Belï¿½n', NULL, NULL, NULL, NULL, NULL); -- Cantï¿½n: Belï¿½n (Canton_ID: 50)
+VALUES (50, 'Belen', NULL, NULL, NULL, NULL, NULL); -- Cantï¿½n: Belï¿½n (Canton_ID: 50)
 
 INSERT INTO FIDE_DISTRITOS_TB (Distrito_ID, Nombre, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
 VALUES (51, 'Flores', NULL, NULL, NULL, NULL, NULL); -- Cantï¿½n: Flores (Canton_ID: 51)
@@ -456,7 +456,7 @@ INSERT INTO FIDE_DISTRITOS_TB (Distrito_ID, Nombre, creado_por, modificado_por, 
 VALUES (52, 'SanPablo', NULL, NULL, NULL, NULL, NULL); -- Cantï¿½n: San Pablo (Canton_ID: 52)
 
 INSERT INTO FIDE_DISTRITOS_TB (Distrito_ID, Nombre, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
-VALUES (53, 'Sarapiquï¿½', NULL, NULL, NULL, NULL, NULL); -- Cantï¿½n: Sarapiquï¿½ (Canton_ID: 53)
+VALUES (53, 'Sarapiqui', NULL, NULL, NULL, NULL, NULL); -- Cantï¿½n: Sarapiquï¿½ (Canton_ID: 53)
 
 -- Provincia: Guanacaste (Provincia_ID: 5)
 INSERT INTO FIDE_DISTRITOS_TB (Distrito_ID, Nombre, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
@@ -475,13 +475,13 @@ INSERT INTO FIDE_DISTRITOS_TB (Distrito_ID, Nombre, creado_por, modificado_por, 
 VALUES (58, 'Carrillo', NULL, NULL, NULL, NULL, NULL); -- Cantï¿½n: Carrillo (Canton_ID: 58)
 
 INSERT INTO FIDE_DISTRITOS_TB (Distrito_ID, Nombre, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
-VALUES (59, 'Caï¿½as', NULL, NULL, NULL, NULL, NULL); -- Cantï¿½n: Caï¿½as (Canton_ID: 59)
+VALUES (59, 'Cañas', NULL, NULL, NULL, NULL, NULL); -- Cantï¿½n: Caï¿½as (Canton_ID: 59)
 
 INSERT INTO FIDE_DISTRITOS_TB (Distrito_ID, Nombre, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
 VALUES (60, 'Abangares', NULL, NULL, NULL, NULL, NULL); -- Cantï¿½n: Abangares (Canton_ID: 60)
 
 INSERT INTO FIDE_DISTRITOS_TB (Distrito_ID, Nombre, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
-VALUES (61, 'Tilarï¿½n', NULL, NULL, NULL, NULL, NULL); -- Cantï¿½n: Tilarï¿½n (Canton_ID: 61)
+VALUES (61, 'Tilaran', NULL, NULL, NULL, NULL, NULL); -- Cantï¿½n: Tilarï¿½n (Canton_ID: 61)
 
 INSERT INTO FIDE_DISTRITOS_TB (Distrito_ID, Nombre, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
 VALUES (62, 'Nandayure', NULL, NULL, NULL, NULL, NULL); -- Cantï¿½n: Nandayure (Canton_ID: 62)
@@ -528,10 +528,10 @@ VALUES (75, 'Garabito', NULL, NULL, NULL, NULL, NULL); -- Cantï¿½n: Garabito (Ca
 
 -- Provincia: Limï¿½n (Provincia_ID: 7)
 INSERT INTO FIDE_DISTRITOS_TB (Distrito_ID, Nombre, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
-VALUES (76, 'Limï¿½n', NULL, NULL, NULL, NULL, NULL); -- Cantï¿½n: Limï¿½n (Canton_ID: 76)
+VALUES (76, 'Limon', NULL, NULL, NULL, NULL, NULL); -- Cantï¿½n: Limï¿½n (Canton_ID: 76)
 
 INSERT INTO FIDE_DISTRITOS_TB (Distrito_ID, Nombre, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
-VALUES (77, 'Pococï¿½', NULL, NULL, NULL, NULL, NULL); -- Cantï¿½n: Pococï¿½ (Canton_ID: 77)
+VALUES (77, 'Pococi', NULL, NULL, NULL, NULL, NULL); -- Cantï¿½n: Pococï¿½ (Canton_ID: 77)
 
 INSERT INTO FIDE_DISTRITOS_TB (Distrito_ID, Nombre, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
 VALUES (78, 'Siquirres', NULL, NULL, NULL, NULL, NULL); -- Cantï¿½n: Siquirres (Canton_ID: 78)
@@ -543,10 +543,10 @@ INSERT INTO FIDE_DISTRITOS_TB (Distrito_ID, Nombre, creado_por, modificado_por, 
 VALUES (80, 'Matina', NULL, NULL, NULL, NULL, NULL); -- Cantï¿½n: Matina (Canton_ID: 80)
 
 INSERT INTO FIDE_DISTRITOS_TB (Distrito_ID, Nombre, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
-VALUES (81, 'Guï¿½cimo', NULL, NULL, NULL, NULL, NULL); -- Cantï¿½n: Guï¿½cimo (Canton_ID: 81)
+VALUES (81, 'Guacimo', NULL, NULL, NULL, NULL, NULL); -- Cantï¿½n: Guï¿½cimo (Canton_ID: 81)
 
 INSERT INTO FIDE_DISTRITOS_TB (Distrito_ID, Nombre, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
-VALUES (82, 'Rï¿½o Cuarto', NULL, NULL, NULL, NULL, NULL); -- Cantï¿½n: Rï¿½o Cuarto (Canton_ID: 82)
+VALUES (82, 'Rio Cuarto', NULL, NULL, NULL, NULL, NULL); -- Cantï¿½n: Rï¿½o Cuarto (Canton_ID: 82)
 /
 
 
@@ -632,50 +632,50 @@ VALUES (20, 7, 78, 78, NULL, NULL, NULL, NULL, NULL);
 /
 
 
-INSERT
+INSERT ALL
 INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
 Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
-VALUES(1, 'Juan', 'Pï¿½rez', TO_DATE('1990-05-15', 'YYYY-MM-DD'), 'juan.perez@example.com', 
+VALUES(1, 'Juan', 'Perez', TO_DATE('1990-05-15', 'YYYY-MM-DD'), 'juan.perez@example.com', 
 '88881111', 1, 1, 1, NULL, NULL, NULL, NULL, NULL)
 
 INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
 Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
-VALUES(2, 'Marï¿½a', 'Gï¿½mez', TO_DATE('1985-08-22', 'YYYY-MM-DD'), 'maria.gomez@example.com', 
+VALUES(2, 'Maria', 'Gomez', TO_DATE('1985-08-22', 'YYYY-MM-DD'), 'maria.gomez@example.com', 
 '88882222', 2, 2, 1, NULL, NULL, NULL, NULL, NULL)
 
 INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
 Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
-VALUES(3, 'Carlos', 'Lï¿½pez', TO_DATE('1992-03-10', 'YYYY-MM-DD'), 'carlos.lopez@example.com', 
+VALUES(3, 'Carlos', 'Lopez', TO_DATE('1992-03-10', 'YYYY-MM-DD'), 'carlos.lopez@example.com', 
 '88883333', 1, 3, 1, NULL, NULL, NULL, NULL, NULL)
 
 INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
 Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
-VALUES(4, 'Ana', 'Rodrï¿½guez', TO_DATE('1988-11-05', 'YYYY-MM-DD'), 'ana.rodriguez@example.com', 
+VALUES(4, 'Ana', 'Rodriguez', TO_DATE('1988-11-05', 'YYYY-MM-DD'), 'ana.rodriguez@example.com', 
 '88884444', 2, 4, 1, NULL, NULL, NULL, NULL, NULL)
 
 INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
 Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
-VALUES(5, 'Luis', 'Martï¿½nez', TO_DATE('1995-07-19', 'YYYY-MM-DD'), 'luis.martinez@example.com', 
+VALUES(5, 'Luis', 'Martinez', TO_DATE('1995-07-19', 'YYYY-MM-DD'), 'luis.martinez@example.com', 
 '88885555', 1, 5, 1, NULL, NULL, NULL, NULL, NULL)
 
 INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
 Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
-VALUES(6, 'Sofï¿½a', 'Chaves', TO_DATE('1991-09-30', 'YYYY-MM-DD'), 'sofia.chaves@example.com', 
+VALUES(6, 'Sofia', 'Chaves', TO_DATE('1991-09-30', 'YYYY-MM-DD'), 'sofia.chaves@example.com', 
 '88886666', 2, 6, 1, NULL, NULL, NULL, NULL, NULL)
 
 INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
 Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
-VALUES(7, 'Pedro', 'Sï¿½nchez', TO_DATE('1987-12-25', 'YYYY-MM-DD'), 'pedro.sanchez@example.com', 
+VALUES(7, 'Pedro', 'Sanchez', TO_DATE('1987-12-25', 'YYYY-MM-DD'), 'pedro.sanchez@example.com', 
 '88887777', 1, 7, 1, NULL, NULL, NULL, NULL, NULL)
 
 INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
 Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
-VALUES(8, 'Laura', 'Fernï¿½ndez', TO_DATE('1993-04-12', 'YYYY-MM-DD'), 'laura.fernandez@example.com', 
+VALUES(8, 'Laura', 'Fernandez', TO_DATE('1993-04-12', 'YYYY-MM-DD'), 'laura.fernandez@example.com', 
 '88888888', 2, 8, 1, NULL, NULL, NULL, NULL, NULL)
 
 INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
 Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
-VALUES(9, 'Diego', 'Ramï¿½rez', TO_DATE('1989-06-08', 'YYYY-MM-DD'), 'diego.ramirez@example.com', 
+VALUES(9, 'Diego', 'Ramirez', TO_DATE('1989-06-08', 'YYYY-MM-DD'), 'diego.ramirez@example.com', 
 '88889999', 1, 9, 1, NULL, NULL, NULL, NULL, NULL)
 
 INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
@@ -685,7 +685,7 @@ VALUES(10, 'Carmen', 'Vargas', TO_DATE('1994-02-14', 'YYYY-MM-DD'), 'carmen.varg
 
 INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
 Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
-VALUES(11, 'Alejandro', 'Hernï¿½ndez', TO_DATE('1990-01-01', 'YYYY-MM-DD'), 'alejandro.hernandez@example.com', 
+VALUES(11, 'Alejandro', 'Hernandez', TO_DATE('1990-01-01', 'YYYY-MM-DD'), 'alejandro.hernandez@example.com', 
 '88881112', 1, 11, 1, NULL, NULL, NULL, NULL, NULL)
 
 INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
@@ -695,22 +695,22 @@ VALUES(12, 'Isabel', 'Morales', TO_DATE('1986-02-02', 'YYYY-MM-DD'), 'isabel.mor
 
 INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
 Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
-VALUES(13, 'Jorge', 'Gutiï¿½rrez', TO_DATE('1992-03-03', 'YYYY-MM-DD'), 'jorge.gutierrez@example.com', 
+VALUES(13, 'Jorge', 'Gutierrez', TO_DATE('1992-03-03', 'YYYY-MM-DD'), 'jorge.gutierrez@example.com', 
 '88883334', 1, 13, 1, NULL, NULL, NULL, NULL, NULL)
 
 INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
 Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
-VALUES(14, 'Patricia', 'Dï¿½az', TO_DATE('1987-04-04', 'YYYY-MM-DD'), 'patricia.diaz@example.com', 
+VALUES(14, 'Patricia', 'Diaz', TO_DATE('1987-04-04', 'YYYY-MM-DD'), 'patricia.diaz@example.com', 
 '88884445', 2, 14, 1, NULL, NULL, NULL, NULL, NULL)
 
 INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
 Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
-VALUES(15, 'Ricardo', 'Mï¿½ndez', TO_DATE('1993-05-05', 'YYYY-MM-DD'), 'ricardo.mendez@example.com', 
+VALUES(15, 'Ricardo', 'Mendez', TO_DATE('1993-05-05', 'YYYY-MM-DD'), 'ricardo.mendez@example.com', 
 '88885556', 1, 15, 1, NULL, NULL, NULL, NULL, NULL)
 
 INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
 Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
-VALUES(16, 'Lucï¿½a', 'Rojas', TO_DATE('1989-06-06', 'YYYY-MM-DD'), 'lucia.rojas@example.com', 
+VALUES(16, 'Lucia', 'Rojas', TO_DATE('1989-06-06', 'YYYY-MM-DD'), 'lucia.rojas@example.com', 
 '88886667', 2, 16, 1, NULL, NULL, NULL, NULL, NULL)
 
 INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
@@ -730,14 +730,13 @@ VALUES(19, 'Roberto', 'Alvarado', TO_DATE('1994-09-09', 'YYYY-MM-DD'), 'roberto.
 
 INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
 Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
-VALUES(20, 'Mï¿½nica', 'Vega', TO_DATE('1990-10-10', 'YYYY-MM-DD'), 'monica.vega@example.com', 
+VALUES(20, 'Monica', 'Vega', TO_DATE('1990-10-10', 'YYYY-MM-DD'), 'monica.vega@example.com', 
 '88880001', 2, 20, 1, NULL, NULL, NULL, NULL, NULL)
-SELECT 1 FROM DUAL;
+
 -- Registros 21-40
-INSERT ALL
 INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
 Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
-VALUES(21, 'Josï¿½', 'Navarro', TO_DATE('1985-11-11', 'YYYY-MM-DD'), 'jose.navarro@example.com', 
+VALUES(21, 'Jose', 'Navarro', TO_DATE('1985-11-11', 'YYYY-MM-DD'), 'jose.navarro@example.com', 
 '88881113', 1, 1, 1, NULL, NULL, NULL, NULL, NULL)
 
 INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
@@ -747,12 +746,12 @@ VALUES(22, 'Adriana', 'Molina', TO_DATE('1992-12-12', 'YYYY-MM-DD'), 'adriana.mo
 
 INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
 Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
-VALUES(23, 'Miguel', 'Rï¿½os', TO_DATE('1988-01-13', 'YYYY-MM-DD'), 'miguel.rios@example.com', 
+VALUES(23, 'Miguel', 'Rios', TO_DATE('1988-01-13', 'YYYY-MM-DD'), 'miguel.rios@example.com', 
 '88883335', 1, 3, 1, NULL, NULL, NULL, NULL, NULL)
 
 INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
 Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
-VALUES(24, 'Verï¿½nica', 'Silva', TO_DATE('1993-02-14', 'YYYY-MM-DD'), 'veronica.silva@example.com', 
+VALUES(24, 'Veronica', 'Silva', TO_DATE('1993-02-14', 'YYYY-MM-DD'), 'veronica.silva@example.com', 
 '88884446', 2, 4, 1, NULL, NULL, NULL, NULL, NULL)
 
 INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
@@ -767,7 +766,7 @@ VALUES(26, 'Daniela', 'Guerrero', TO_DATE('1995-04-16', 'YYYY-MM-DD'), 'daniela.
 
 INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
 Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
-VALUES(27, 'Andrï¿½s', 'Vargas', TO_DATE('1991-05-17', 'YYYY-MM-DD'), 'andres.vargas@example.com', 
+VALUES(27, 'Andres', 'Vargas', TO_DATE('1991-05-17', 'YYYY-MM-DD'), 'andres.vargas@example.com', 
 '88887779', 1, 7, 1, NULL, NULL, NULL, NULL, NULL)
 
 INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
@@ -777,7 +776,7 @@ VALUES(28, 'Sara', 'Cruz', TO_DATE('1987-06-18', 'YYYY-MM-DD'), 'sara.cruz@examp
 
 INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
 Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
-VALUES(29, 'Raï¿½l', 'Ortiz', TO_DATE('1994-07-19', 'YYYY-MM-DD'), 'raul.ortiz@example.com', 
+VALUES(29, 'Raul', 'Ortiz', TO_DATE('1994-07-19', 'YYYY-MM-DD'), 'raul.ortiz@example.com', 
 '88889991', 1, 9, 1, NULL, NULL, NULL, NULL, NULL)
 
 INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
@@ -792,12 +791,12 @@ VALUES(31, 'Eduardo', 'Soto', TO_DATE('1986-09-21', 'YYYY-MM-DD'), 'eduardo.soto
 
 INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
 Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
-VALUES(32, 'Marina', 'Cortï¿½s', TO_DATE('1992-10-22', 'YYYY-MM-DD'), 'marina.cortes@example.com', 
+VALUES(32, 'Marina', 'Cortes', TO_DATE('1992-10-22', 'YYYY-MM-DD'), 'marina.cortes@example.com', 
 '88882225', 2, 12, 1, NULL, NULL, NULL, NULL, NULL)
 
 INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
 Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
-VALUES(33, 'Hï¿½ctor', 'Guzmï¿½n', TO_DATE('1988-11-23', 'YYYY-MM-DD'), 'hector.guzman@example.com', 
+VALUES(33, 'Hector', 'Guzman', TO_DATE('1988-11-23', 'YYYY-MM-DD'), 'hector.guzman@example.com', 
 '88883336', 1, 13, 1, NULL, NULL, NULL, NULL, NULL)
 
 INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
@@ -812,7 +811,7 @@ VALUES(35, 'Javier', 'Aguilar', TO_DATE('1989-01-25', 'YYYY-MM-DD'), 'javier.agu
 
 INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
 Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
-VALUES(36, 'Valeria', 'Mï¿½ndez', TO_DATE('1995-02-26', 'YYYY-MM-DD'), 'valeria.mendez@example.com', 
+VALUES(36, 'Valeria', 'Mendez', TO_DATE('1995-02-26', 'YYYY-MM-DD'), 'valeria.mendez@example.com', 
 '88886669', 2, 16, 1, NULL, NULL, NULL, NULL, NULL)
 
 INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
@@ -827,7 +826,7 @@ VALUES(38, 'Lorena', 'Santos', TO_DATE('1987-04-28', 'YYYY-MM-DD'), 'lorena.sant
 
 INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
 Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
-VALUES(39, 'Manuel', 'Jimï¿½nez', TO_DATE('1994-05-29', 'YYYY-MM-DD'), 'manuel.jimenez@example.com', 
+VALUES(39, 'Manuel', 'Jimenez', TO_DATE('1994-05-29', 'YYYY-MM-DD'), 'manuel.jimenez@example.com', 
 '88889992', 1, 19, 1, NULL, NULL, NULL, NULL, NULL)
 
 INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
@@ -839,38 +838,38 @@ SELECT 1 FROM DUAL;
 INSERT ALL 
 INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
 Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
-VALUES(41, 'Ricardo', 'Mï¿½ndez', TO_DATE('1998-12-31', 'YYYY-MM-DD'), 'ricar.mend@example.com', 
+VALUES(41, 'Ricardo', 'Mendez', TO_DATE('1998-12-31', 'YYYY-MM-DD'), 'ricar.mend@example.com', 
 '88889998', 1, 20, 1, NULL, NULL, NULL, NULL, NULL)
 
 INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
 Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
-VALUES(42, 'Carlos', 'Pï¿½rez', TO_DATE('1987-06-23', 'YYYY-MM-DD'), 'carlos.perez@example.com', 
+VALUES(42, 'Carlos', 'Perez', TO_DATE('1987-06-23', 'YYYY-MM-DD'), 'carlos.perez@example.com', 
 '88884256', 2, 1, 1, NULL, NULL, NULL, NULL, NULL)
 
 INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
 Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
-VALUES(43, 'Lucï¿½a', 'Gï¿½mez', TO_DATE('1990-07-30', 'YYYY-MM-DD'), 'lucia.gomez@example.com', 
+VALUES(43, 'Lucia', 'Gomez', TO_DATE('1990-07-30', 'YYYY-MM-DD'), 'lucia.gomez@example.com', 
 '88885367', 1, 2, 1, NULL, NULL, NULL, NULL, NULL)
 
 INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
 Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
-VALUES(44, 'Raï¿½l', 'Hernï¿½ndez', TO_DATE('1993-02-25', 'YYYY-MM-DD'), 'raul.hernandez@example.com', 
+VALUES(44, 'Raul', 'Hernandez', TO_DATE('1993-02-25', 'YYYY-MM-DD'), 'raul.hernandez@example.com', 
 '88886478', 3, 3, 1, NULL, NULL, NULL, NULL, NULL)
 
 INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
 Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
-VALUES(45, 'Ana', 'Sï¿½nchez', TO_DATE('1989-05-18', 'YYYY-MM-DD'), 'ana.sanchez@example.com', 
+VALUES(45, 'Ana', 'Sanchez', TO_DATE('1989-05-18', 'YYYY-MM-DD'), 'ana.sanchez@example.com', 
 '88887589', 2, 1, 1, NULL, NULL, NULL, NULL, NULL)
 SELECT 1 FROM DUAL;
 INSERT ALL
 INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
 Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
-VALUES(46, 'Pedro', 'Ramï¿½rez', TO_DATE('1985-09-14', 'YYYY-MM-DD'), 'pedro.ramirez@example.com', 
+VALUES(46, 'Pedro', 'Ramirez', TO_DATE('1985-09-14', 'YYYY-MM-DD'), 'pedro.ramirez@example.com', 
 '88888690', 1, 2, 1, NULL, NULL, NULL, NULL, NULL)
 
 INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
 Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
-VALUES(47, 'Elena', 'Martï¿½nez', TO_DATE('1991-03-12', 'YYYY-MM-DD'), 'elena.martinez@example.com',
+VALUES(47, 'Elena', 'Martinez', TO_DATE('1991-03-12', 'YYYY-MM-DD'), 'elena.martinez@example.com',
 '88889701', 3, 3, 1, NULL, NULL, NULL, NULL, NULL)
 
 INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
@@ -880,33 +879,33 @@ VALUES(48, 'Ricardo', 'Vega', TO_DATE('1986-08-07', 'YYYY-MM-DD'), 'ricardo.vega
 
 INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
 Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
-VALUES(49, 'Beatriz', 'Garcï¿½a', TO_DATE('1994-10-21', 'YYYY-MM-DD'), 'beatriz.garcia@example.com', 
+VALUES(49, 'Beatriz', 'Garcia', TO_DATE('1994-10-21', 'YYYY-MM-DD'), 'beatriz.garcia@example.com', 
 '88891923', 1, 2, 1, NULL, NULL, NULL, NULL, NULL)
 
 INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
 Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
-VALUES(50, 'Juan', 'Lï¿½pez', TO_DATE('1988-11-16', 'YYYY-MM-DD'), 'juan.lopez@example.com', 
+VALUES(50, 'Juan', 'Lopez', TO_DATE('1988-11-16', 'YYYY-MM-DD'), 'juan.lopez@example.com', 
 '88893034', 2, 3, 1, NULL, NULL, NULL, NULL, NULL)
 SELECT 1 FROM DUAL;
 INSERT ALL
 INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
 Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
-VALUES(51, 'Marta', 'Jimï¿½nez', TO_DATE('1995-01-25', 'YYYY-MM-DD'), 'ma.jimenez22@example.com',
+VALUES(51, 'Marta', 'Jimenez', TO_DATE('1995-01-25', 'YYYY-MM-DD'), 'ma.jimenez22@example.com',
 '88894145', 1, 1, 1, NULL, NULL, NULL, NULL, NULL)
 
 INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
 Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
-VALUES(52, 'Fernando', 'Fernï¿½ndez', TO_DATE('1990-04-09', 'YYYY-MM-DD'), 'fer.fernandz12@example.com',
+VALUES(52, 'Fernando', 'Fernandez', TO_DATE('1990-04-09', 'YYYY-MM-DD'), 'fer.fernandz12@example.com',
 '88895256', 3, 2, 1, NULL, NULL, NULL, NULL, NULL)
 
 INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
 Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
-VALUES(53, 'Marï¿½a', 'ï¿½lvarez', TO_DATE('1986-12-13', 'YYYY-MM-DD'), 'maria.alvarez34@example.com',
+VALUES(53, 'Maria', 'Alvarez', TO_DATE('1986-12-13', 'YYYY-MM-DD'), 'maria.alvarez34@example.com',
 '88896367', 2, 1, 1, NULL, NULL, NULL, NULL, NULL)
 
 INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
 Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
-VALUES(54, 'Josï¿½', 'Torres', TO_DATE('1992-07-29', 'YYYY-MM-DD'), 'jose.torres44@example.com',
+VALUES(54, 'Jose', 'Torres', TO_DATE('1992-07-29', 'YYYY-MM-DD'), 'jose.torres44@example.com',
 '88897478', 1, 3, 1, NULL, NULL, NULL, NULL, NULL)
 
 INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
@@ -921,12 +920,12 @@ VALUES(56, 'David', 'Morales', TO_DATE('1989-01-06', 'YYYY-MM-DD'), 'david.moral
 
 INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
 Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
-VALUES(57, 'Cristina', 'Gonzï¿½lez', TO_DATE('1987-11-11', 'YYYY-MM-DD'), 'crist.gonz98@example.com', 
+VALUES(57, 'Cristina', 'Gonzalez', TO_DATE('1987-11-11', 'YYYY-MM-DD'), 'crist.gonz98@example.com', 
 '88900701', 2, 3, 1, NULL, NULL, NULL, NULL, NULL)
 
 INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
 Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
-VALUES(58, 'Josï¿½', 'Dï¿½az', TO_DATE('1994-02-18', 'YYYY-MM-DD'), 'jos.diaz43@example.com',
+VALUES(58, 'Jose', 'Diaz', TO_DATE('1994-02-18', 'YYYY-MM-DD'), 'jos.diaz43@example.com',
 '88901812', 1, 2, 1, NULL, NULL, NULL, NULL, NULL)
 
 INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
@@ -936,7 +935,7 @@ VALUES(59, 'Laura', 'Ruiz', TO_DATE('1993-05-09', 'YYYY-MM-DD'), 'lau.ruiz3221@e
 
 INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
 Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
-VALUES(60, 'Mario', 'Gï¿½mez', TO_DATE('1988-12-22', 'YYYY-MM-DD'), 'mario.gomez097@example.com', 
+VALUES(60, 'Mario', 'Gomez', TO_DATE('1988-12-22', 'YYYY-MM-DD'), 'mario.gomez097@example.com', 
 '88904034', 1, 1, 1, NULL, NULL, NULL, NULL, NULL)
 SELECT 1 FROM DUAL;
 -- Registros 61-80
@@ -958,37 +957,37 @@ VALUES(63, 'Juan', 'Serrano', TO_DATE('1989-11-08', 'YYYY-MM-DD'), 'juan.serrano
 
 INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
 Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
-VALUES(64, 'Sandra', 'Gonzï¿½lez', TO_DATE('1992-10-25', 'YYYY-MM-DD'), 'sandra.gonzalez@example.com', 
+VALUES(64, 'Sandra', 'Gonzolez', TO_DATE('1992-10-25', 'YYYY-MM-DD'), 'sandra.gonzalez@example.com', 
 '88908478', 1, 2, 1, NULL, NULL, NULL, NULL, NULL)
 
 INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
 Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
-VALUES(65, 'Javier', 'Hernï¿½ndez', TO_DATE('1990-02-20', 'YYYY-MM-DD'), 'javier.herna77@example.com', 
+VALUES(65, 'Javier', 'Hernandez', TO_DATE('1990-02-20', 'YYYY-MM-DD'), 'javier.herna77@example.com', 
 '88909589', 2, 1, 1, NULL, NULL, NULL, NULL, NULL)
 
 INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
 Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
-VALUES(66, 'Sofï¿½a', 'Lï¿½pez', TO_DATE('1993-08-14', 'YYYY-MM-DD'), 'sofia.lopez@example.com', 
+VALUES(66, 'Sofia', 'Lopez', TO_DATE('1993-08-14', 'YYYY-MM-DD'), 'sofia.lopez@example.com', 
 '88910690', 1, 3, 1, NULL, NULL, NULL, NULL, NULL)
 
 INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
 Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
-VALUES(67, 'Rafael', 'Pï¿½rez', TO_DATE('1986-04-06', 'YYYY-MM-DD'), 'rafael.perez@example.com',
+VALUES(67, 'Rafael', 'Perez', TO_DATE('1986-04-06', 'YYYY-MM-DD'), 'rafael.perez@example.com',
 '88911701', 3, 2, 1, NULL, NULL, NULL, NULL, NULL)
 
 INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
 Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
-VALUES(68, 'Bea', 'Gonzï¿½lez', TO_DATE('1987-05-23', 'YYYY-MM-DD'), 'bea.gonz09@example.com', 
+VALUES(68, 'Bea', 'Gonzalez', TO_DATE('1987-05-23', 'YYYY-MM-DD'), 'bea.gonz09@example.com', 
 '88912812', 2, 1, 1, NULL, NULL, NULL, NULL, NULL)
 
 INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
 Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
-VALUES(69, 'Ricardo', 'Vï¿½zquez', TO_DATE('1990-11-19', 'YYYY-MM-DD'), 'ricardo.vazquez@example.com', 
+VALUES(69, 'Ricardo', 'Vazquez', TO_DATE('1990-11-19', 'YYYY-MM-DD'), 'ricardo.vazquez@example.com', 
 '88913923', 1, 2, 1, NULL, NULL, NULL, NULL, NULL)
 
 INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
 Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
-VALUES(70, 'Mï¿½nica', 'Martï¿½n', TO_DATE('1989-12-02', 'YYYY-MM-DD'), 'monica.martin@example.com', 
+VALUES(70, 'Monica', 'Martin', TO_DATE('1989-12-02', 'YYYY-MM-DD'), 'monica.martin@example.com', 
 '88915034', 2, 3, 1, NULL, NULL, NULL, NULL, NULL)
 
 INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
@@ -998,17 +997,17 @@ VALUES(71, 'Antonio', 'Cordero', TO_DATE('1992-03-13', 'YYYY-MM-DD'), 'antonio.c
 
 INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
 Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
-VALUES(72, 'Esther', 'Garcï¿½a', TO_DATE('1991-07-15', 'YYYY-MM-DD'), 'esther.garcia@example.com',
+VALUES(72, 'Esther', 'Garcia', TO_DATE('1991-07-15', 'YYYY-MM-DD'), 'esther.garcia@example.com',
 '88917256', 3, 2, 1, NULL, NULL, NULL, NULL, NULL)
 
 INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
 Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
-VALUES(73, 'Pedro', 'Martï¿½nez', TO_DATE('1988-06-28', 'YYYY-MM-DD'), 'ped9.martinez@example.com',
+VALUES(73, 'Pedro', 'Martinez', TO_DATE('1988-06-28', 'YYYY-MM-DD'), 'ped9.martinez@example.com',
 '88918367', 2, 1, 1, NULL, NULL, NULL, NULL, NULL)
 
 INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
 Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
-VALUES(74, 'Marina', 'Lï¿½pez', TO_DATE('1990-05-19', 'YYYY-MM-DD'), 'marina.lopez@example.com',
+VALUES(74, 'Marina', 'o½pez', TO_DATE('1990-05-19', 'YYYY-MM-DD'), 'marina.lopez@example.com',
 '88919478', 1, 3, 1, NULL, NULL, NULL, NULL, NULL)
 
 INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
@@ -1018,27 +1017,27 @@ VALUES(75, 'Alberto', 'Romero', TO_DATE('1986-02-14', 'YYYY-MM-DD'), 'alberto.ro
 
 INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
 Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
-VALUES(76, 'Victoria', 'Gutiï¿½rrez', TO_DATE('1993-11-27', 'YYYY-MM-DD'), 'victoria.gutierrez@example.com', 
+VALUES(76, 'Victoria', 'Gutierrez', TO_DATE('1993-11-27', 'YYYY-MM-DD'), 'victoria.gutierrez@example.com', 
 '88921690', 2, 1, 1, NULL, NULL, NULL, NULL, NULL)
 
 INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
 Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
-VALUES(77, 'Andrï¿½s', 'Vega', TO_DATE('1992-09-06', 'YYYY-MM-DD'), 'andres.vega@example.com', 
+VALUES(77, 'Andres', 'Vega', TO_DATE('1992-09-06', 'YYYY-MM-DD'), 'andres.vega@example.com', 
 '88922701', 1, 2, 1, NULL, NULL, NULL, NULL, NULL)
 
 INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
 Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
-VALUES(78, 'Patricia', 'Fernï¿½ndez', TO_DATE('1985-10-15', 'YYYY-MM-DD'), 'patricia.fernandez@example.com', 
+VALUES(78, 'Patricia', 'Fernandez', TO_DATE('1985-10-15', 'YYYY-MM-DD'), 'patricia.fernandez@example.com', 
 '88923812', 2, 3, 1, NULL, NULL, NULL, NULL, NULL)
 
 INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
 Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
-VALUES(79, 'Fabiola', 'Dï¿½az', TO_DATE('1994-04-10', 'YYYY-MM-DD'), 'fabiola.diaz@example.com', 
+VALUES(79, 'Fabiola', 'Diaz', TO_DATE('1994-04-10', 'YYYY-MM-DD'), 'fabiola.diaz@example.com', 
 '88924923', 1, 1, 1, NULL, NULL, NULL, NULL, NULL)
 
 INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
 Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
-VALUES(80, 'Josï¿½', 'Jimï¿½nez', TO_DATE('1987-02-27', 'YYYY-MM-DD'), 'jose.jimenez@example.com', 
+VALUES(80, 'Jose', 'Jimenez', TO_DATE('1987-02-27', 'YYYY-MM-DD'), 'jose.jimenez@example.com', 
 '88926034', 2, 2, 1, NULL, NULL, NULL, NULL, NULL)
 SELECT 1 FROM DUAL;
 -- Registros 81-100
@@ -1050,7 +1049,7 @@ VALUES(81, 'Antonio', 'Ruiz', TO_DATE('1978-03-22', 'YYYY-MM-DD'), 'anto.ruiz@ex
 
 INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
 Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
-VALUES(82, 'Mercedes', 'Lï¿½pez', TO_DATE('1953-07-11', 'YYYY-MM-DD'), 'mercedes.lopez@example.com',
+VALUES(82, 'Mercedes', 'Lopez', TO_DATE('1953-07-11', 'YYYY-MM-DD'), 'mercedes.lopez@example.com',
 '88928256', 2, 2, 1, NULL, NULL, NULL, NULL, NULL)
 
 INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
@@ -1060,62 +1059,62 @@ VALUES(83, 'Ricardo', 'Castro', TO_DATE('1965-09-19', 'YYYY-MM-DD'), 'r99.castro
 
 INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
 Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
-VALUES(84, 'Dolores', 'Ramï¿½rez', TO_DATE('1950-12-03', 'YYYY-MM-DD'), 'dolores.ramirez@example.com', 
+VALUES(84, 'Dolores', 'Ramirez', TO_DATE('1950-12-03', 'YYYY-MM-DD'), 'dolores.ramirez@example.com', 
 '88930478', 2, 3, 1, NULL, NULL, NULL, NULL, NULL)
 
 INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
 Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
-VALUES(85, 'Josï¿½', 'Gï¿½mez', TO_DATE('1972-04-26', 'YYYY-MM-DD'), 'jose.gomez@example.com', 
+VALUES(85, 'Jose', 'Gomez', TO_DATE('1972-04-26', 'YYYY-MM-DD'), 'jose.gomez@example.com', 
 '88931589', 1, 2, 1, NULL, NULL, NULL, NULL, NULL)
 
 INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
 Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
-VALUES(86, 'Susana', 'Gonzï¿½lez', TO_DATE('1968-06-10', 'YYYY-MM-DD'), 'susana.gonza77@example.com', 
+VALUES(86, 'Susana', 'Gonzalez', TO_DATE('1968-06-10', 'YYYY-MM-DD'), 'susana.gonza77@example.com', 
 '88932690', 2, 1, 1, NULL, NULL, NULL, NULL, NULL)
 
 INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
 Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
-VALUES(87, 'Carlos', 'ï¿½lvarez', TO_DATE('1962-08-30', 'YYYY-MM-DD'), 'carlos.alvarez@example.com', 
+VALUES(87, 'Carlos', 'Alvarez', TO_DATE('1962-08-30', 'YYYY-MM-DD'), 'carlos.alvarez@example.com', 
 '88933701', 3, 2, 1, NULL, NULL, NULL, NULL, NULL)
 
 INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
 Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
-VALUES(88, 'Alfonso', 'Martï¿½nez', TO_DATE('1981-01-14', 'YYYY-MM-DD'), 'alfonso.martinez@example.com', 
+VALUES(88, 'Alfonso', 'Martinez', TO_DATE('1981-01-14', 'YYYY-MM-DD'), 'alfonso.martinez@example.com', 
 '88934812', 1, 3, 1, NULL, NULL, NULL, NULL, NULL)
 
 INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
 Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
-VALUES(89, 'Santiago', 'Hernï¿½ndez', TO_DATE('1975-10-07', 'YYYY-MM-DD'), 'santiago.hernaN66@example.com',
+VALUES(89, 'Santiago', 'Hernandez', TO_DATE('1975-10-07', 'YYYY-MM-DD'), 'santiago.hernaN66@example.com',
 '88935923', 2, 1, 1, NULL, NULL, NULL, NULL, NULL)
 
 INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
 Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
-VALUES(90, 'Marï¿½a', 'Carmona', TO_DATE('1989-02-15', 'YYYY-MM-DD'), 'maria.carmona@example.com', 
+VALUES(90, 'Maria', 'Carmona', TO_DATE('1989-02-15', 'YYYY-MM-DD'), 'maria.carmona@example.com', 
 '88937034', 1, 2, 1, NULL, NULL, NULL, NULL, NULL)
 
 INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
 Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
-VALUES(91, 'Francisco', 'Sï¿½nchez', TO_DATE('1961-05-02', 'YYYY-MM-DD'), 'francisco.sz@example.com',
+VALUES(91, 'Francisco', 'Sanchez', TO_DATE('1961-05-02', 'YYYY-MM-DD'), 'francisco.sz@example.com',
 '88938145', 3, 3, 1, NULL, NULL, NULL, NULL, NULL)
 
 INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
 Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
-VALUES(92, 'Jesï¿½s', 'Jimï¿½nez', TO_DATE('1984-03-17', 'YYYY-MM-DD'), 'jesus.jim21@example.com', 
+VALUES(92, 'Jesus', 'Jimenez', TO_DATE('1984-03-17', 'YYYY-MM-DD'), 'jesus.jim21@example.com', 
 '88939256', 2, 1, 1, NULL, NULL, NULL, NULL, NULL)
 
 INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
 Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
-VALUES(93, 'Rosa', 'Gutiï¿½rrez', TO_DATE('1979-11-09', 'YYYY-MM-DD'), 'rosa.gutierrez@example.com', 
+VALUES(93, 'Rosa', 'Gutierrez', TO_DATE('1979-11-09', 'YYYY-MM-DD'), 'rosa.gutierrez@example.com', 
 '88940367', 1, 2, 1, NULL, NULL, NULL, NULL, NULL)
 
 INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
 Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
-VALUES(94, 'Jorge', 'Vï¿½zquez', TO_DATE('1956-06-30', 'YYYY-MM-DD'), 'jorge.vazquez@example.com', 
+VALUES(94, 'Jorge', 'Vazquez', TO_DATE('1956-06-30', 'YYYY-MM-DD'), 'jorge.vazquez@example.com', 
 '88941478', 2, 3, 1, NULL, NULL, NULL, NULL, NULL)
 
 INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
 Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
-VALUES(95, 'Isabel', 'Fernï¿½ndez', TO_DATE('1993-09-25', 'YYYY-MM-DD'), 'isabel.fer@example.com', 
+VALUES(95, 'Isabel', 'Fernandez', TO_DATE('1993-09-25', 'YYYY-MM-DD'), 'isabel.fer@example.com', 
 '88942589', 1, 1, 1, NULL, NULL, NULL, NULL, NULL)
 
 INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
@@ -1125,7 +1124,7 @@ VALUES(96, 'Miguel', 'Navarro', TO_DATE('1986-07-13', 'YYYY-MM-DD'), 'miguel.nav
 
 INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
 Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
-VALUES(97, 'Sofï¿½a', 'Moreno', TO_DATE('1969-05-14', 'YYYY-MM-DD'), 'sofia.moreno@example.com',
+VALUES(97, 'Sofia', 'Moreno', TO_DATE('1969-05-14', 'YYYY-MM-DD'), 'sofia.moreno@example.com',
 '88944701', 2, 1, 1, NULL, NULL, NULL, NULL, NULL)
 
 INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
@@ -1135,24 +1134,24 @@ VALUES(98, 'Antonio', 'Lozano', TO_DATE('1983-04-18', 'YYYY-MM-DD'), 'antonio.lo
 
 INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
 Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
-VALUES(99, 'Alicia', 'Mï¿½ndez', TO_DATE('1990-11-30', 'YYYY-MM-DD'), 'alicia.mendez@example.com', 
+VALUES(99, 'Alicia', 'Mendez', TO_DATE('1990-11-30', 'YYYY-MM-DD'), 'alicia.mendez@example.com', 
 '88946923', 2, 2, 1, NULL, NULL, NULL, NULL, NULL)
 
 INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
 Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
-VALUES(100, 'Eduardo', 'Rodrï¿½guez', TO_DATE('1980-09-04', 'YYYY-MM-DD'), 'eduardo.rodriguez@example.com', 
+VALUES(100, 'Eduardo', 'Rodriguez', TO_DATE('1980-09-04', 'YYYY-MM-DD'), 'eduardo.rodriguez@example.com', 
 '88948034', 3, 1, 1, NULL, NULL, NULL, NULL, NULL)
 SELECT 1 FROM DUAL;
 -- Registros 101-120
 INSERT ALL
 INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
 Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
-VALUES(101, 'Elena', 'Muï¿½oz', TO_DATE('1973-02-21', 'YYYY-MM-DD'), 'elena.munoz@example.com', 
+VALUES(101, 'Elena', 'Muñoz', TO_DATE('1973-02-21', 'YYYY-MM-DD'), 'elena.munoz@example.com', 
 '88949145', 1, 2, 1, NULL, NULL, NULL, NULL, NULL)
 
 INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
 Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
-VALUES(102, 'Hï¿½ctor', 'Blanco', TO_DATE('1964-11-02', 'YYYY-MM-DD'), 'hector.blanco@example.com', 
+VALUES(102, 'Hector', 'Blanco', TO_DATE('1964-11-02', 'YYYY-MM-DD'), 'hector.blanco@example.com', 
 '88950256', 2, 3, 1, NULL, NULL, NULL, NULL, NULL)
 
 INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
@@ -1172,27 +1171,27 @@ VALUES(105, 'Patricia', 'Vega', TO_DATE('1994-01-10', 'YYYY-MM-DD'), 'patri.vega
 
 INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
 Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
-VALUES(106, 'Luis', 'Pï¿½rez', TO_DATE('1988-03-22', 'YYYY-MM-DD'), 'luis.perez@example.com', 
+VALUES(106, 'Luis', 'Perez', TO_DATE('1988-03-22', 'YYYY-MM-DD'), 'luis.perez@example.com', 
 '88954690', 1, 3, 1, NULL, NULL, NULL, NULL, NULL)
 
 INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
 Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
-VALUES(107, 'Josï¿½', 'Herrera', TO_DATE('1960-10-04', 'YYYY-MM-DD'), 'jose.her@example.com',
+VALUES(107, 'Jose', 'Herrera', TO_DATE('1960-10-04', 'YYYY-MM-DD'), 'jose.her@example.com',
 '88955701', 2, 2, 1, NULL, NULL, NULL, NULL, NULL)
 
 INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
 Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
-VALUES(108, 'Ana', 'Martï¿½nez', TO_DATE('1987-12-09', 'YYYY-MM-DD'), 'ana.martinez@example.com',
+VALUES(108, 'Ana', 'Martinez', TO_DATE('1987-12-09', 'YYYY-MM-DD'), 'ana.martinez@example.com',
 '88956812', 1, 1, 1, NULL, NULL, NULL, NULL, NULL)
 
 INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
 Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
-VALUES(109, 'ï¿½scar', 'Garcï¿½a', TO_DATE('1977-05-19', 'YYYY-MM-DD'), 'oscar.garcia@example.com', 
+VALUES(109, 'Oscar', 'Garcia', TO_DATE('1977-05-19', 'YYYY-MM-DD'), 'oscar.garcia@example.com', 
 '88957923', 3, 3, 1, NULL, NULL, NULL, NULL, NULL)
 
 INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
 Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
-VALUES(110, 'Lucï¿½a', 'Morales', TO_DATE('1991-11-17', 'YYYY-MM-DD'), 'lucia.morales@example.com',
+VALUES(110, 'Lucia', 'Morales', TO_DATE('1991-11-17', 'YYYY-MM-DD'), 'lucia.morales@example.com',
 '88959034', 2, 1, 1, NULL, NULL, NULL, NULL, NULL)
 
 INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
@@ -1202,12 +1201,12 @@ VALUES(111, 'Ricardo', 'Cabrera', TO_DATE('1984-12-13', 'YYYY-MM-DD'), 'ricardo.
 
 INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
 Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
-VALUES(112, 'Ana', 'Gonzï¿½lez', TO_DATE('1963-07-21', 'YYYY-MM-DD'), 'ana.gonzalez@example.com', 
+VALUES(112, 'Ana', 'Gonzalez', TO_DATE('1963-07-21', 'YYYY-MM-DD'), 'ana.gonzalez@example.com', 
 '88961256', 2, 3, 1, NULL, NULL, NULL, NULL, NULL)
 
 INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
 Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
-VALUES(113, 'Manuel', 'Suï¿½rez', TO_DATE('1995-02-18', 'YYYY-MM-DD'), 'manuel.suarez@example.com',
+VALUES(113, 'Manuel', 'Suarez', TO_DATE('1995-02-18', 'YYYY-MM-DD'), 'manuel.suarez@example.com',
 '88962367', 1, 1, 1, NULL, NULL, NULL, NULL, NULL)
 
 INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
@@ -1217,7 +1216,7 @@ VALUES(114, 'Santiago', 'Vargas', TO_DATE('1974-06-09', 'YYYY-MM-DD'), 'santiago
 
 INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
 Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
-VALUES(115, 'Teresa', 'Jimï¿½nez', TO_DATE('1985-11-28', 'YYYY-MM-DD'), 'teresa.jim099@example.com', 
+VALUES(115, 'Teresa', 'Jimenez', TO_DATE('1985-11-28', 'YYYY-MM-DD'), 'teresa.jim099@example.com', 
 '88964589', 2, 1, 1, NULL, NULL, NULL, NULL, NULL)
 
 INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
@@ -1227,12 +1226,12 @@ VALUES(116, 'Antonio', 'Castro', TO_DATE('1992-09-13', 'YYYY-MM-DD'), 'ant.castr
 
 INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
 Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
-VALUES(117, 'Fï¿½tima', 'Garcï¿½a', TO_DATE('1994-08-14', 'YYYY-MM-DD'), 'fatima.garcia@example.com',
+VALUES(117, 'Fatima', 'Garcia', TO_DATE('1994-08-14', 'YYYY-MM-DD'), 'fatima.garcia@example.com',
 '88966701', 2, 2, 1, NULL, NULL, NULL, NULL, NULL)
 
 INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
 Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
-VALUES(118, 'Cristina', 'Rodrï¿½guez', TO_DATE('1981-07-02', 'YYYY-MM-DD'), 'cristina.rod9@example.com',
+VALUES(118, 'Cristina', 'Rodriguez', TO_DATE('1981-07-02', 'YYYY-MM-DD'), 'cristina.rod9@example.com',
 '88967812', 1, 1, 1, NULL, NULL, NULL, NULL, NULL)
 
 INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
@@ -1264,47 +1263,47 @@ VALUES(123, 'Carlos', 'Vargas', TO_DATE('1953-03-30', 'YYYY-MM-DD'), 'carlos.var
 
 INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
 Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
-VALUES(124, 'Lucï¿½a', 'Rodrï¿½guez', TO_DATE('1945-07-23', 'YYYY-MM-DD'), 'lucia.rodri@example.com',
+VALUES(124, 'Lucia', 'Rodriguez', TO_DATE('1945-07-23', 'YYYY-MM-DD'), 'lucia.rodri@example.com',
 '88974478', 2, 1, 1, NULL, NULL, NULL, NULL, NULL)
 
 INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
 Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
-VALUES(125, 'Miguel', 'Lï¿½pez', TO_DATE('1950-01-04', 'YYYY-MM-DD'), 'miguel.lopez@example.com', 
+VALUES(125, 'Miguel', 'Lopez', TO_DATE('1950-01-04', 'YYYY-MM-DD'), 'miguel.lopez@example.com', 
 '88975589', 3, 2, 1, NULL, NULL, NULL, NULL, NULL)
 
 INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
 Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
-VALUES(126, 'Eva', 'Ramï¿½rez', TO_DATE('1938-04-29', 'YYYY-MM-DD'), 'eva.ramirez@example.com', 
+VALUES(126, 'Eva', 'Ramirez', TO_DATE('1938-04-29', 'YYYY-MM-DD'), 'eva.ramirez@example.com', 
 '88976690', 1, 1, 1, NULL, NULL, NULL, NULL, NULL)
 
 INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
 Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
-VALUES(127, 'Josï¿½', 'Gutiï¿½rrez', TO_DATE('1942-08-15', 'YYYY-MM-DD'), 'jose.gut@example.com', 
+VALUES(127, 'Jose', 'Gutierrez', TO_DATE('1942-08-15', 'YYYY-MM-DD'), 'jose.gut@example.com', 
 '88977701', 2, 3, 1, NULL, NULL, NULL, NULL, NULL)
 
 INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
 Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
-VALUES(128, 'Marï¿½a', 'ï¿½lvarez', TO_DATE('1949-09-03', 'YYYY-MM-DD'), 'mari1.alvarez@example.com',
+VALUES(128, 'Maria', 'Alvarez', TO_DATE('1949-09-03', 'YYYY-MM-DD'), 'mari1.alvarez@example.com',
 '88978812', 1, 2, 1, NULL, NULL, NULL, NULL, NULL)
 
 INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
 Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
-VALUES(129, 'Antonio', 'Martï¿½nez', TO_DATE('1957-06-11', 'YYYY-MM-DD'), 'antonio.marti@example.com',
+VALUES(129, 'Antonio', 'Martinez', TO_DATE('1957-06-11', 'YYYY-MM-DD'), 'antonio.marti@example.com',
 '88979923', 3, 1, 1, NULL, NULL, NULL, NULL, NULL)
 
 INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
 Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
-VALUES(130, 'Ana', 'Fernï¿½ndez', TO_DATE('1946-05-12', 'YYYY-MM-DD'), 'ana.fernan@example.com',
+VALUES(130, 'Ana', 'Fernandez', TO_DATE('1946-05-12', 'YYYY-MM-DD'), 'ana.fernan@example.com',
 '88981034', 2, 2, 1, NULL, NULL, NULL, NULL, NULL)
 
 INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
 Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
-VALUES(131, 'Carlos', 'Garcï¿½a', TO_DATE('1951-03-25', 'YYYY-MM-DD'), 'carlos.garcia@example.com', 
+VALUES(131, 'Carlos', 'Garcia', TO_DATE('1951-03-25', 'YYYY-MM-DD'), 'carlos.garcia@example.com', 
 '88982145', 1, 3, 1, NULL, NULL, NULL, NULL, NULL)
 
 INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
 Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
-VALUES(132, 'Marta', 'Jimï¿½nez', TO_DATE('1959-12-18', 'YYYY-MM-DD'), 'm32.jimenez@example.com', 
+VALUES(132, 'Marta', 'Jimenez', TO_DATE('1959-12-18', 'YYYY-MM-DD'), 'm32.jimenez@example.com', 
 '88983256', 2, 1, 1, NULL, NULL, NULL, NULL, NULL)
 
 INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
@@ -1314,7 +1313,7 @@ VALUES(133, 'Luis', 'Torres', TO_DATE('1950-07-05', 'YYYY-MM-DD'), 'luis.torres@
 
 INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
 Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
-VALUES(134, 'Jesï¿½s', 'Moreno', TO_DATE('1940-11-11', 'YYYY-MM-DD'), 'j2.moreno@example.com', 
+VALUES(134, 'Jesus', 'Moreno', TO_DATE('1940-11-11', 'YYYY-MM-DD'), 'j2.moreno@example.com', 
 '88985478', 3, 3, 1, NULL, NULL, NULL, NULL, NULL)
 
 INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
@@ -1324,22 +1323,22 @@ VALUES(135, 'Beatriz', 'Vega', TO_DATE('1954-02-26', 'YYYY-MM-DD'), 'bea6.vega@e
 
 INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
 Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
-VALUES(136, 'Rosa', 'Hernï¿½ndez', TO_DATE('1952-06-19', 'YYYY-MM-DD'), 'r87.hernandez@example.com', 
+VALUES(136, 'Rosa', 'Hernandez', TO_DATE('1952-06-19', 'YYYY-MM-DD'), 'r87.hernandez@example.com', 
 '88987690', 1, 3, 1, NULL, NULL, NULL, NULL, NULL)
 
 INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
 Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
-VALUES(137, 'Juan', 'Martï¿½nez', TO_DATE('1948-12-12', 'YYYY-MM-DD'), 'j7.martinez@example.com', 
+VALUES(137, 'Juan', 'Martinez', TO_DATE('1948-12-12', 'YYYY-MM-DD'), 'j7.martinez@example.com', 
 '88988701', 2, 2, 1, NULL, NULL, NULL, NULL, NULL)
 
 INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
 Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
-VALUES(138, 'Josï¿½', 'Gï¿½mez', TO_DATE('1956-04-14', 'YYYY-MM-DD'), 'jo00.gomez@example.com', 
+VALUES(138, 'Jose', 'Gomez', TO_DATE('1956-04-14', 'YYYY-MM-DD'), 'jo00.gomez@example.com', 
 '88989812', 1, 1, 1, NULL, NULL, NULL, NULL, NULL)
 
 INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
 Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
-VALUES(139, 'Raquel', 'Sï¿½nchez', TO_DATE('1944-10-25', 'YYYY-MM-DD'), 'raq.sanchez@example.com', 
+VALUES(139, 'Raquel', 'Sanchez', TO_DATE('1944-10-25', 'YYYY-MM-DD'), 'raq.sanchez@example.com', 
 '88990923', 2, 3, 1, NULL, NULL, NULL, NULL, NULL)
 
 INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
@@ -1351,52 +1350,52 @@ SELECT 1 FROM DUAL;
 INSERT ALL
 INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
 Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
-VALUES(141, 'Laura', 'Pï¿½rez', TO_DATE('2003-07-15', 'YYYY-MM-DD'), 'l4u.perez@example.com', 
+VALUES(141, 'Laura', 'Perez', TO_DATE('2003-07-15', 'YYYY-MM-DD'), 'l4u.perez@example.com', 
 '88993145', 1, 2, 1, NULL, NULL, NULL, NULL, NULL)
 
 INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
 Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
-VALUES(142, 'Daniel', 'Ramï¿½rez', TO_DATE('2000-05-30', 'YYYY-MM-DD'), 'dan1.ramirez@example.com', 
+VALUES(142, 'Daniel', 'Ramirez', TO_DATE('2000-05-30', 'YYYY-MM-DD'), 'dan1.ramirez@example.com', 
 '88994256', 2, 3, 1, NULL, NULL, NULL, NULL, NULL)
 
 INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
 Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
-VALUES(143, 'Valeria', 'Sï¿½nchez', TO_DATE('1999-10-09', 'YYYY-MM-DD'), 'vale0.sanchez@example.com', 
+VALUES(143, 'Valeria', 'Sanchez', TO_DATE('1999-10-09', 'YYYY-MM-DD'), 'vale0.sanchez@example.com', 
 '88995367', 3, 1, 1, NULL, NULL, NULL, NULL, NULL)
 
 INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
 Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
-VALUES(144, 'Tomï¿½s', 'Torres', TO_DATE('2004-01-21', 'YYYY-MM-DD'), 'tomas.t0rres@example.com', 
+VALUES(144, 'Tomas', 'Torres', TO_DATE('2004-01-21', 'YYYY-MM-DD'), 'tomas.t0rres@example.com', 
 '88996478', 1, 2, 1, NULL, NULL, NULL, NULL, NULL)
 
 INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
 Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
-VALUES(145, 'Paula', 'Garcï¿½a', TO_DATE('1998-09-11', 'YYYY-MM-DD'), 'paula.g4rcia@example.com', 
+VALUES(145, 'Paula', 'Garcia', TO_DATE('1998-09-11', 'YYYY-MM-DD'), 'paula.g4rcia@example.com', 
 '88997589', 2, 3, 1, NULL, NULL, NULL, NULL, NULL)
 
 INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
 Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
-VALUES(146, 'Mateo', 'Martï¿½nez', TO_DATE('2001-06-25', 'YYYY-MM-DD'), 'mateo.m4rtinez@example.com', 
+VALUES(146, 'Mateo', 'Martinez', TO_DATE('2001-06-25', 'YYYY-MM-DD'), 'mateo.m4rtinez@example.com', 
 '88998690', 1, 1, 1, NULL, NULL, NULL, NULL, NULL)
 
 INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
 Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
-VALUES(147, 'Carmen', 'Lï¿½pez', TO_DATE('2002-11-02', 'YYYY-MM-DD'), 'carmen.l0pez@example.com', 
+VALUES(147, 'Carmen', 'Lopez', TO_DATE('2002-11-02', 'YYYY-MM-DD'), 'carmen.l0pez@example.com', 
 '88999701', 2, 2, 1, NULL, NULL, NULL, NULL, NULL)
 
 INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
 Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
-VALUES(148, 'Ivï¿½n', 'Hernï¿½ndez', TO_DATE('1997-04-06', 'YYYY-MM-DD'), 'ivan.h3rnandez@example.com', 
+VALUES(148, 'Ivan', 'Hernandez', TO_DATE('1997-04-06', 'YYYY-MM-DD'), 'ivan.h3rnandez@example.com', 
 '89000812', 3, 1, 1, NULL, NULL, NULL, NULL, NULL)
 
 INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
 Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
-VALUES(149, 'Lucï¿½a', 'Gonzï¿½lez', TO_DATE('1996-08-19', 'YYYY-MM-DD'), 'lucia.g0nzalez@example.com', 
+VALUES(149, 'Lucia', 'Gonzalez', TO_DATE('1996-08-19', 'YYYY-MM-DD'), 'lucia.g0nzalez@example.com', 
 '89001923', 1, 3, 1, NULL, NULL, NULL, NULL, NULL)
 
 INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
 Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
-VALUES(150, 'David', 'Suï¿½rez', TO_DATE('2005-02-13', 'YYYY-MM-DD'), 'david.suar3z@example.com', 
+VALUES(150, 'David', 'Suarez', TO_DATE('2005-02-13', 'YYYY-MM-DD'), 'david.suar3z@example.com', 
 '89003034', 2, 1, 1, NULL, NULL, NULL, NULL, NULL)
 
 INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
@@ -1406,64 +1405,64 @@ VALUES(151, 'Javier', 'Blanco', TO_DATE('1999-01-10', 'YYYY-MM-DD'), 'javier.bla
 
 INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
 Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
-VALUES(152, 'Raï¿½l', 'Vega', TO_DATE('2000-12-24', 'YYYY-MM-DD'), 'raul.vega@example.com', 
+VALUES(152, 'Raul', 'Vega', TO_DATE('2000-12-24', 'YYYY-MM-DD'), 'raul.vega@example.com', 
 '89005256', 1, 2, 1, NULL, NULL, NULL, NULL, NULL)
 
 INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
 Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
-VALUES(153, 'Isabel', 'Jimï¿½nez', TO_DATE('2003-05-03', 'YYYY-MM-DD'), 'isabel.jimenez@example.com', 
+VALUES(153, 'Isabel', 'Jimenez', TO_DATE('2003-05-03', 'YYYY-MM-DD'), 'isabel.jimenez@example.com', 
 '89006367', 2, 3, 1, NULL, NULL, NULL, NULL, NULL)
 
 INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
 Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
-VALUES(154, 'Alba', 'Gonzï¿½lez', TO_DATE('2002-02-22', 'YYYY-MM-DD'), 'alba.gonzalez@example.com', 
+VALUES(154, 'Alba', 'Gonzalez', TO_DATE('2002-02-22', 'YYYY-MM-DD'), 'alba.gonzalez@example.com', 
 '89007478', 1, 1, 1, NULL, NULL, NULL, NULL, NULL)
 
 INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
 Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
-VALUES(155, 'ï¿½scar', 'Cabrera', TO_DATE('2004-09-12', 'YYYY-MM-DD'), 'oscar.cabrera@example.com', 
+VALUES(155, 'Oscar', 'Cabrera', TO_DATE('2004-09-12', 'YYYY-MM-DD'), 'oscar.cabrera@example.com', 
 '89008589', 3, 2, 1, NULL, NULL, NULL, NULL, NULL)
 
 INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
 Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
-VALUES(156, 'Andrea', 'Lï¿½pez', TO_DATE('1997-11-01', 'YYYY-MM-DD'), 'andrea.lopez@example.com', 
+VALUES(156, 'Andrea', 'Lopez', TO_DATE('1997-11-01', 'YYYY-MM-DD'), 'andrea.lopez@example.com', 
 '89009690', 2, 1, 1, NULL, NULL, NULL, NULL, NULL)
 
 INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
 Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
-VALUES(157, 'Luis', 'Vï¿½zquez', TO_DATE('2001-08-14', 'YYYY-MM-DD'), 'luis.vazquez@example.com', 
+VALUES(157, 'Luis', 'Vazquez', TO_DATE('2001-08-14', 'YYYY-MM-DD'), 'luis.vazquez@example.com', 
 '89010701', 1, 3, 1, NULL, NULL, NULL, NULL, NULL)
 
 INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
 Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
-VALUES(158, 'Martï¿½n', 'Pï¿½rez', TO_DATE('1998-04-04', 'YYYY-MM-DD'), 'martin.perez@example.com',
+VALUES(158, 'Martin', 'Perez', TO_DATE('1998-04-04', 'YYYY-MM-DD'), 'martin.perez@example.com',
 '89011812', 2, 2, 1, NULL, NULL, NULL, NULL, NULL)
 
 INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
 Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
-VALUES(159, 'Sofï¿½a', 'Gutiï¿½rrez', TO_DATE('2000-03-13', 'YYYY-MM-DD'), 'sofia.gutierrez@example.com', 
+VALUES(159, 'Sofia', 'Gutierrez', TO_DATE('2000-03-13', 'YYYY-MM-DD'), 'sofia.gutierrez@example.com', 
 '89012923', 1, 1, 1, NULL, NULL, NULL, NULL, NULL)
 
 INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
 Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
-VALUES(160, 'Alfredo', 'Ramï¿½rez', TO_DATE('1999-07-07', 'YYYY-MM-DD'), 'alfredo.ramirez@example.com', 
+VALUES(160, 'Alfredo', 'Ramirez', TO_DATE('1999-07-07', 'YYYY-MM-DD'), 'alfredo.ramirez@example.com', 
 '89014034', 3, 2, 1, NULL, NULL, NULL, NULL, NULL)
 SELECT 1 FROM DUAL;
 -- Registros 161-180
 INSERT ALL
 INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
 Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
-VALUES(161, 'Elena', 'Suï¿½rez', TO_DATE('2003-04-02', 'YYYY-MM-DD'), 'elen4.suarez@example.com', 
+VALUES(161, 'Elena', 'Suarez', TO_DATE('2003-04-02', 'YYYY-MM-DD'), 'elen4.suarez@example.com', 
 '89015145', 2, 1, 1, NULL, NULL, NULL, NULL, NULL)
 
 INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
 Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
-VALUES(162, 'Beatriz', 'Hernï¿½ndez', TO_DATE('2001-10-29', 'YYYY-MM-DD'), 'b3.hernandez@example.com', 
+VALUES(162, 'Beatriz', 'Hernandez', TO_DATE('2001-10-29', 'YYYY-MM-DD'), 'b3.hernandez@example.com', 
 '89016256', 1, 2, 1, NULL, NULL, NULL, NULL, NULL)
 
 INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
 Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
-VALUES(163, 'Pedro', 'Castaï¿½o', TO_DATE('1997-06-13', 'YYYY-MM-DD'), 'pedr0.castano@example.com', 
+VALUES(163, 'Pedro', 'Castaño', TO_DATE('1997-06-13', 'YYYY-MM-DD'), 'pedr0.castano@example.com', 
 '89017367', 2, 3, 1, NULL, NULL, NULL, NULL, NULL)
 
 INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
@@ -1473,32 +1472,32 @@ VALUES(164, 'Marcos', 'Torres', TO_DATE('1996-12-25', 'YYYY-MM-DD'), 'marc0s.tor
 
 INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
 Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
-VALUES(165, 'Paula', 'Gonzï¿½lez', TO_DATE('2002-05-20', 'YYYY-MM-DD'), 'p4.gonzalez@example.com', 
+VALUES(165, 'Paula', 'Gonzalez', TO_DATE('2002-05-20', 'YYYY-MM-DD'), 'p4.gonzalez@example.com', 
 '89019589', 3, 2, 1, NULL, NULL, NULL, NULL, NULL)
 
 INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
 Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
-VALUES(166, 'Raquel', 'Martï¿½nez', TO_DATE('2004-04-18', 'YYYY-MM-DD'), 'raquel.martinez@example.com',
+VALUES(166, 'Raquel', 'Martinez', TO_DATE('2004-04-18', 'YYYY-MM-DD'), 'raquel.martinez@example.com',
 '89020690', 1, 3, 1, NULL, NULL, NULL, NULL, NULL)
 
 INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
 Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
-VALUES(167, 'Ivï¿½n', 'Suï¿½rez', TO_DATE('2005-07-06', 'YYYY-MM-DD'), 'ivan.suarez@example.com', 
+VALUES(167, 'Ivan', 'Suarez', TO_DATE('2005-07-06', 'YYYY-MM-DD'), 'ivan.suarez@example.com', 
 '89021701', 2, 1, 1, NULL, NULL, NULL, NULL, NULL)
 
 INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
 Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
-VALUES(168, 'Celia', 'Lï¿½pez', TO_DATE('2001-12-14', 'YYYY-MM-DD'), 'celia.lopez@example.com', 
+VALUES(168, 'Celia', 'Lopez', TO_DATE('2001-12-14', 'YYYY-MM-DD'), 'celia.lopez@example.com', 
 '89022812', 3, 2, 1, NULL, NULL, NULL, NULL, NULL)
 
 INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
 Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
-VALUES(169, 'Nicolï¿½s', 'Pï¿½rez', TO_DATE('1999-09-19', 'YYYY-MM-DD'), 'n1colas.perez@example.com', 
+VALUES(169, 'Nicolas', 'Perez', TO_DATE('1999-09-19', 'YYYY-MM-DD'), 'n1colas.perez@example.com', 
 '89023923', 1, 1, 1, NULL, NULL, NULL, NULL, NULL)
 
 INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
 Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
-VALUES(170, 'Paola', 'Garcï¿½a', TO_DATE('2002-01-03', 'YYYY-MM-DD'), 'pa0la.garcia@example.com', 
+VALUES(170, 'Paola', 'Garcia', TO_DATE('2002-01-03', 'YYYY-MM-DD'), 'pa0la.garcia@example.com', 
 '89025034', 2, 3, 1, NULL, NULL, NULL, NULL, NULL)
 
 INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
@@ -1513,12 +1512,12 @@ VALUES(172, 'Emilio', 'Torres', TO_DATE('2000-06-17', 'YYYY-MM-DD'), 'emilio.tor
 
 INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
 Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
-VALUES(173, 'Mercedes', 'Hernï¿½ndez', TO_DATE('1997-05-09', 'YYYY-MM-DD'), 'merC3.hernan@example.com', 
+VALUES(173, 'Mercedes', 'Hernandez', TO_DATE('1997-05-09', 'YYYY-MM-DD'), 'merC3.hernan@example.com', 
 '89028367', 2, 2, 1, NULL, NULL, NULL, NULL, NULL)
 
 INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
 Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
-VALUES(174, 'Raï¿½l', 'Vï¿½zquez', TO_DATE('2003-02-12', 'YYYY-MM-DD'), 'raul.vazquez@example.com', 
+VALUES(174, 'Raul', 'Vazquez', TO_DATE('2003-02-12', 'YYYY-MM-DD'), 'raul.vazquez@example.com', 
 '89029478', 1, 3, 1, NULL, NULL, NULL, NULL, NULL)
 
 INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
@@ -1528,17 +1527,17 @@ VALUES(175, 'Lidia', 'Cabrera', TO_DATE('1998-10-23', 'YYYY-MM-DD'), 'lidia.cabr
 
 INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
 Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
-VALUES(176, 'ï¿½ngel', 'Gutiï¿½rrez', TO_DATE('2001-04-15', 'YYYY-MM-DD'), 'angel.gutierrez@example.com', 
+VALUES(176, 'Angel', 'Gutierrez', TO_DATE('2001-04-15', 'YYYY-MM-DD'), 'angel.gutierrez@example.com', 
 '89031690', 3, 2, 1, NULL, NULL, NULL, NULL, NULL)
 
 INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
 Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
-VALUES(177, 'Andrea', 'Jimï¿½nez', TO_DATE('1996-11-09', 'YYYY-MM-DD'), 'andrea.jimenez@example.com', 
+VALUES(177, 'Andrea', 'Jimenez', TO_DATE('1996-11-09', 'YYYY-MM-DD'), 'andrea.jimenez@example.com', 
 '89032701', 1, 1, 1, NULL, NULL, NULL, NULL, NULL)
 
 INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
 Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
-VALUES(178, 'Felipe', 'Sï¿½nchez', TO_DATE('2004-03-19', 'YYYY-MM-DD'), 'felipe.sanchez@example.com', 
+VALUES(178, 'Felipe', 'Sanchez', TO_DATE('2004-03-19', 'YYYY-MM-DD'), 'felipe.sanchez@example.com', 
 '89033812', 2, 3, 1, NULL, NULL, NULL, NULL, NULL)
 
 INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
@@ -1560,22 +1559,22 @@ VALUES(181, 'Isabel', 'Morales', TO_DATE('1986-02-02', 'YYYY-MM-DD'), 'isab3l.mo
 
 INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
 Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
-VALUES(182, 'Jorge', 'Gutiï¿½rrez', TO_DATE('1992-03-03', 'YYYY-MM-DD'), 'jorg3.gutierr@example.com', 
+VALUES(182, 'Jorge', 'Gutierrez', TO_DATE('1992-03-03', 'YYYY-MM-DD'), 'jorg3.gutierr@example.com', 
 '88883337', 1, 3, 1, NULL, NULL, NULL, NULL, NULL)
 
 INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
 Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
-VALUES(183, 'Patricia', 'Dï¿½az', TO_DATE('1987-04-04', 'YYYY-MM-DD'), 'patr1cia.d1az@example.com', 
+VALUES(183, 'Patricia', 'Diaz', TO_DATE('1987-04-04', 'YYYY-MM-DD'), 'patr1cia.d1az@example.com', 
 '88884448', 2, 4, 1, NULL, NULL, NULL, NULL, NULL)
 
 INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
 Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
-VALUES(184, 'Ricardo', 'Mï¿½ndez', TO_DATE('1993-05-05', 'YYYY-MM-DD'), 'r1c.m3ndez@example.com',
+VALUES(184, 'Ricardo', 'Mendez', TO_DATE('1993-05-05', 'YYYY-MM-DD'), 'r1c.m3ndez@example.com',
 '88885559', 1, 5, 1, NULL, NULL, NULL, NULL, NULL)
 
 INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
 Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
-VALUES(185, 'Lucï¿½a', 'Rojas', TO_DATE('1989-06-06', 'YYYY-MM-DD'), 'luci4.roj4s@example.com', 
+VALUES(185, 'Lucia', 'Rojas', TO_DATE('1989-06-06', 'YYYY-MM-DD'), 'luci4.roj4s@example.com', 
 '88886670', 2, 6, 1, NULL, NULL, NULL, NULL, NULL)
 
 INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
@@ -1595,12 +1594,12 @@ VALUES(188, 'Roberto', 'Alvarado', TO_DATE('1994-09-09', 'YYYY-MM-DD'), 'r0.4lva
 
 INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
 Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
-VALUES(189, 'Mï¿½nica', 'Vega', TO_DATE('1990-10-10', 'YYYY-MM-DD'), 'monic4.vga@example.com', 
+VALUES(189, 'Monica', 'Vega', TO_DATE('1990-10-10', 'YYYY-MM-DD'), 'monic4.vga@example.com', 
 '88880004', 2, 10, 1, NULL, NULL, NULL, NULL, NULL)
 
 INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
 Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
-VALUES(190, 'Josï¿½', 'Navarro', TO_DATE('1985-11-11', 'YYYY-MM-DD'), 'jos3.n4varro@example.com', 
+VALUES(190, 'Jose', 'Navarro', TO_DATE('1985-11-11', 'YYYY-MM-DD'), 'jos3.n4varro@example.com', 
 '88881116', 1, 11, 1, NULL, NULL, NULL, NULL, NULL)
 
 INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
@@ -1610,12 +1609,12 @@ VALUES(191, 'Adriana', 'Molina', TO_DATE('1992-12-12', 'YYYY-MM-DD'), '4dri4na.m
 
 INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
 Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
-VALUES(192, 'Miguel', 'Rï¿½os', TO_DATE('1988-01-13', 'YYYY-MM-DD'), 'migu3l.r1os@example.com', 
+VALUES(192, 'Miguel', 'Rios', TO_DATE('1988-01-13', 'YYYY-MM-DD'), 'migu3l.r1os@example.com', 
 '88883338', 1, 13, 1, NULL, NULL, NULL, NULL, NULL)
 
 INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
 Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
-VALUES(193, 'Verï¿½nica', 'Silva', TO_DATE('1993-02-14', 'YYYY-MM-DD'), 'ver0.silva@example.com', 
+VALUES(193, 'Veronica', 'Silva', TO_DATE('1993-02-14', 'YYYY-MM-DD'), 'ver0.silva@example.com', 
 '88884449', 2, 14, 1, NULL, NULL, NULL, NULL, NULL)
 
 INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
@@ -1630,7 +1629,7 @@ VALUES(195, 'Daniela', 'Guerrero', TO_DATE('1995-04-16', 'YYYY-MM-DD'), 'd4la.gu
 
 INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
 Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
-VALUES(196, 'Andrï¿½s', 'Vargas', TO_DATE('1991-05-17', 'YYYY-MM-DD'), '4ndr3s.vargas@example.com',
+VALUES(196, 'Andres', 'Vargas', TO_DATE('1991-05-17', 'YYYY-MM-DD'), '4ndr3s.vargas@example.com',
 '88887782', 1, 17, 1, NULL, NULL, NULL, NULL, NULL)
 
 INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
@@ -1640,7 +1639,7 @@ VALUES(197, 'Sara', 'Cruz', TO_DATE('1987-06-18', 'YYYY-MM-DD'), 'sar4.cr2z@exam
 
 INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
 Direccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
-VALUES(198, 'Raï¿½l', 'Ortiz', TO_DATE('1994-07-19', 'YYYY-MM-DD'), 'r4ul.ort1z@example.com', 
+VALUES(198, 'Raul', 'Ortiz', TO_DATE('1994-07-19', 'YYYY-MM-DD'), 'r4ul.ort1z@example.com', 
 '88889994', 1, 19, 1, NULL, NULL, NULL, NULL, NULL)
 
 INTO FIDE_VOTANTES_TB (Votante_ID, Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, 
@@ -1697,15 +1696,15 @@ VALUES (2, 'Fabricio', 'Alvarado', 4, 1, 1, NULL, NULL, NULL, NULL, NULL);
 
 -- Candidato 3: Josï¿½ Marï¿½a Figueres (PLN)
 INSERT INTO FIDE_CANDIDATOS_TB (Candidato_ID, Nombre, Apellido, Partido_ID, Eleccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
-VALUES (3, 'Josï¿½ Marï¿½a', 'Figueres', 1, 1, 1, NULL, NULL, NULL, NULL, NULL);
+VALUES (3, 'Jose Maria', 'Figueres', 1, 1, 1, NULL, NULL, NULL, NULL, NULL);
 
 -- Candidato 4: Lineth Saborï¿½o (PUSC)
 INSERT INTO FIDE_CANDIDATOS_TB (Candidato_ID, Nombre, Apellido, Partido_ID, Eleccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
-VALUES (4, 'Lineth', 'Saborï¿½o', 2, 1, 1, NULL, NULL, NULL, NULL, NULL);
+VALUES (4, 'Lineth', 'Saborio', 2, 1, 1, NULL, NULL, NULL, NULL, NULL);
 
 -- Candidato 5: Eliï¿½cer Feinzaig (PNR)
 INSERT INTO FIDE_CANDIDATOS_TB (Candidato_ID, Nombre, Apellido, Partido_ID, Eleccion_ID, Estado_ID, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
-VALUES (5, 'Eliï¿½cer', 'Feinzaig', 5, 1, 1, NULL, NULL, NULL, NULL, NULL);
+VALUES (5, 'Eliecer', 'Feinzaig', 5, 1, 1, NULL, NULL, NULL, NULL, NULL);
 /
 
 
@@ -1747,15 +1746,15 @@ VALUES (5, 'votante3', 'votante123', 'votante3@example.com', 3, 1, NULL, NULL, N
 
 -- Auditor 1
 INSERT INTO FIDE_AUDITORES_TB (Auditor_ID, Nombre, Apellido, Email, Telefono, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
-VALUES (1, 'Juan', 'Pï¿½rez', 'juan.perez@example.com', '88881111', NULL, NULL, NULL, NULL, NULL);
+VALUES (1, 'Juan', 'Perez', 'juan.perez@example.com', '88881111', NULL, NULL, NULL, NULL, NULL);
 
 -- Auditor 2
 INSERT INTO FIDE_AUDITORES_TB (Auditor_ID, Nombre, Apellido, Email, Telefono, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
-VALUES (2, 'Marï¿½a', 'Gï¿½mez', 'maria.gomez@example.com', '88882222', NULL, NULL, NULL, NULL, NULL);
+VALUES (2, 'Maria', 'Gomez', 'maria.gomez@example.com', '88882222', NULL, NULL, NULL, NULL, NULL);
 
 -- Auditor 3
 INSERT INTO FIDE_AUDITORES_TB (Auditor_ID, Nombre, Apellido, Email, Telefono, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
-VALUES (3, 'Carlos', 'Lï¿½pez', 'carlos.lopez@example.com', '88883333', NULL, NULL, NULL, NULL, NULL);
+VALUES (3, 'Carlos', 'Lopez', 'carlos.lopez@example.com', '88883333', NULL, NULL, NULL, NULL, NULL);
 /
 
 
@@ -1949,7 +1948,7 @@ VALUES (1, 1, 1, TO_DATE('2022-02-06', 'YYYY-MM-DD'), 'Falta de boletas en la me
 
 -- Reporte 2: Incidencia en la Sede Alajuela Centro
 INSERT INTO FIDE_REPORTES_TB (Reporte_ID, Eleccion_ID, Votante_ID, FechaReporte, Descripcion, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
-VALUES (2, 1, 2, TO_DATE('2022-02-06', 'YYYY-MM-DD'), 'Problema con la urna electrï¿½nica', NULL, NULL, NULL, NULL, NULL);
+VALUES (2, 1, 2, TO_DATE('2022-02-06', 'YYYY-MM-DD'), 'Problema con la urna electronica', NULL, NULL, NULL, NULL, NULL);
 
 -- Reporte 3: Incidencia en la Sede Cartago Central
 INSERT INTO FIDE_REPORTES_TB (Reporte_ID, Eleccion_ID, Votante_ID, FechaReporte, Descripcion, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
@@ -1957,11 +1956,11 @@ VALUES (3, 1, 3, TO_DATE('2022-02-06', 'YYYY-MM-DD'), 'Falta de personal en la m
 
 -- Reporte 4: Incidencia en la Sede Heredia Centro
 INSERT INTO FIDE_REPORTES_TB (Reporte_ID, Eleccion_ID, Votante_ID, FechaReporte, Descripcion, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
-VALUES (4, 1, 4, TO_DATE('2022-02-06', 'YYYY-MM-DD'), 'Demora en el proceso de votaciï¿½n', NULL, NULL, NULL, NULL, NULL);
+VALUES (4, 1, 4, TO_DATE('2022-02-06', 'YYYY-MM-DD'), 'Demora en el proceso de votacion', NULL, NULL, NULL, NULL, NULL);
 
 -- Reporte 5: Incidencia en la Sede Liberia Centro
 INSERT INTO FIDE_REPORTES_TB (Reporte_ID, Eleccion_ID, Votante_ID, FechaReporte, Descripcion, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
-VALUES (5, 1, 5, TO_DATE('2022-02-06', 'YYYY-MM-DD'), 'Problema con la identificaciï¿½n de votantes', NULL, NULL, NULL, NULL, NULL);
+VALUES (5, 1, 5, TO_DATE('2022-02-06', 'YYYY-MM-DD'), 'Problema con la identificacion de votantes', NULL, NULL, NULL, NULL, NULL);
 /
 
 
@@ -2051,7 +2050,7 @@ VALUES (10, 10, 'CLAVE3242', TO_DATE('2022-01-01', 'YYYY-MM-DD'), NULL, NULL, NU
 
 -- Log 1: Inicio de sesiï¿½n de Juan Pï¿½rez (Votante_ID: 1)
 INSERT INTO FIDE_LOGSEGURIDAD_TB (Log_ID, Votante_ID, Fecha, Accion_log, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
-VALUES (1, 1, TO_DATE('2022-02-06 08:00:00', 'YYYY-MM-DD HH24:MI:SS'), 'Inicio de sesiï¿½n exitoso', NULL, NULL, NULL, NULL, NULL);
+VALUES (1, 1, TO_DATE('2022-02-06 08:00:00', 'YYYY-MM-DD HH24:MI:SS'), 'Inicio de sesion exitoso', NULL, NULL, NULL, NULL, NULL);
 
 -- Log 2: Cambio de clave de Marï¿½a Gï¿½mez (Votante_ID: 2)
 INSERT INTO FIDE_LOGSEGURIDAD_TB (Log_ID, Votante_ID, Fecha, Accion_log, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
@@ -2063,7 +2062,7 @@ VALUES (3, 3, TO_DATE('2022-02-06 10:30:00', 'YYYY-MM-DD HH24:MI:SS'), 'Voto emi
 
 -- Log 4: Inicio de sesiï¿½n de Ana Rodrï¿½guez (Votante_ID: 4)
 INSERT INTO FIDE_LOGSEGURIDAD_TB (Log_ID, Votante_ID, Fecha, Accion_log, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
-VALUES (4, 4, TO_DATE('2022-02-06 11:45:00', 'YYYY-MM-DD HH24:MI:SS'), 'Inicio de sesiï¿½n exitoso', NULL, NULL, NULL, NULL, NULL);
+VALUES (4, 4, TO_DATE('2022-02-06 11:45:00', 'YYYY-MM-DD HH24:MI:SS'), 'Inicio de sesion exitoso', NULL, NULL, NULL, NULL, NULL);
 
 -- Log 5: Voto emitido por Luis Martï¿½nez (Votante_ID: 5)
 INSERT INTO FIDE_LOGSEGURIDAD_TB (Log_ID, Votante_ID, Fecha, Accion_log, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
@@ -2071,7 +2070,7 @@ VALUES (5, 5, TO_DATE('2022-02-06 12:00:00', 'YYYY-MM-DD HH24:MI:SS'), 'Voto emi
 
 -- Log 6: Inicio de sesiï¿½n de Sofï¿½a Chaves (Votante_ID: 6)
 INSERT INTO FIDE_LOGSEGURIDAD_TB (Log_ID, Votante_ID, Fecha, Accion_log, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
-VALUES (6, 6, TO_DATE('2022-02-06 13:15:00', 'YYYY-MM-DD HH24:MI:SS'), 'Inicio de sesiï¿½n exitoso', NULL, NULL, NULL, NULL, NULL);
+VALUES (6, 6, TO_DATE('2022-02-06 13:15:00', 'YYYY-MM-DD HH24:MI:SS'), 'Inicio de sesion exitoso', NULL, NULL, NULL, NULL, NULL);
 
 -- Log 7: Cambio de clave de Pedro Sï¿½nchez (Votante_ID: 7)
 INSERT INTO FIDE_LOGSEGURIDAD_TB (Log_ID, Votante_ID, Fecha, Accion_log, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
@@ -2083,7 +2082,7 @@ VALUES (8, 8, TO_DATE('2022-02-06 15:45:00', 'YYYY-MM-DD HH24:MI:SS'), 'Voto emi
 
 -- Log 9: Inicio de sesiï¿½n de Diego Ramï¿½rez (Votante_ID: 9)
 INSERT INTO FIDE_LOGSEGURIDAD_TB (Log_ID, Votante_ID, Fecha, Accion_log, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
-VALUES (9, 9, TO_DATE('2022-02-06 16:00:00', 'YYYY-MM-DD HH24:MI:SS'), 'Inicio de sesiï¿½n exitoso', NULL, NULL, NULL, NULL, NULL);
+VALUES (9, 9, TO_DATE('2022-02-06 16:00:00', 'YYYY-MM-DD HH24:MI:SS'), 'Inicio de sesion exitoso', NULL, NULL, NULL, NULL, NULL);
 
 -- Log 10: Voto emitido por Carmen Vargas (Votante_ID: 10)
 INSERT INTO FIDE_LOGSEGURIDAD_TB (Log_ID, Votante_ID, Fecha, Accion_log, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
@@ -2109,7 +2108,7 @@ VALUES (4, 4, 'Su boleta ha sido procesada correctamente.', TO_DATE('2022-02-06'
 
 -- Notificaciï¿½n 5: Luis Martï¿½nez (Votante_ID: 5)
 INSERT INTO FIDE_NOTIFICACIONES_TB (Notificacion_ID, Votante_ID, Mensaje, FechaNotificacion, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
-VALUES (5, 5, 'Su reporte ha sido recibido y estï¿½ en revisiï¿½n.', TO_DATE('2022-02-06', 'YYYY-MM-DD'), NULL, NULL, NULL, NULL, NULL);
+VALUES (5, 5, 'Su reporte ha sido recibido y esta en revision.', TO_DATE('2022-02-06', 'YYYY-MM-DD'), NULL, NULL, NULL, NULL, NULL);
 
 -- Notificaciï¿½n 6: Sofï¿½a Chaves (Votante_ID: 6)
 INSERT INTO FIDE_NOTIFICACIONES_TB (Notificacion_ID, Votante_ID, Mensaje, FechaNotificacion, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
@@ -2129,7 +2128,7 @@ VALUES (9, 9, 'Su boleta ha sido procesada correctamente.', TO_DATE('2022-02-06'
 
 -- Notificaciï¿½n 10: Carmen Vargas (Votante_ID: 10)
 INSERT INTO FIDE_NOTIFICACIONES_TB (Notificacion_ID, Votante_ID, Mensaje, FechaNotificacion, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
-VALUES (10, 10, 'Su reporte ha sido recibido y estï¿½ en revisiï¿½n.', TO_DATE('2022-02-06', 'YYYY-MM-DD'), NULL, NULL, NULL, NULL, NULL);
+VALUES (10, 10, 'Su reporte ha sido recibido y esta en revision.', TO_DATE('2022-02-06', 'YYYY-MM-DD'), NULL, NULL, NULL, NULL, NULL);
 /
 
 
@@ -2157,23 +2156,23 @@ VALUES (5, 5, TO_DATE('2022-02-06 12:00:00', 'YYYY-MM-DD HH24:MI:SS'), TO_DATE('
 
 -- Historial 1: Modificaciï¿½n de voto emitido por Juan Pï¿½rez (Votante_ID: 1)
 INSERT INTO FIDE_HISTORIALVOTOS_TB (Historial_ID, FechaModificacion, Accion_historial, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
-VALUES (1, TO_DATE('2022-02-06 10:00:00', 'YYYY-MM-DD HH24:MI:SS'), 'Modificaciï¿½n de voto', NULL, NULL, NULL, NULL, NULL);
+VALUES (1, TO_DATE('2022-02-06 10:00:00', 'YYYY-MM-DD HH24:MI:SS'), 'Modificacion de voto', NULL, NULL, NULL, NULL, NULL);
 
 -- Historial 2: Modificaciï¿½n de voto emitido por Marï¿½a Gï¿½mez (Votante_ID: 2)
 INSERT INTO FIDE_HISTORIALVOTOS_TB (Historial_ID, FechaModificacion, Accion_historial, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
-VALUES (2, TO_DATE('2022-02-06 11:00:00', 'YYYY-MM-DD HH24:MI:SS'), 'Modificaciï¿½n de voto', NULL, NULL, NULL, NULL, NULL);
+VALUES (2, TO_DATE('2022-02-06 11:00:00', 'YYYY-MM-DD HH24:MI:SS'), 'Modificacion de voto', NULL, NULL, NULL, NULL, NULL);
 
 -- Historial 3: Modificaciï¿½n de voto emitido por Carlos Lï¿½pez (Votante_ID: 3)
 INSERT INTO FIDE_HISTORIALVOTOS_TB (Historial_ID, FechaModificacion, Accion_historial, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
-VALUES (3, TO_DATE('2022-02-06 12:00:00', 'YYYY-MM-DD HH24:MI:SS'), 'Modificaciï¿½n de voto', NULL, NULL, NULL, NULL, NULL);
+VALUES (3, TO_DATE('2022-02-06 12:00:00', 'YYYY-MM-DD HH24:MI:SS'), 'Modificacionn de voto', NULL, NULL, NULL, NULL, NULL);
 
 -- Historial 4: Modificaciï¿½n de voto emitido por Ana Rodrï¿½guez (Votante_ID: 4)
 INSERT INTO FIDE_HISTORIALVOTOS_TB (Historial_ID, FechaModificacion, Accion_historial, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
-VALUES (4, TO_DATE('2022-02-06 13:00:00', 'YYYY-MM-DD HH24:MI:SS'), 'Modificaciï¿½n de voto', NULL, NULL, NULL, NULL, NULL);
+VALUES (4, TO_DATE('2022-02-06 13:00:00', 'YYYY-MM-DD HH24:MI:SS'), 'Modificacion de voto', NULL, NULL, NULL, NULL, NULL);
 
 -- Historial 5: Modificaciï¿½n de voto emitido por Luis Martï¿½nez (Votante_ID: 5)
 INSERT INTO FIDE_HISTORIALVOTOS_TB (Historial_ID, FechaModificacion, Accion_historial, creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion)
-VALUES (5, TO_DATE('2022-02-06 14:00:00', 'YYYY-MM-DD HH24:MI:SS'), 'Modificaciï¿½n de voto', NULL, NULL, NULL, NULL, NULL);
+VALUES (5, TO_DATE('2022-02-06 14:00:00', 'YYYY-MM-DD HH24:MI:SS'), 'Modificacion de voto', NULL, NULL, NULL, NULL, NULL);
 /
 
 
