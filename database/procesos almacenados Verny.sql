@@ -186,16 +186,28 @@ END FIDE_GENEROS_Obtener_SP;
 
 --15. Procedimiento para obtener los Cantones por Provincia
 
-CREATE OR REPLACE PROCEDURE FIDE_CANTONES_ObtenerPorProvincia_SP (
+CREATE OR REPLACE PROCEDURE FIDE_CANTONES_ObtenerPorProvincia_SP(
     p_Provincia_ID IN NUMBER
 ) AS
 BEGIN
-    FOR rec IN (SELECT * FROM FIDE_CANTONES_TB WHERE Provincia_ID = p_Provincia_ID) LOOP
+    FOR rec IN (SELECT Canton_ID, Nombre 
+                FROM FIDE_CANTONES_TB 
+                WHERE Canton_ID IN (
+                    SELECT Canton_ID 
+                    FROM FIDE_DIRECCIONES_TB 
+                    WHERE Provincia_ID = p_Provincia_ID)) LOOP
         DBMS_OUTPUT.PUT_LINE('Canton_ID: ' || rec.Canton_ID || ' - Nombre: ' || rec.Nombre);
     END LOOP;
+EXCEPTION
+    WHEN OTHERS THEN
+        DBMS_OUTPUT.PUT_LINE('Ocurrió un error: ' || SQLERRM);
 END FIDE_CANTONES_ObtenerPorProvincia_SP;
-
-
+---llama la funcion
+/*
+BEGIN
+    FIDE_CANTONES_ObtenerPorProvincia_SP(1);
+END;*/
+/
 
 ---------------------------------------Cracion del paquete-------------------------
 -- Crear el paquete 
