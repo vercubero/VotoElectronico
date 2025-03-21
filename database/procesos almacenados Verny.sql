@@ -14,7 +14,7 @@ BEGIN
 END FIDE_ESTADOS_Insertar_SP;
 
 
---2. Procedimiento para insertar un Género
+--2. Procedimiento para insertar un Gï¿½nero
 
 CREATE OR REPLACE PROCEDURE FIDE_GENEROS_Insertar_SP (
     p_Genero_ID IN NUMBER,
@@ -40,7 +40,7 @@ BEGIN
 END FIDE_PROVINCIAS_Insertar_SP;
 
 
---4. Procedimiento para insertar un Cantón
+--4. Procedimiento para insertar un Cantï¿½n
 
 CREATE OR REPLACE PROCEDURE FIDE_CANTONES_Insertar_SP (
     p_Canton_ID IN NUMBER,
@@ -53,7 +53,7 @@ BEGIN
 END FIDE_CANTONES_Insertar_SP;
 
 
---5. Procedimiento para actualizar la descripción de un Estado
+--5. Procedimiento para actualizar la descripciï¿½n de un Estado
 
 
 CREATE OR REPLACE PROCEDURE FIDE_ESTADOS_Actualizar_SP (
@@ -69,7 +69,7 @@ BEGIN
 END FIDE_ESTADOS_Actualizar_SP;
 
 
---6. Procedimiento para actualizar el nombre de un Género
+--6. Procedimiento para actualizar el nombre de un Gï¿½nero
 
 CREATE OR REPLACE PROCEDURE FIDE_GENEROS_Actualizar_SP (
     p_Genero_ID IN NUMBER,
@@ -99,7 +99,7 @@ BEGIN
 END FIDE_PROVINCIAS_Actualizar_SP;
 
 
---8. Procedimiento para actualizar el nombre de un Cantón
+--8. Procedimiento para actualizar el nombre de un Cantï¿½n
 
 CREATE OR REPLACE PROCEDURE FIDE_CANTONES_Actualizar_SP (
     p_Canton_ID IN NUMBER,
@@ -126,7 +126,7 @@ BEGIN
 END FIDE_ESTADOS_Eliminar_SP;
 
 
---10. Procedimiento para eliminar un Género
+--10. Procedimiento para eliminar un Gï¿½nero
 
 CREATE OR REPLACE PROCEDURE FIDE_GENEROS_Eliminar_SP (
     p_Genero_ID IN NUMBER
@@ -149,7 +149,7 @@ BEGIN
 END FIDE_PROVINCIAS_Eliminar_SP;
 
 
---12. Procedimiento para eliminar un Cantón
+--12. Procedimiento para eliminar un Cantï¿½n
 
 CREATE OR REPLACE PROCEDURE FIDE_CANTONES_Eliminar_SP (
     p_Canton_ID IN NUMBER
@@ -163,8 +163,8 @@ END FIDE_CANTONES_Eliminar_SP;
 
 --13. Procedimiento para obtener los Estados activos
 
-CREATE OR REPLACE PROCEDURE FIDE_ESTADOS_ObtenerActivos_SP (
-) AS
+CREATE OR REPLACE PROCEDURE FIDE_ESTADOS_ObtenerActivos_SP
+AS
 BEGIN
     FOR rec IN (SELECT * FROM FIDE_ESTADOS_TB WHERE Descripcion = 'Activo') LOOP
         DBMS_OUTPUT.PUT_LINE('Estado_ID: ' || rec.Estado_ID || ' - Descripcion: ' || rec.Descripcion);
@@ -173,10 +173,10 @@ END FIDE_ESTADOS_ObtenerActivos_SP;
 
 
 
---14. Procedimiento para obtener los Géneros existentes
+--14. Procedimiento para obtener los Gï¿½neros existentes
 
-CREATE OR REPLACE PROCEDURE FIDE_GENEROS_Obtener_SP (
-) AS
+CREATE OR REPLACE PROCEDURE FIDE_GENEROS_Obtener_SP
+AS
 BEGIN
     FOR rec IN (SELECT * FROM FIDE_GENEROS_TB) LOOP
         DBMS_OUTPUT.PUT_LINE('Genero_ID: ' || rec.Genero_ID || ' - Nombre: ' || rec.Nombre);
@@ -200,10 +200,10 @@ END FIDE_CANTONES_ObtenerPorProvincia_SP;
 ---------------------------------------Cracion del paquete-------------------------
 -- Crear el paquete 
 CREATE OR REPLACE PACKAGE Fide_Proyecto_Final_PKG AS
-    -- Declaración de la función
+    -- Declaraciï¿½n de la funciï¿½n
     FUNCTION obtener_nombre_votante (p_votante_id IN NUMBER) RETURN VARCHAR2;
     
-    -- Declaración del procedimiento
+    -- Declaraciï¿½n del procedimiento
     PROCEDURE insertar_votante (
         p_nombre IN VARCHAR2,
         p_apellido IN VARCHAR2,
@@ -220,7 +220,7 @@ END Fide_Proyecto_Final_PKG;
 /
 CREATE OR REPLACE PACKAGE BODY Fide_Proyecto_Final_PKG AS
 
-    -- Implementación de la función
+    -- Implementaciï¿½n de la funciï¿½n
     FUNCTION obtener_nombre_votante (p_votante_id IN NUMBER) RETURN VARCHAR2 IS
         v_nombre_completo VARCHAR2(101); -- para almacenar el nombre completo
     BEGIN
@@ -233,7 +233,7 @@ CREATE OR REPLACE PACKAGE BODY Fide_Proyecto_Final_PKG AS
         RETURN v_nombre_completo;
     END obtener_nombre_votante;
     
-    -- Implementación del procedimiento
+    -- Implementaciï¿½n del procedimiento
     PROCEDURE insertar_votante (
         p_nombre IN VARCHAR2,
         p_apellido IN VARCHAR2,
