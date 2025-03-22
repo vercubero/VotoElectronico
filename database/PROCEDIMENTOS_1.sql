@@ -759,4 +759,30 @@ BEGIN
     WHERE Mesa_Voto_ID = p_Mesa_Voto_ID;
 END;
 /
+CREATE OR REPLACE PROCEDURE FIDE_USUARIOS_VALIDAR_USUARIO_SP(
+    p_username IN VARCHAR2,
+    p_password IN VARCHAR2,
+    p_valido OUT NUMBER
+)
+IS
+BEGIN
+    SELECT COUNT(*)
+    INTO p_valido
+    FROM FIDE_USUARIOS_TB
+    WHERE User_name = p_username AND Password = p_password;
+END;
+/
 
+CREATE OR REPLACE PROCEDURE FIDE_VALIDAR_VOTANTE_SP(
+    p_votante_id IN NUMBER,
+    p_clave IN VARCHAR2,
+    p_valido OUT NUMBER
+)
+IS
+BEGIN
+    SELECT COUNT(*)
+    INTO p_valido
+    FROM FIDE_CLAVES_SEGURIDAD_TB
+    WHERE Votante_ID = p_votante_id AND Clave = p_clave;
+END;
+/
