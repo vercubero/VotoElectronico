@@ -635,6 +635,128 @@ BEGIN
     WHERE Direccion_ID = p_Direccion_ID;
 END;
 /
-
-
+CREATE OR REPLACE PROCEDURE FIDE_VOTOS_INSERT_SP(
+    p_Voto_ID IN NUMBER,
+    p_Votante_ID IN NUMBER,
+    p_Eleccion_ID IN NUMBER,
+    p_Candidato_ID IN NUMBER,
+    p_Fecha_Voto IN DATE,
+    p_Detalle_Voto IN VARCHAR2,
+    p_creado_por IN VARCHAR2,
+    p_modificado_por IN VARCHAR2,
+    p_fecha_creacion IN DATE,
+    p_fecha_modificacion IN DATE,
+    p_accion IN VARCHAR2
+)
+AS
+BEGIN
+    INSERT INTO FIDE_VOTOS_TB (
+        Voto_ID, Votante_ID, Eleccion_ID, Candidato_ID, Fecha_Voto,
+        Detalle_Voto, creado_por, modificado_por, fecha_creacion,
+        fecha_modificacion, accion
+    )
+    VALUES (
+        p_Voto_ID, p_Votante_ID, p_Eleccion_ID, p_Candidato_ID, p_Fecha_Voto,
+        p_Detalle_Voto, p_creado_por, p_modificado_por, p_fecha_creacion,
+        p_fecha_modificacion, p_accion
+    );
+END;
+/
+CREATE OR REPLACE PROCEDURE FIDE_VOTOS_UPDATE_SP(
+    p_Voto_ID IN NUMBER,
+    p_Votante_ID IN NUMBER,
+    p_Eleccion_ID IN NUMBER,
+    p_Candidato_ID IN NUMBER,
+    p_Fecha_Voto IN DATE,
+    p_Detalle_Voto IN VARCHAR2,
+    p_creado_por IN VARCHAR2,
+    p_modificado_por IN VARCHAR2,
+    p_fecha_creacion IN DATE,
+    p_fecha_modificacion IN DATE,
+    p_accion IN VARCHAR2
+)
+AS
+BEGIN
+    UPDATE FIDE_VOTOS_TB
+    SET Votante_ID = p_Votante_ID,
+        Eleccion_ID = p_Eleccion_ID,
+        Candidato_ID = p_Candidato_ID,
+        Fecha_Voto = p_Fecha_Voto,
+        Detalle_Voto = p_Detalle_Voto,
+        creado_por = p_creado_por,
+        modificado_por = p_modificado_por,
+        fecha_creacion = p_fecha_creacion,
+        fecha_modificacion = p_fecha_modificacion,
+        accion = p_accion
+    WHERE Voto_ID = p_Voto_ID;
+END;
+/
+CREATE OR REPLACE PROCEDURE FIDE_VOTOS_DELETE_SP(
+    p_Voto_ID IN NUMBER
+)
+AS
+BEGIN
+    DELETE FROM FIDE_VOTOS_TB
+    WHERE Voto_ID = p_Voto_ID;
+END;
+/
+CREATE OR REPLACE PROCEDURE FIDE_MESAS_VOTO_INSERT_SP(
+    p_Mesa_Voto_ID IN NUMBER,
+    p_Eleccion_ID IN NUMBER,
+    p_Votante_ID IN NUMBER,
+    p_Estado_ID IN NUMBER,
+    p_creado_por IN VARCHAR2,
+    p_modificado_por IN VARCHAR2,
+    p_fecha_creacion IN DATE,
+    p_fecha_modificacion IN DATE,
+    p_accion IN VARCHAR2
+)
+AS
+BEGIN
+    INSERT INTO FIDE_MESAS_VOTO_TB (
+        Mesa_Voto_ID, Eleccion_ID, Votante_ID, Estado_ID,
+        creado_por, modificado_por, fecha_creacion,
+        fecha_modificacion, accion
+    )
+    VALUES (
+        p_Mesa_Voto_ID, p_Eleccion_ID, p_Votante_ID, p_Estado_ID,
+        p_creado_por, p_modificado_por, p_fecha_creacion,
+        p_fecha_modificacion, p_accion
+    );
+END;
+/
+CREATE OR REPLACE PROCEDURE FIDE_MESAS_VOTO_UPDATE_SP(
+    p_Mesa_Voto_ID IN NUMBER,
+    p_Eleccion_ID IN NUMBER,
+    p_Votante_ID IN NUMBER,
+    p_Estado_ID IN NUMBER,
+    p_creado_por IN VARCHAR2,
+    p_modificado_por IN VARCHAR2,
+    p_fecha_creacion IN DATE,
+    p_fecha_modificacion IN DATE,
+    p_accion IN VARCHAR2
+)
+AS
+BEGIN
+    UPDATE FIDE_MESAS_VOTO_TB
+    SET Eleccion_ID = p_Eleccion_ID,
+        Votante_ID = p_Votante_ID,
+        Estado_ID = p_Estado_ID,
+        creado_por = p_creado_por,
+        modificado_por = p_modificado_por,
+        fecha_creacion = p_fecha_creacion,
+        fecha_modificacion = p_fecha_modificacion,
+        accion = p_accion
+    WHERE Mesa_Voto_ID = p_Mesa_Voto_ID;
+END;
+/
+CREATE OR REPLACE PROCEDURE FIDE_MESAS_VOTO_DELETE_SP(
+    p_Mesa_Voto_ID IN NUMBER
+)
+AS
+BEGIN
+    DELETE FROM FIDE_MESAS_VOTO_TB
+    WHERE Mesa_Voto_ID = p_Mesa_Voto_ID;
+END;
+/
 
