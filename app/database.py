@@ -7,7 +7,7 @@ def connect_to_db():
         connection = cx_Oracle.connect(
             user="FIDE_VOTO_ELECTRONICO",
             password="123",
-            dsn="localhost:1521/XE"  # Modifica con el host y servicio de tu base de dato
+            dsn="localhost:1521/XE"
         )
         print("Conexión exitosa a la base de datos")
         return connection
@@ -15,89 +15,113 @@ def connect_to_db():
         print("Error al conectar a la base de datos:", error)
         return None
 
-# Función para autenticar al votante
-def authenticate_voter(connection, voter_id, clave):
-    cursor = connection.cursor()
-    query = """
-        SELECT Votante_ID 
-        FROM FIDE_CLAVES_SEGURIDAD_TB
-        WHERE Votante_ID = :voter_id AND Clave = :clave
-    """
-    cursor.execute(query, {"voter_id": voter_id, "clave": clave})
-    result = cursor.fetchone()
-    cursor.close()
-    if result:
-        return True
-    else:
-        return False
-
-# Función para registrar el voto
-def cast_vote(connection, votante_id, eleccion_id, candidato_id):
+# Función para insertar datos
+def insertar_votante(connection):
     try:
         cursor = connection.cursor()
-        # Verificar si el votante ya ha votado
-        query_check = """
-            SELECT COUNT(*) 
-            FROM FIDE_VOTOS_TB 
-            WHERE Votante_ID = :votante_id AND Eleccion_ID = :eleccion_id
-        """
-        cursor.execute(query_check, {"votante_id": votante_id, "eleccion_id": eleccion_id})
-        already_voted = cursor.fetchone()[0]
+        print("Insertar nuevo votante:")
+        Votante_ID = int(input("ID del votante: "))
+        Nombre = input("Nombre: ")
+        Apellido = input("Apellido: ")
+        Fecha_Nacimiento = input("Fecha de nacimiento (YYYY-MM-DD): ")
+        Email = input("Email: ")
+        Telefono = input("Teléfono: ")
+        Genero_ID = int(input("ID del género: "))
+        Direccion_ID = int(input("ID de la dirección: "))
+        Estado_ID = int(input("ID del estado: "))
+        creado_por = input("Creado por: ")
+        modificado_por = input("Modificado por: ")
+        Fecha_Creacion = input("Fecha de creacion (YYYY-MM-DD): ")
+        Fecha_Modificacion = input("Fecha de modificacion (YYYY-MM-DD): ")
+        accion = input("Acción: ")
 
-        if already_voted > 0:
-            print("Ya has emitido tu voto para esta elección.")
-            return False
-
-        # Registrar el voto
-        query_insert = """
-    INSERT INTO FIDE_VOTOS_TB (
-        Voto_ID, Votante_ID, Eleccion_ID, Candidato_ID, Fecha_Voto, Detalle_Voto,
-        creado_por, modificado_por, fecha_creacion, fecha_modificacion, accion
-    )
-    VALUES (
-        FIDE_VOTOS_SEQ.NEXTVAL, :votante_id, :eleccion_id, :candidato_id, :fecha_voto, :detalle_voto,
-        NULL, NULL, NULL, NULL, NULL
-    )
-"""
-        cursor.execute(query_insert, {
-            "votante_id": votante_id,
-            "eleccion_id": eleccion_id,
-            "candidato_id": candidato_id,
-            "fecha_voto": datetime.datetime.now(),
-            "detalle_voto": "Voto registrado electrónicamente"
-        })
+        cursor.callproc("FIDE_VOTANTES_INSERT_SP", [
+            Votante_ID, Nombre, Apellido, 
+            datetime.datetime.strptime(Fecha_Nacimiento, '%Y-%m-%d'),
+            Email, Telefono, Genero_ID, Direccion_ID, Estado_ID, 
+            creado_por, modificado_por, datetime.datetime.strptime(Fecha_Creacion, '%Y-%m-%d'),
+            datetime.datetime.strptime(Fecha_Modificacion, '%Y-%m-%d'), accion
+        ])
         connection.commit()
-        print("¡Voto emitido exitosamente!")
-        return True
+        print("¡Votante insertado exitosamente!")
     except cx_Oracle.Error as error:
-        print("Error al registrar el voto:", error)
-        return False
-    finally:
-        cursor.close()
+        print("Error al insertar votante:", error)
+
+# Función para actualizar datos
+def actualizar_votante(connection):
+    try:
+        cursor = connection.cursor()
+        print("Actualizar votante existente:")
+        Votante_ID = int(input("ID del votante a actualizar: "))
+        Nombre = input("Nuevo nombre: ")
+        Apellido = input("Nuevo apellido: ")
+        Fecha_Nacimiento = input("Nueva fecha de nacimiento (YYYY-MM-DD): ")
+        Email = input("Nuevo email: ")
+        Telefono = input("Nuevo teléfono: ")
+        Genero_ID = int(input("Nuevo ID del género: "))
+        Direccion_ID = int(input("Nuevo ID de la dirección: "))
+        Estado_ID = int(input("Nuevo ID del estado: "))
+        creado_por = input("Creado por: ")
+        modificado_por = input("Modificado por: ")
+        Fecha_Creacion = input("Fecha de creacion (YYYY-MM-DD): ")
+        Fecha_Modificacion = input("Fecha de modificacion (YYYY-MM-DD): ")
+        accion = input("Acción: ")
+
+        cursor.callproc("FIDE_VOTANTES_UPDATE_SP", [
+            Votante_ID, Nombre, Apellido, 
+            datetime.datetime.strptime(Fecha_Nacimiento, '%Y-%m-%d'),
+            Email, Telefono, Genero_ID, Direccion_ID, Estado_ID, 
+            creado_por, modificado_por,datetime.datetime.strptime(Fecha_Creacion, '%Y-%m-%d'),
+            datetime.datetime.strptime(Fecha_Modificacion, '%Y-%m-%d'), accion
+        ])
+        connection.commit()
+        print("¡Votante actualizado exitosamente!")
+    except cx_Oracle.Error as error:
+        print("Error al actualizar votante:", error)
+
+# Función para eliminar datos
+def eliminar_votante(connection):
+    try:
+        cursor = connection.cursor()
+        print("Eliminar votante:")
+        Votante_ID = int(input("ID del votante a eliminar: "))
+
+        cursor.callproc("FIDE_VOTANTES_DELETE_SP", [Votante_ID])
+        connection.commit()
+        print("¡Votante eliminado exitosamente!")
+    except cx_Oracle.Error as error:
+        print("Error al eliminar votante:", error)
 
 # Menú principal
 def main():
     connection = connect_to_db()
     if not connection:
         return
+    try:
+        while True:
+            print("\n--- Menú Principal ---")
+            print("1. Insertar Votante")
+            print("2. Actualizar Votante")
+            print("3. Eliminar Votante")
+            print("4. Salir")
 
-    print("\n--- Bienvenido al Sistema de Voto Electrónico ---")
-    voter_id = int(input("Ingresa tu ID de votante: "))
-    clave = input("Ingresa tu clave de seguridad: ")
+            opcion = input("Elige una opción: ")
 
-    if authenticate_voter(connection, voter_id, clave):
-        print("Autenticación exitosa.")
-        eleccion_id = int(input("Ingresa el ID de la elección: "))
-        candidato_id = int(input("Ingresa el ID del candidato por el que deseas votar: "))
-        
-        if cast_vote(connection, voter_id, eleccion_id, candidato_id):
-            print("Gracias por participar en esta elección.")
-        else:
-            print("No se pudo completar el proceso de votación.")
-    else:
-        print("Autenticación fallida. Por favor, verifica tus credenciales.")
+            if opcion == "1":
+                insertar_votante(connection)
+            elif opcion == "2":
+                actualizar_votante(connection)
+            elif opcion == "3":
+                eliminar_votante(connection)
+            elif opcion == "4":
+                print("Saliendo del programa...")
+                break
+            else:
+                print("Opción inválida. Por favor, elige una opción válida.")
+    finally:
+        connection.close()
+        print("Conexión cerrada.")
 
-    connection.close()
 
 if __name__ == "__main__":
     main()
