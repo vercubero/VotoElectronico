@@ -92,11 +92,58 @@ def eliminar_votante(connection):
     except cx_Oracle.Error as error:
         print("Error al eliminar votante:", error)
 
-# Menú principal
-def main():
-    connection = connect_to_db()
-    if not connection:
-        return
+# Validación de credenciales de admin
+def validar_admin(connection):
+    try:
+        nombre_usuario = input("Nombre de usuario: ")
+        clave = input("Contraseña: ")
+
+        cursor = connection.cursor()
+
+        valido = cursor.var(cx_Oracle.NUMBER)
+
+        cursor.callproc("FIDE_USUARIOS_VALIDAR_USUARIO_SP", [nombre_usuario, clave, valido])
+        
+        if valido.getvalue() == 1:  # Si el resultado es 1, las credenciales son válidas
+            print("Inicio de sesión exitoso como Admin")
+            return True
+        else:
+            print("Usuario o contraseña incorrectos")
+            return False
+
+    except cx_Oracle.Error as error:
+        print("Error al validar credenciales:", error)
+        return False
+
+
+# Validación de credenciales de votante
+def validar_votante(connection):
+    try:
+        votante_id = input("Id de usuario: ")
+        clave = input("Clave: ")
+        cursor = connection.cursor()
+
+        valido = cursor.var(cx_Oracle.NUMBER)
+
+        cursor.callproc("FIDE_VALIDAR_VOTANTE_SP", [votante_id, clave, valido])
+
+        # Comprobación del resultado
+        if valido.getvalue() == 1:  
+            print("Inicio de sesión exitoso como votante")
+            
+            return True
+        else:
+            print("ID o clave incorrectos")
+            return False
+    except cx_Oracle.Error as error:
+        print("Error al validar credenciales:", error)
+        return False
+
+#---
+
+
+# Función para mostrar menú principal2
+def mostrar_menu(connection):
     try:
         while True:
             print("\n--- Menú Principal ---")
@@ -121,6 +168,31 @@ def main():
     finally:
         connection.close()
         print("Conexión cerrada.")
+
+# Menú principal
+def main():
+    connection = connect_to_db()
+    if not connection:
+        return
+    while True:
+        print("\n--- Bienvenido ---")
+        print("1. Admin")
+        print("2. Votante")
+        print("3. Salir")
+        opcion = input("Elige una opción: ")
+
+        if opcion == "1":
+            if validar_admin(connection):
+                mostrar_menu(connection)
+        elif opcion == "2":
+            if validar_votante(connection):
+                connection.close()
+                print("Devolviendo menu inicial.")
+        elif opcion == "3":
+            print("Saliendo del programa...")
+            break
+        else:
+            print("Opción inválida. Por favor, elige una opción válida.")
 
 
 if __name__ == "__main__":
