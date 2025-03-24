@@ -26,13 +26,6 @@ app.use(cors(corsOptions));
 app.use(express.json());
 app.use(express.static('public'));
 
-// Eliminar cualquier middleware que sobrescriba el encabezado CORS manualmente
-// (Remover el siguiente bloque)
-// app.use((req, res, next) => {
-//     res.setHeader('Access-Control-Allow-Origin', 'http://localhost');
-//     next();
-// });
-
 oracledb.outFormat = oracledb.OUT_FORMAT_OBJECT;
 
 // Configuración de conexión
