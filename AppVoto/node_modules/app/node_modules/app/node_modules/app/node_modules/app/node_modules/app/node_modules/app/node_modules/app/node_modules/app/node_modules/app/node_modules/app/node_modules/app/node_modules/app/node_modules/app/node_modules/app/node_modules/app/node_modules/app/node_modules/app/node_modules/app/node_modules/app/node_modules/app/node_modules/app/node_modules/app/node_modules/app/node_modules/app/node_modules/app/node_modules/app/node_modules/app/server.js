@@ -5,7 +5,7 @@ const cors = require('cors');
 const app = express();
 
 // Lista de orígenes permitidos
-const allowedOrigins = ['http://192.168.100.10:5501', 'http://localhost:5500', 'http://localhost', 'http://127.0.0.1:5501'];
+const allowedOrigins = ['http://192.168.100.23:5501', 'http://localhost:5500', 'http://localhost', 'http://127.0.0.1:5501'];
 
 const corsOptions = {
   origin: function (origin, callback) {
