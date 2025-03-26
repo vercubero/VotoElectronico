@@ -5,7 +5,8 @@ const cors = require('cors');
 const app = express();
 
 // Lista de orígenes permitidos
-const allowedOrigins = ['http://192.168.100.23:5501', 'http://localhost:5500', 'http://localhost', 'http://127.0.0.1:5501'];
+const allowedOrigins = ['http://192.168.100.23:5501', 'http://localhost:5500', 'http://localhost', 
+    'http://127.0.0.1:5501', 'http://localhost:3000'];
 
 const corsOptions = {
   origin: function (origin, callback) {
@@ -30,7 +31,7 @@ oracledb.outFormat = oracledb.OUT_FORMAT_OBJECT;
 
 // Configuración de conexión
 const dbConfig = {
-    user: "FIDE_VOTO_ELECTRONICO",
+    user: "Proyecto_Lenguaje",
     password: "123",
     connectionString: "localhost:1521/XE"
 };
@@ -72,6 +73,60 @@ app.post('/validar-usuario', async (req, res) => {
             }
         }
     }
+});
+
+// Endpoint para insertar
+app.post('/insertar', async (req, res) => {
+  const { tabla, datos } = req.body; // Recibe la tabla y los datos a insertar
+  try {
+    const connection = await oracledb.getConnection(dbConfig);
+    const result = await connection.execute(
+      `BEGIN insertar_${tabla}(:datos); END;`,
+      { datos: datos },
+      { autoCommit: true }
+    );
+    res.status(200).send('Registro insertado correctamente');
+    await connection.close();
+  } catch (err) {
+    console.error(err);
+    res.status(500).send('Error al insertar');
+  }
+});
+
+// Endpoint para actualizar
+app.put('/actualizar', async (req, res) => {
+  const { tabla, id, datos } = req.body; // Recibe la tabla, el ID del registro y los datos a actualizar
+  try {
+    const connection = await oracledb.getConnection(dbConfig);
+    const result = await connection.execute(
+      `BEGIN actualizar_${tabla}(:id, :datos); END;`,
+      { id: id, datos: datos },
+      { autoCommit: true }
+    );
+    res.status(200).send('Registro actualizado correctamente');
+    await connection.close();
+  } catch (err) {
+    console.error(err);
+    res.status(500).send('Error al actualizar');
+  }
+});
+
+// Endpoint para eliminar
+app.delete('/eliminar', async (req, res) => {
+  const { tabla, id } = req.body; // Recibe la tabla y el ID del registro a eliminar
+  try {
+    const connection = await oracledb.getConnection(dbConfig);
+    const result = await connection.execute(
+      `BEGIN eliminar_${tabla}(:id); END;`,
+      { id: id },
+      { autoCommit: true }
+    );
+    res.status(200).send('Registro eliminado correctamente');
+    await connection.close();
+  } catch (err) {
+    console.error(err);
+    res.status(500).send('Error al eliminar');
+  }
 });
 
 // Iniciar el servidor en el puerto correspondiente
