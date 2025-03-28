@@ -132,7 +132,7 @@
     <script>
       document.addEventListener("DOMContentLoaded", function () {
         let tablaSeleccionada = "";
-    
+  
         // Define el arreglo con los nombres de las tablas
         const nombresTablas = [
           "Auditores", "Auditorias", "Boletas", "Candidatos", "Cantones", "Claves", 
@@ -141,13 +141,13 @@
           "Provincias", "Reportes", "Resultados", "Roles", "Sedes", "Sesiones",
           "Usuarios", "Votantes", "VotosHistorial", "Votos"
         ];
-    
+  
         // Genera opciones dinámicas basadas en el arreglo de nombres
         const containerRow = document.querySelector('.container-votacion .row');
         nombresTablas.forEach((nombre, index) => {
           const colDiv = document.createElement('div');
           colDiv.className = "col-4 col-sm-3 col-md-2 mb-3";
-    
+  
           const opcionDiv = document.createElement('div');
           opcionDiv.className = "candidato tabla";
           opcionDiv.setAttribute('data-tabla', index + 1);
@@ -158,14 +158,14 @@
               seleccionarTabla(this);
             }
           };
-    
+  
           const p = document.createElement('p');
           p.textContent = nombre; // Usa el nombre del arreglo como texto
           opcionDiv.appendChild(p);
           colDiv.appendChild(opcionDiv);
           containerRow.appendChild(colDiv);
         });
-    
+  
         function seleccionarTabla(elemento) {
           document.querySelectorAll('.tabla').forEach(el => el.classList.remove("seleccionado"));
           elemento.classList.add("seleccionado");
@@ -175,90 +175,30 @@
           document.getElementById("modal-acciones").style.display = "block";
           document.getElementById("overlay").style.display = "block";
         }
-    
+  
         function cerrarModalAcciones() {
           document.getElementById("modal-acciones").style.display = "none";
           document.getElementById("overlay").style.display = "none";
           document.querySelectorAll('.tabla').forEach(el => el.classList.remove("seleccionado"));
           tablaSeleccionada = "";
         }
-    
-        // Función para manejar la acción de insertar
-        window.accionInsertar = async function () {
-          const datos = prompt("Ingrese los datos a insertar en formato JSON:");
-          if (!datos) return;
-    
-          try {
-            const response = await fetch('/insertar', {
-              method: 'POST',
-              headers: { 'Content-Type': 'application/json' },
-              body: JSON.stringify({ tabla: tablaSeleccionada, datos: JSON.parse(datos) })
-            });
-    
-            if (response.ok) {
-              alert("Registro insertado correctamente en " + tablaSeleccionada);
-            } else {
-              alert("Error al insertar en " + tablaSeleccionada);
-            }
-          } catch (error) {
-            console.error(error);
-            alert("Error al procesar la solicitud de inserción.");
-          }
-    
+  
+        window.accionInsertar= function () {
+          window.location.href = "http://192.168.100.10:5501/users.html";
+          //alert("Insertar acción en " + tablaSeleccionada);
+          //cerrarModalAcciones();
+        };
+  
+        window.accionActualizar = function () {
+          alert("Actualizar acción en " + tablaSeleccionada);
           cerrarModalAcciones();
         };
-    
-        // Función para manejar la acción de actualizar
-        window.accionActualizar = async function () {
-          const id = prompt("Ingrese el ID del registro a actualizar:");
-          const datos = prompt("Ingrese los nuevos datos en formato JSON:");
-          if (!id || !datos) return;
-    
-          try {
-            const response = await fetch('/actualizar', {
-              method: 'PUT',
-              headers: { 'Content-Type': 'application/json' },
-              body: JSON.stringify({ tabla: tablaSeleccionada, id: id, datos: JSON.parse(datos) })
-            });
-    
-            if (response.ok) {
-              alert("Registro actualizado correctamente en " + tablaSeleccionada);
-            } else {
-              alert("Error al actualizar en " + tablaSeleccionada);
-            }
-          } catch (error) {
-            console.error(error);
-            alert("Error al procesar la solicitud de actualización.");
-          }
-    
+  
+        window.accionEliminar = function () {
+          alert("Eliminar acción en " + tablaSeleccionada);
           cerrarModalAcciones();
         };
-    
-        // Función para manejar la acción de eliminar
-        window.accionEliminar = async function () {
-          const id = prompt("Ingrese el ID del registro a eliminar:");
-          if (!id) return;
-    
-          try {
-            const response = await fetch('/eliminar', {
-              method: 'DELETE',
-              headers: { 'Content-Type': 'application/json' },
-              body: JSON.stringify({ tabla: tablaSeleccionada, id: id })
-            });
-    
-            if (response.ok) {
-              alert("Registro eliminado correctamente en " + tablaSeleccionada);
-            } else {
-              alert("Error al eliminar en " + tablaSeleccionada);
-            }
-          } catch (error) {
-            console.error(error);
-            alert("Error al procesar la solicitud de eliminación.");
-          }
-    
-          cerrarModalAcciones();
-        };
-    
+  
         window.cerrarModalAcciones = cerrarModalAcciones;
       });
     </script>

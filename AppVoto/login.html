@@ -129,7 +129,7 @@
             try {
                 const username = document.getElementById("username").value;
                 const password = document.getElementById("password").value;
-                
+                console.log("inicia try de validacion");
                 const response = await fetch("http://localhost:3000/validar-usuario", {
                     method: "POST",
                     headers: { "Content-Type": "application/json" },
