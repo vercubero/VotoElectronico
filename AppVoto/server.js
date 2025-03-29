@@ -224,6 +224,298 @@ app.get('/usuarios', async (req, res) => {
         }
     }
 });
+
+// Endpoint para insertar auditor en server.js
+app.post('/insertar-auditor', async (req, res) => {
+    console.log("Llega a insertar datos");
+    console.log("Datos recibidos:", req.body);
+    const { auditorID, nombre, apellido, email, telefono } = req.body;
+    let connection;
+
+    try {
+        connection = await oracledb.getConnection(dbConfig);
+        console.log("Llega al try del PS");
+        console.log("Parámetros enviados al procedimiento:", {
+            p_Auditor_ID: auditorID,
+            p_Nombre: nombre,
+            p_Apellido: apellido,
+            p_Email: email,
+            p_Telefono: telefono
+        });
+        
+        // Llamada al procedimiento almacenado
+        const result = await connection.execute(
+            `BEGIN FIDE_AUDITORES_INSERTAR_SP(:p_Auditor_ID, :p_Nombre, :p_Apellido, 
+            :p_Email, :p_Telefono); END;`,
+            {
+                p_Auditor_ID: auditorID,
+                p_Nombre: nombre,
+                p_Apellido: apellido,
+                p_Email: email,
+                p_Telefono: telefono
+                
+            }
+        );
+        
+    } catch (err) {
+        console.error("Error al Insertar Auditor:", err);
+        res.status(500).json({ message: "Error interno del servidor." });
+    } finally {
+        if (connection) {
+            try {
+                await connection.close();
+            } catch (closeErr) {
+                console.error("Error al cerrar la conexión:", closeErr);
+            }
+        }
+    }
+    res.status(200).json({ message: 'Auditor insertado correctamente.' });
+});
+
+// Endpoint para eliminar auditores utilizando el procedimiento almacenado
+app.delete('/eliminar-auditor/:id', async (req, res) => {
+    console.log("Datos recibidos:");
+    const auditorID = req.params.id; // Recuperar el ID del auditor desde los parámetros de la URL
+    let connection;
+
+    try {
+        connection = await oracledb.getConnection(dbConfig);
+
+        // Llamamos al procedimiento almacenado para eliminar el usuario
+        await connection.execute(
+            `BEGIN FIDE_AUDITORES_ELIMINAR_SP(:p_Auditor_ID); END;`,
+            { p_Auditor_ID: Number(auditorID) } // Enviamos el ID como parámetro
+        );
+
+        res.json({ message: 'Auditor eliminado exitosamente.' });
+    } catch (err) {
+        console.error('Error al eliminar Auditor:', err);
+        res.status(500).send({ message: 'Error al eliminar Auditor.' });
+    } finally {
+        if (connection) {
+            try {
+                await connection.close();
+            } catch (err) {
+                console.error('Error al cerrar conexión:', err);
+            }
+        }
+    }
+});
+
+// Endpoint para actualizar auditor utilizando el procedimiento almacenado
+app.put('/actualizar-auditor', async (req, res) => {
+    console.log("Datos recibidos para actualización:", req.body);
+    const { auditorID, nombre, apellido, email, telefono  } = req.body;
+    let connection;
+  
+    try {
+      connection = await oracledb.getConnection(dbConfig);
+  
+      console.log("Ejecutando procedimiento para actualizar auditores...");
+      await connection.execute(
+        `BEGIN FIDE_AUDITORES_ACTUALIZAR_SP(:p_Auditor_ID, :p_Nombre, :p_Apellido, 
+            :p_Email, :p_Telefono); END;`,
+
+            {
+                p_Auditor_ID: auditorID,
+                p_Nombre: nombre,
+                p_Apellido: apellido,
+                p_Email: email,
+                p_Telefono: telefono
+                
+            }
+      );
+  
+      res.json({ message: "auditor actualizado correctamente." });
+    } catch (err) {
+      console.error("Error al actualizar auditor:", err);
+      res.status(500).json({ message: "Error interno del servidor." });
+    } finally {
+      if (connection) {
+        try {
+          await connection.close();
+        } catch (closeErr) {
+          console.error("Error al cerrar conexión:", closeErr);
+        }
+      }
+    }
+  });
+  
+
+// Endpoint para obtener todos los usuarios
+app.get('/auditores', async (req, res) => {
+    let connection;
+
+    try {
+        connection = await oracledb.getConnection(dbConfig);
+
+        // Ejecutar una consulta directa desde la tabla, porque el procedimiento actual solo imprime texto
+        const result = await connection.execute(
+            `SELECT Auditor_ID, Nombre, Apellido, Email, Telefono FROM FIDE_AUDITORES_TB`,
+            [], // Sin parámetros en este caso
+            { outFormat: oracledb.OUT_FORMAT_OBJECT } // Formato de salida como objeto
+        );
+
+        res.json(result.rows); // Devuelve los datos al frontend
+    } catch (err) {
+        console.error('Error al obtener usuarios:', err);
+        res.status(500).send('Error al obtener usuarios.');
+    } finally {
+        if (connection) {
+            try {
+                await connection.close();
+            } catch (err) {
+                console.error('Error al cerrar conexión:', err);
+            }
+        }
+    }
+});
+
+// Endpoint para insertar candidato en server.js
+app.post('/insertar-candidato', async (req, res) => {
+    console.log("Llega a insertar datos");
+    console.log("Datos recibidos:", req.body);
+    const { CandidatoID, nombre, apellido, PartidoID, EleccionID, EstadoID} = req.body;
+    let connection;
+
+    try {
+        connection = await oracledb.getConnection(dbConfig);
+        console.log("Llega al try del PS");
+        console.log("Parámetros enviados al procedimiento:", {
+            p_Candidato_ID: CandidatoID,
+            p_Nombre: nombre,
+            p_Apellido: apellido,
+            p_Partido_ID: PartidoID,
+            p_Eleccion_ID: EleccionID,
+            p_Estado_ID: EstadoID
+        });
+        
+        // Llamada al procedimiento almacenado
+        const result = await connection.execute(
+            `BEGIN FIDE_CANDIDATOS_INSERTAR_SP(:p_Candidato_ID, :p_Nombre, :p_Apellido, 
+            :p_Partido_ID, :p_Eleccion_ID, :p_Estado_ID); END;`,
+            {
+                p_Candidato_ID: CandidatoID,
+                p_Nombre: nombre,
+                p_Apellido: apellido,
+                p_Partido_ID: PartidoID,
+                p_Eleccion_ID: EleccionID,
+                p_Estado_ID: EstadoID
+            }
+        );
+        
+    } catch (err) {
+        console.error("Error al Insertar candidato:", err);
+        res.status(500).json({ message: "Error interno del servidor." });
+    } finally {
+        if (connection) {
+            try {
+                await connection.close();
+            } catch (closeErr) {
+                console.error("Error al cerrar la conexión:", closeErr);
+            }
+        }
+    }
+    res.status(200).json({ message: 'candidato insertado correctamente.' });
+});
+
+// Endpoint para eliminar candidatos utilizando el procedimiento almacenado
+app.delete('/eliminar-candidato/:id', async (req, res) => {
+    const candidatoID = req.params.id; // Recuperar el ID del candidato desde los parámetros de la URL
+    let connection;
+
+    try {
+        connection = await oracledb.getConnection(dbConfig);
+
+        // Llamamos al procedimiento almacenado para eliminar el usuario
+        await connection.execute(
+            `BEGIN FIDE_CANDIDATOS_ELIMINAR_SP(:p_candidato_ID); END;`,
+            { p_candidato_ID: Number(candidatoID) } // Enviamos el ID como parámetro
+        );
+
+        res.json({ message: 'Candidato eliminado exitosamente.' });
+    } catch (err) {
+        console.error('Error al eliminar candidato:', err);
+        res.status(500).send({ message: 'Error al eliminar candidato.' });
+    } finally {
+        if (connection) {
+            try {
+                await connection.close();
+            } catch (err) {
+                console.error('Error al cerrar conexión:', err);
+            }
+        }
+    }
+});
+
+// Endpoint para actualizar candidato utilizando el procedimiento almacenado
+app.put('/actualizar-candidato', async (req, res) => {
+    console.log("Datos recibidos para actualización:", req.body);
+    const { CandidatoID, nombre, apellido, PartidoID, EleccionID, EstadoID } = req.body;
+    let connection;
+
+    try {
+        connection = await oracledb.getConnection(dbConfig);
+
+        console.log("Ejecutando procedimiento para actualizar candidatos...");
+        await connection.execute(
+            `BEGIN FIDE_CANDIDATOS_ACTUALIZAR_SP(:p_candidato_ID, :p_Nombre, :p_Apellido, 
+                :p_Partido_ID, :p_Eleccion_ID, :p_Estado_ID); END;`,
+            {
+                p_candidato_ID: CandidatoID,
+                p_Nombre: nombre,
+                p_Apellido: apellido,
+                p_Partido_ID: PartidoID,
+                p_Eleccion_ID: EleccionID,
+                p_Estado_ID: EstadoID
+            }
+        );
+
+        res.json({ message: "Candidato actualizado correctamente." });
+    } catch (err) {
+        console.error("Error al actualizar candidato:", err);
+        res.status(500).json({ message: "Error interno del servidor." });
+    } finally {
+        if (connection) {
+            try {
+                await connection.close();
+            } catch (closeErr) {
+                console.error("Error al cerrar conexión:", closeErr);
+            }
+        }
+    }
+});
+
+
+// Endpoint para obtener todos los candidatos
+app.get('/candidatos', async (req, res) => {
+    let connection;
+
+    try {
+        connection = await oracledb.getConnection(dbConfig);
+
+        // Ejecutar una consulta directa desde la tabla
+        const result = await connection.execute(
+            `SELECT Candidato_ID, Nombre, Apellido, Partido_ID, Eleccion_ID, Estado_ID FROM FIDE_CANDIDATOS_TB`,
+            [], // Sin parámetros en este caso
+            { outFormat: oracledb.OUT_FORMAT_OBJECT } // Formato de salida como objeto
+        );
+
+        res.json(result.rows); // Devuelve los datos al frontend
+    } catch (err) {
+        console.error('Error al obtener candidatos:', err);
+        res.status(500).send('Error al obtener candidatos.');
+    } finally {
+        if (connection) {
+            try {
+                await connection.close();
+            } catch (err) {
+                console.error('Error al cerrar conexión:', err);
+            }
+        }
+    }
+});
+
 // Iniciar el servidor en el puerto correspondiente
 app.listen(3000, '0.0.0.0', () => {
     console.log("Servidor corriendo en puerto 3000");
