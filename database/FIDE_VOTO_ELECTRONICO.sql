@@ -31,24 +31,26 @@ CREATE TABLE FIDE_PROVINCIAS_TB(
 
 CREATE TABLE FIDE_CANTONES_TB(
     Canton_ID NUMBER PRIMARY KEY,
+    Provincia_ID NUMBER,
     Nombre VARCHAR2(20) UNIQUE NOT NULL,
     creado_por VARCHAR2(50),
     modificado_por VARCHAR2(50),
     fecha_creacion DATE,
     fecha_modificacion DATE,
-    accion VARCHAR2(100)
+    accion VARCHAR2(100),
+    FOREIGN KEY (Provincia_ID) REFERENCES FIDE_PROVINCIAS_TB(Provincia_ID)
 );
-
 CREATE TABLE FIDE_DISTRITOS_TB(
     Distrito_ID NUMBER PRIMARY KEY,
+    Canton_ID NUMBER,
     Nombre VARCHAR2(20) UNIQUE NOT NULL,
     creado_por VARCHAR2(50),
     modificado_por VARCHAR2(50),
     fecha_creacion DATE,
     fecha_modificacion DATE,
-    accion VARCHAR2(100)
+    accion VARCHAR2(100),
+    FOREIGN KEY (Canton_ID) REFERENCES FIDE_CANTONES_TB(Canton_ID)
 );
-
 CREATE TABLE FIDE_DIRECCIONES_TB(
     Direccion_ID NUMBER PRIMARY KEY,
     Provincia_ID NUMBER,
@@ -159,6 +161,7 @@ CREATE TABLE FIDE_USUARIOS_TB(
 
 CREATE TABLE FIDE_AUDITORES_TB(
     Auditor_ID NUMBER PRIMARY KEY,
+    Estado_ID NUMBER,
     Nombre VARCHAR2(50) NOT NULL,
     Apellido VARCHAR2(50) NOT NULL,
     Email VARCHAR2(100) UNIQUE NOT NULL,
@@ -167,7 +170,8 @@ CREATE TABLE FIDE_AUDITORES_TB(
     modificado_por VARCHAR2(50),
     fecha_creacion DATE,
     fecha_modificacion DATE,
-    accion VARCHAR2(100)
+    accion VARCHAR2(100),
+    FOREIGN KEY (Estado_ID) REFERENCES FIDE_ESTADOS_TB(Estado_ID)
 );
 
 CREATE TABLE FIDE_AUDITORIAS_TB(
@@ -314,7 +318,7 @@ CREATE TABLE FIDE_NOTIFICACIONES_TB(
     FOREIGN KEY (Votante_ID) REFERENCES FIDE_VOTANTES_TB(Votante_ID)
 );
 
-CREATE TABLE FIDE_SESIONES_TB(
+CREATE TABLE FIDE_SESIONES_TB (
     Sesion_ID NUMBER PRIMARY KEY,
     Usuario_ID NUMBER,
     FechaInicio DATE NOT NULL,
@@ -329,13 +333,15 @@ CREATE TABLE FIDE_SESIONES_TB(
 
 CREATE TABLE FIDE_HISTORIALVOTOS_TB(
     Historial_ID NUMBER PRIMARY KEY,
+    Votante_ID NUMBER,
     FechaModificacion DATE NOT NULL,
     Accion_historial VARCHAR2(50) NOT NULL,
     creado_por VARCHAR2(50),
     modificado_por VARCHAR2(50),
     fecha_creacion DATE,
     fecha_modificacion DATE,
-    accion VARCHAR2(100)
+    accion VARCHAR2(100),
+    FOREIGN KEY (Votante_ID) REFERENCES FIDE_VOTANTES_TB(Votante_ID)
 );
 
 CREATE TABLE FIDE_VOTOS_HISTORIAL_TB(
