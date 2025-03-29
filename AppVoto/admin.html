@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Gestión de Tablas</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <script defer src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <style>
+    body {
+      background-color: #f8f9fa;
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .container-votacion {
+      background: white;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      max-width: 1200px;
+      text-align: center;
+    }
+    /* Se reusa la clase 'candidato' para estilo de opción de tabla */
+    .candidato {
+      background: white;
+      padding: 15px;
+      border-radius: 15px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      cursor: pointer;
+      transition: transform 0.2s, box-shadow 0.2s;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .candidato p {
+      margin: 0;
+      font-weight: bold;
+    }
+    .candidato:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    }
+    .seleccionado {
+      border: 3px solid green;
+      box-shadow: 0 0 12px rgba(0, 255, 0, 0.5);
+    }
+    .accesibilidad {
+      position: fixed;
+      top: 15px;
+      left: 15px;
+      z-index: 1000;
+    }
+    .accesibilidad img {
+      width: 50px;
+      cursor: pointer;
+    }
+    .menu-accesibilidad {
+      display: none;
+      background: white;
+      padding: 10px;
+      border-radius: 5px;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+      margin-top: 10px;
+      text-align: center;
+    }
+    .alto-contraste {
+      background-color: black !important;
+      color: yellow !important;
+    }
+    .alto-contraste .candidato {
+      background-color: #333;
+      color: yellow;
+    }
+    .alto-contraste .btn {
+      background-color: yellow;
+      color: black;
+    }
+    .modal-custom {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+      display: none;
+      text-align: center;
+      z-index: 1000;
+    }
+    .modal-custom h2 {
+      margin-top: 0;
+    }
+    .modal-custom p {
+      margin: 15px 0;
+    }
+    .overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      display: none;
+      z-index: 999;
+    }
+  </style>
+</head>
+<body>
+    <div class="container-votacion">
+      <h2 id="titulo">Modificar Tablas</h2>
+      <div class="row justify-content-center mt-4">
+        <!-- Aquí se generarán las opciones dinámicamente usando un arreglo -->
+      </div>
+    </div>
+  
+    <!-- Modal para seleccionar acción sobre la tabla -->
+    <div class="overlay" id="overlay"></div>
+    <div class="modal-custom" id="modal-acciones">
+      <h2>Seleccionar Acción</h2>
+      <p>¿Qué acción desea realizar en <span id="tabla-seleccionada"></span>?</p>
+      <button class="btn btn-primary" onclick="accionInsertar()">Insertar</button>
+      <button class="btn btn-warning" onclick="accionActualizar()">Actualizar</button>
+      <button class="btn btn-danger" onclick="accionEliminar()">Eliminar</button>
+      <button class="btn btn-secondary" onclick="cerrarModalAcciones()">Cancelar</button>
+    </div>
+  
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        let tablaSeleccionada = "";
+  
+        // Define el arreglo con los nombres de las tablas
+        const nombresTablas = [
+          "Auditores", "Auditorias", "Boletas", "Candidatos", "Cantones", "Claves", 
+          "Credenciales", "Direcciones", "Distritos", "Elecciones", "Estados", "Generos",
+          "HistorialVotos", "LogSeguridad", "Mesas", "Notificaciones", "Partidos",
+          "Provincias", "Reportes", "Resultados", "Roles", "Sedes", "Sesiones",
+          "Usuarios", "Votantes", "VotosHistorial", "Votos"
+        ];
+  
+        // Genera opciones dinámicas basadas en el arreglo de nombres
+        const containerRow = document.querySelector('.container-votacion .row');
+        nombresTablas.forEach((nombre, index) => {
+          const colDiv = document.createElement('div');
+          colDiv.className = "col-4 col-sm-3 col-md-2 mb-3";
+  
+          const opcionDiv = document.createElement('div');
+          opcionDiv.className = "candidato tabla";
+          opcionDiv.setAttribute('data-tabla', index + 1);
+          opcionDiv.setAttribute('tabindex', '0');
+          opcionDiv.onclick = function () { seleccionarTabla(this); };
+          opcionDiv.onkeypress = function (e) {
+            if (e.key === 'Enter') {
+              seleccionarTabla(this);
+            }
+          };
+  
+          const p = document.createElement('p');
+          p.textContent = nombre; // Usa el nombre del arreglo como texto
+          opcionDiv.appendChild(p);
+          colDiv.appendChild(opcionDiv);
+          containerRow.appendChild(colDiv);
+        });
+  
+        function seleccionarTabla(elemento) {
+          document.querySelectorAll('.tabla').forEach(el => el.classList.remove("seleccionado"));
+          elemento.classList.add("seleccionado");
+          const numeroTabla = elemento.getAttribute('data-tabla');
+          tablaSeleccionada = elemento.textContent; // Utiliza el nombre en lugar del número
+          document.getElementById("tabla-seleccionada").textContent = tablaSeleccionada;
+          document.getElementById("modal-acciones").style.display = "block";
+          document.getElementById("overlay").style.display = "block";
+        }
+  
+        function cerrarModalAcciones() {
+          document.getElementById("modal-acciones").style.display = "none";
+          document.getElementById("overlay").style.display = "none";
+          document.querySelectorAll('.tabla').forEach(el => el.classList.remove("seleccionado"));
+          tablaSeleccionada = "";
+        }
+  
+        window.accionInsertar= function () {
+          window.location.href = "http://192.168.100.10:5501/users.html";
+          //alert("Insertar acción en " + tablaSeleccionada);
+          //cerrarModalAcciones();
+        };
+  
+        window.accionActualizar = function () {
+          alert("Actualizar acción en " + tablaSeleccionada);
+          cerrarModalAcciones();
+        };
+  
+        window.accionEliminar = function () {
+          alert("Eliminar acción en " + tablaSeleccionada);
+          cerrarModalAcciones();
+        };
+  
+        window.cerrarModalAcciones = cerrarModalAcciones;
+      });
+    </script>
+  </body>
+  </html>
