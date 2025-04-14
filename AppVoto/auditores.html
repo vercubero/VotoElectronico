@@ -48,16 +48,6 @@
           <div class="modal-body">
             <form id="insertarAuditorForm">
               <div class="mb-3">
-                <label for="AuditorId" class="form-label">AuditorID</label>
-                <input
-                  type="number"
-                  class="form-control"
-                  id="AuditorId"
-                  name="AuditorId"
-                  required
-                />
-              </div>
-              <div class="mb-3">
                 <label for="userName" class="form-label">Nombre</label>
                 <input
                   type="text"
@@ -242,7 +232,6 @@
           e.preventDefault();
 
           // Recuperamos los datos del formulario
-          const auditorID = document.getElementById("AuditorId").value;
           const nombre = document.getElementById("userName").value;
           const apellido = document.getElementById("Apellido").value;
           const email = document.getElementById("email").value;
@@ -251,7 +240,7 @@
           
           // Preparamos el objeto de datos
           const data = {
-            auditorID: Number(auditorID),
+            
             nombre: nombre,
             apellido: apellido,
             email: email,

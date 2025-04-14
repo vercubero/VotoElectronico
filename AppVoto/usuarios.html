@@ -48,16 +48,6 @@
           <div class="modal-body">
             <form id="insertarUsuarioForm">
               <div class="mb-3">
-                <label for="usuarioId" class="form-label">Usuario ID</label>
-                <input
-                  type="number"
-                  class="form-control"
-                  id="usuarioId"
-                  name="usuarioId"
-                  required
-                />
-              </div>
-              <div class="mb-3">
                 <label for="userName" class="form-label">User Name</label>
                 <input
                   type="text"
@@ -264,7 +254,7 @@
           e.preventDefault();
 
           // Recuperamos los datos del formulario
-          const usuarioId = document.getElementById("usuarioId").value;
+          
           const userName = document.getElementById("userName").value;
           const password = document.getElementById("password").value;
           const email = document.getElementById("email").value;
@@ -273,7 +263,7 @@
           
           // Preparamos el objeto de datos
           const data = {
-            usuarioId: Number(usuarioId),
+            
             userName: userName,
             password: password,
             email: email,
@@ -285,7 +275,7 @@
           try {
             // Llamada al endpoint que ejecuta el procedimiento almacenado
             
-            const response = await fetch("http://192.168.100.10:3000/insertar-usuario", {
+            const response = await fetch("http://localhost:3000/insertar-usuario", {
               method: "POST",
               headers: {
                 "Content-Type": "application/json",

@@ -48,16 +48,6 @@
           <div class="modal-body">
             <form id="insertarCandidatoForm">
               <div class="mb-3">
-                <label for="CandidatoID" class="form-label">CandidatoID</label>
-                <input
-                  type="number"
-                  class="form-control"
-                  id="CandidatoID"
-                  name="CandidatoID"
-                  required
-                />
-              </div>
-              <div class="mb-3">
                 <label for="userName" class="form-label">Nombre</label>
                 <input
                   type="text"
@@ -263,7 +253,7 @@
           e.preventDefault();
 
           // Recuperamos los datos del formulario
-          const CandidatoID = document.getElementById("CandidatoID").value;
+          
           const nombre = document.getElementById("userName").value;
           const apellido = document.getElementById("Apellido").value;
           const PartidoID = document.getElementById("PartidoID").value;
@@ -273,7 +263,7 @@
           
           // Preparamos el objeto de datos
           const data = {
-            CandidatoID: Number(CandidatoID),
+            
             nombre: nombre,
             apellido: apellido,
             PartidoID: Number(PartidoID),
@@ -285,7 +275,7 @@
           try {
             // Llamada al endpoint que ejecuta el procedimiento almacenado
             
-            const response = await fetch("http://192.168.100.10:3000/insertar-candidato", {
+            const response = await fetch("http://localhost:3000/insertar-candidato", {
               method: "POST",
               headers: {
                 "Content-Type": "application/json",
@@ -377,6 +367,7 @@
       // Cargar los Candidatos automáticamente al cargar la página
       window.onload = cargarCandidato;
   </script>
+  
   <script>
     // Capturamos el envío del formulario para actualizar Candidato
     document

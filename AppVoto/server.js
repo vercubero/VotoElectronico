@@ -49,7 +49,7 @@ app.post('/validar-usuario', async (req, res) => {
 
         // Llamada al procedimiento almacenado
         const result = await connection.execute(
-            `BEGIN FIDE_USUARIOS_VALIDAR_USUARIO_SP(:p_username, :p_password, :p_valido); END;`,
+            `BEGIN FIDE_PROYECTO_FINAL_PKG.FIDE_USUARIOS_VALIDAR_USUARIO_SP(:p_username, :p_password, :p_valido); END;`,
             {
                 p_username: username,
                 p_password: password,
@@ -81,14 +81,14 @@ app.post('/validar-usuario', async (req, res) => {
 app.post('/insertar-usuario', async (req, res) => {
     console.log("Llega a insertar datos");
     console.log("Datos recibidos:", req.body);
-    const { usuarioId, userName, password, email, rolId, estadoId } = req.body;
+    const { userName, password, email, rolId, estadoId } = req.body;
     let connection;
 
     try {
         connection = await oracledb.getConnection(dbConfig);
         console.log("Llega al try del PS");
         console.log("Parámetros enviados al procedimiento:", {
-            p_Usuario_ID: usuarioId,
+            
             p_User_name: userName,
             p_password: password,
             p_Email: email,
@@ -98,10 +98,10 @@ app.post('/insertar-usuario', async (req, res) => {
         
         // Llamada al procedimiento almacenado
         const result = await connection.execute(
-            `BEGIN FIDE_USUARIOS_INSERTAR_SP(:p_Usuario_ID, :p_User_name, :p_password, 
+            `BEGIN FIDE_PROYECTO_FINAL_PKG.FIDE_USUARIOS_INSERTAR_SP(:p_User_name, :p_password, 
             :p_Email, :p_Rol_ID, :p_Estado_ID); END;`,
             {
-                p_Usuario_ID: usuarioId,
+                
                 p_User_name: userName,
                 p_password: password,
                 p_Email: email,
@@ -137,7 +137,7 @@ app.delete('/eliminar-usuario/:id', async (req, res) => {
 
         // Llamamos al procedimiento almacenado para eliminar el usuario
         await connection.execute(
-            `BEGIN FIDE_USUARIOS_ELIMINAR_SP(:p_Usuario_ID); END;`,
+            `BEGIN FIDE_PROYECTO_FINAL_PKG.FIDE_USUARIOS_ELIMINAR_SP(:p_Usuario_ID); END;`,
             { p_Usuario_ID: Number(usuarioId) } // Enviamos el ID como parámetro
         );
 
@@ -168,7 +168,7 @@ app.put('/actualizar-usuario', async (req, res) => {
   
       console.log("Ejecutando procedimiento para actualizar usuario...");
       await connection.execute(
-        `BEGIN FIDE_USUARIOS_ACTUALIZAR_SP(:p_Usuario_ID, :p_User_name, :p_Password, 
+        `BEGIN FIDE_PROYECTO_FINAL_PKG.FIDE_USUARIOS_ACTUALIZAR_SP(:p_Usuario_ID, :p_User_name, :p_Password, 
         :p_Email, :p_Rol_ID, :p_Estado_ID); END;`,
         {
           p_Usuario_ID: usuarioId,
@@ -203,14 +203,24 @@ app.get('/usuarios', async (req, res) => {
     try {
         connection = await oracledb.getConnection(dbConfig);
 
-        // Ejecutar una consulta directa desde la tabla, porque el procedimiento actual solo imprime texto
         const result = await connection.execute(
-            `SELECT Usuario_ID, User_name, Password, Email, Rol_ID, Estado_ID FROM FIDE_USUARIOS_TB`,
-            [], // Sin parámetros en este caso
-            { outFormat: oracledb.OUT_FORMAT_OBJECT } // Formato de salida como objeto
+            `BEGIN FIDE_PROYECTO_FINAL_PKG.FIDE_USUARIOS_SELECT_SP(:p_cursor); END;`,
+            { p_cursor: { type: oracledb.CURSOR, dir: oracledb.BIND_OUT } }
         );
-
-        res.json(result.rows); // Devuelve los datos al frontend
+        
+        // Procesar los resultados del cursor
+        const rows = [];
+        const cursor = result.outBinds.p_cursor;
+        
+        let row;
+        while ((row = await cursor.getRow())) {
+            rows.push(row);
+        }
+        
+        await cursor.close();
+        
+        res.json(rows); // Devuelve los datos al frontend
+        
     } catch (err) {
         console.error('Error al obtener usuarios:', err);
         res.status(500).send('Error al obtener usuarios.');
@@ -229,14 +239,14 @@ app.get('/usuarios', async (req, res) => {
 app.post('/insertar-auditor', async (req, res) => {
     console.log("Llega a insertar datos");
     console.log("Datos recibidos:", req.body);
-    const { auditorID, nombre, apellido, email, telefono } = req.body;
+    const { nombre, apellido, email, telefono } = req.body;
     let connection;
 
     try {
         connection = await oracledb.getConnection(dbConfig);
         console.log("Llega al try del PS");
         console.log("Parámetros enviados al procedimiento:", {
-            p_Auditor_ID: auditorID,
+            
             p_Nombre: nombre,
             p_Apellido: apellido,
             p_Email: email,
@@ -245,10 +255,10 @@ app.post('/insertar-auditor', async (req, res) => {
         
         // Llamada al procedimiento almacenado
         const result = await connection.execute(
-            `BEGIN FIDE_AUDITORES_INSERTAR_SP(:p_Auditor_ID, :p_Nombre, :p_Apellido, 
+            `BEGIN FIDE_PROYECTO_FINAL_PKG.FIDE_AUDITORES_INSERTAR_SP(:p_Nombre, :p_Apellido, 
             :p_Email, :p_Telefono); END;`,
             {
-                p_Auditor_ID: auditorID,
+                
                 p_Nombre: nombre,
                 p_Apellido: apellido,
                 p_Email: email,
@@ -283,7 +293,7 @@ app.delete('/eliminar-auditor/:id', async (req, res) => {
 
         // Llamamos al procedimiento almacenado para eliminar el usuario
         await connection.execute(
-            `BEGIN FIDE_AUDITORES_ELIMINAR_SP(:p_Auditor_ID); END;`,
+            `BEGIN FIDE_PROYECTO_FINAL_PKG.FIDE_AUDITORES_ELIMINAR_SP(:p_Auditor_ID); END;`,
             { p_Auditor_ID: Number(auditorID) } // Enviamos el ID como parámetro
         );
 
@@ -313,7 +323,7 @@ app.put('/actualizar-auditor', async (req, res) => {
   
       console.log("Ejecutando procedimiento para actualizar auditores...");
       await connection.execute(
-        `BEGIN FIDE_AUDITORES_ACTUALIZAR_SP(:p_Auditor_ID, :p_Nombre, :p_Apellido, 
+        `BEGIN FIDE_PROYECTO_FINAL_PKG.FIDE_AUDITORES_ACTUALIZAR_SP(:p_Auditor_ID, :p_Nombre, :p_Apellido, 
             :p_Email, :p_Telefono); END;`,
 
             {
@@ -349,14 +359,24 @@ app.get('/auditores', async (req, res) => {
     try {
         connection = await oracledb.getConnection(dbConfig);
 
-        // Ejecutar una consulta directa desde la tabla, porque el procedimiento actual solo imprime texto
         const result = await connection.execute(
-            `SELECT Auditor_ID, Nombre, Apellido, Email, Telefono FROM FIDE_AUDITORES_TB`,
-            [], // Sin parámetros en este caso
-            { outFormat: oracledb.OUT_FORMAT_OBJECT } // Formato de salida como objeto
+            `BEGIN FIDE_PROYECTO_FINAL_PKG.FIDE_AUDITORES_SELECT_SP(:p_cursor); END;`,
+            { p_cursor: { type: oracledb.CURSOR, dir: oracledb.BIND_OUT } }
         );
-
-        res.json(result.rows); // Devuelve los datos al frontend
+        
+        // Procesar los resultados del cursor
+        const rows = [];
+        const cursor = result.outBinds.p_cursor;
+        
+        let row;
+        while ((row = await cursor.getRow())) {
+            rows.push(row);
+        }
+        
+        await cursor.close();
+        
+        res.json(rows); // Devuelve los datos al frontend
+        
     } catch (err) {
         console.error('Error al obtener usuarios:', err);
         res.status(500).send('Error al obtener usuarios.');
@@ -375,14 +395,14 @@ app.get('/auditores', async (req, res) => {
 app.post('/insertar-candidato', async (req, res) => {
     console.log("Llega a insertar datos");
     console.log("Datos recibidos:", req.body);
-    const { CandidatoID, nombre, apellido, PartidoID, EleccionID, EstadoID} = req.body;
+    const { nombre, apellido, PartidoID, EleccionID, EstadoID} = req.body;
     let connection;
 
     try {
         connection = await oracledb.getConnection(dbConfig);
         console.log("Llega al try del PS");
         console.log("Parámetros enviados al procedimiento:", {
-            p_Candidato_ID: CandidatoID,
+            
             p_Nombre: nombre,
             p_Apellido: apellido,
             p_Partido_ID: PartidoID,
@@ -392,10 +412,10 @@ app.post('/insertar-candidato', async (req, res) => {
         
         // Llamada al procedimiento almacenado
         const result = await connection.execute(
-            `BEGIN FIDE_CANDIDATOS_INSERTAR_SP(:p_Candidato_ID, :p_Nombre, :p_Apellido, 
+            `BEGIN FIDE_PROYECTO_FINAL_PKG.FIDE_CANDIDATOS_INSERTAR_SP(:p_Nombre, :p_Apellido, 
             :p_Partido_ID, :p_Eleccion_ID, :p_Estado_ID); END;`,
             {
-                p_Candidato_ID: CandidatoID,
+                
                 p_Nombre: nombre,
                 p_Apellido: apellido,
                 p_Partido_ID: PartidoID,
@@ -429,7 +449,7 @@ app.delete('/eliminar-candidato/:id', async (req, res) => {
 
         // Llamamos al procedimiento almacenado para eliminar el usuario
         await connection.execute(
-            `BEGIN FIDE_CANDIDATOS_ELIMINAR_SP(:p_candidato_ID); END;`,
+            `BEGIN FIDE_PROYECTO_FINAL_PKG.FIDE_CANDIDATOS_ELIMINAR_SP(:p_candidato_ID); END;`,
             { p_candidato_ID: Number(candidatoID) } // Enviamos el ID como parámetro
         );
 
@@ -459,7 +479,7 @@ app.put('/actualizar-candidato', async (req, res) => {
 
         console.log("Ejecutando procedimiento para actualizar candidatos...");
         await connection.execute(
-            `BEGIN FIDE_CANDIDATOS_ACTUALIZAR_SP(:p_candidato_ID, :p_Nombre, :p_Apellido, 
+            `BEGIN FIDE_PROYECTO_FINAL_PKG.FIDE_CANDIDATOS_ACTUALIZAR_SP(:p_candidato_ID, :p_Nombre, :p_Apellido, 
                 :p_Partido_ID, :p_Eleccion_ID, :p_Estado_ID); END;`,
             {
                 p_candidato_ID: CandidatoID,
@@ -494,14 +514,23 @@ app.get('/candidatos', async (req, res) => {
     try {
         connection = await oracledb.getConnection(dbConfig);
 
-        // Ejecutar una consulta directa desde la tabla
         const result = await connection.execute(
-            `SELECT Candidato_ID, Nombre, Apellido, Partido_ID, Eleccion_ID, Estado_ID FROM FIDE_CANDIDATOS_TB`,
-            [], // Sin parámetros en este caso
-            { outFormat: oracledb.OUT_FORMAT_OBJECT } // Formato de salida como objeto
+            `BEGIN FIDE_PROYECTO_FINAL_PKG.FIDE_CANDIDATOS_SELECT_SP(:p_cursor); END;`,
+            { p_cursor: { type: oracledb.CURSOR, dir: oracledb.BIND_OUT } }
         );
-
-        res.json(result.rows); // Devuelve los datos al frontend
+        
+        // Procesar los resultados del cursor
+        const rows = [];
+        const cursor = result.outBinds.p_cursor;
+        
+        let row;
+        while ((row = await cursor.getRow())) {
+            rows.push(row);
+        }
+        
+        await cursor.close();
+        
+        res.json(rows); // Devuelve los datos al frontend
     } catch (err) {
         console.error('Error al obtener candidatos:', err);
         res.status(500).send('Error al obtener candidatos.');

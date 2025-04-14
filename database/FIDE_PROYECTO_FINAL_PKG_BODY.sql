@@ -1,5 +1,4 @@
 CREATE OR REPLACE PACKAGE BODY Fide_Proyecto_Final_PKG AS
-
     ----------------- Implementaci�n de la funci�n-----------------------
 FUNCTION FIDE_ELECIONES_OBTENER_ESTADO_FN(p_eleccion_ID IN NUMBER) RETURN VARCHAR2 IS
     v_nombreEstado VARCHAR2(50);

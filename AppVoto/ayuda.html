@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centro de Asistencia Electoral</title>
+    <style>
+        :root {
+            --primary-color: #007bff;
+            --secondary-color: #0056b3;
+            --background-light: #f8f9fa;
+            --text-dark: #212529;
+            --contrast-bg: #000;
+            --contrast-text: #ff0;
+            --transition: 0.3s ease;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            line-height: 1.6;
+            background: var(--background-light);
+            color: var(--text-dark);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 2rem 1rem;
+            position: relative;
+        }
+
+        .accessibility-tools {
+            position: fixed;
+            top: 1rem;
+            left: 1rem;
+            z-index: 1000;
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .accessibility-menu {
+            display: none;
+            position: absolute;
+            left: 0;
+            background: white;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.1);
+            min-width: 200px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 800px;
+            margin: 2rem auto;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 2rem;
+            border-radius: 1rem;
+            box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+            backdrop-filter: blur(0.5rem);
+        }
+
+        .video-container {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%;
+            margin: 1rem 0;
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 0.5rem;
+        }
+
+        /* Estilos nuevos para el botón de redirección */
+        .redirect-button {
+            background: #28a745;
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 0.5rem;
+            cursor: pointer;
+            font-weight: 600;
+            margin-top: 1.5rem;
+            transition: background-color 0.3s ease;
+        }
+
+        .redirect-button:hover {
+            background: #218838;
+        }
+
+        .chat-container {
+            display: grid;
+            gap: 1rem;
+        }
+
+        .chat-history {
+            height: 300px;
+            overflow-y: auto;
+            padding: 1rem;
+            background: var(--background-light);
+            border-radius: 0.5rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .message {
+            max-width: 80%;
+            padding: 1rem;
+            border-radius: 1rem;
+        }
+
+        .user-message {
+            background: var(--primary-color);
+            color: white;
+            align-self: flex-end;
+        }
+
+        .bot-message {
+            background: #e9ecef;
+            align-self: flex-start;
+        }
+
+        input, textarea, button, select {
+            width: 100%;
+            padding: 0.875rem;
+            border: 2px solid #dee2e6;
+            border-radius: 0.5rem;
+            font-size: 1rem;
+            transition: border-color var(--transition);
+        }
+
+        button {
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-weight: 600;
+            transition: 
+                background-color var(--transition),
+                transform 0.1s ease;
+        }
+
+        button:hover {
+            background: var(--secondary-color);
+        }
+
+        button:active {
+            transform: scale(0.98);
+        }
+
+        .high-contrast {
+            --background-light: var(--contrast-bg);
+            --text-dark: var(--contrast-text);
+            --primary-color: var(--contrast-text);
+            --secondary-color: var(--contrast-text);
+        }
+
+        .high-contrast .card {
+            background: var(--contrast-bg);
+            border: 2px solid var(--contrast-text);
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+            
+            .card {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="accessibility-tools" aria-label="Herramientas de accesibilidad">
+        <button class="accessibility-trigger" aria-expanded="false">
+            ♿
+        </button>
+        <div class="accessibility-menu">
+            <button data-action="toggle-contrast">🌙 Modo Alto Contraste</button>
+            <select data-action="change-language" aria-label="Seleccionar idioma">
+                <option value="es">Español</option>
+                <option value="en">English</option>
+                <option value="fr">Français</option>
+            </select>
+        </div>
+    </nav>
+
+    <main class="container">
+        <article class="card">
+            <h1 data-translate="simulationTitle">Simulación de Votación</h1>
+            
+            <div class="video-container">
+                <iframe 
+                    src="https://www.youtube.com/embed/3wfO0jd22cw" 
+                    title="Tutorial de Votación" 
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope" 
+                    allowfullscreen
+                    loading="lazy">  
+                </iframe>
+            </div>
+            
+            <!-- Botón de redirección añadido aquí -->
+            <button 
+                class="redirect-button"
+                onclick="window.location.href='proceso-votacion.html'"
+                data-translate="goToVoting"
+                aria-label="Ir al proceso de votación real">
+                Ir a Votación Real
+            </button>
+        </article>
+
+        <section class="card" aria-labelledby="helpCenterTitle">
+            <h2 id="helpCenterTitle" data-translate="helpTitle">Centro de Ayuda</h2>
+            <form id="feedbackForm">
+                <textarea 
+                    data-translate-placeholder="helpPlaceholder"
+                    aria-label="Escribir comentario"
+                    rows="4">
+                </textarea>
+                <button type="submit" data-translate="sendButton">Enviar comentario</button>
+            </form>
+            <div id="commentsSection"></div>
+        </section>
+
+        <section class="card chat-container" aria-labelledby="chatbotTitle">
+            <h2 id="chatbotTitle" data-translate="chatTitle">Asistente Virtual</h2>
+            <div class="chat-history" id="chatHistory" role="log" aria-live="polite"></div>
+            <div class="chat-input">
+                <input 
+                    type="text" 
+                    id="chatInput" 
+                    data-translate-placeholder="chatPlaceholder"
+                    aria-label="Escribir mensaje">
+                <button id="sendButton" data-translate="sendButton">Enviar</button>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        const translations = {
+            es: {
+                simulationTitle: 'Simulación de Votación',
+                helpTitle: 'Centro de Ayuda',
+                chatTitle: 'Asistente Virtual',
+                sendButton: 'Enviar',
+                goToVoting: 'Ir a Votación Real',
+                helpPlaceholder: 'Escribe tu consulta o comentario...',
+                chatPlaceholder: 'Escribe tu pregunta...',
+                responses: {
+                    greeting: "¡Hola! ¿En qué puedo ayudarte?",
+                    preguntas: {
+                        hola: "¿Cómo puedo empezar?",
+                        registro: "¿Cómo me registro para votar?",
+                        horario: "¿Cuál es el horario de votación?",
+                        documentos: "¿Qué documentos necesito?",
+                        ubicacion: "¿Dónde está mi centro de votación?",
+                        estado: "¿Cómo verifico mi estado de registro?",
+                        seguridad: "¿Es seguro el proceso de votación?",
+                        requisitos: "¿Cuáles son los requisitos para votar?",
+                        fraude: "¿Qué hacer si sospecho de fraude?"
+                    },
+                    respuestas: {
+                        hola: "¡Bienvenido! Estoy aquí para ayudarte con el proceso electoral. ¿En qué necesitas asistencia?",
+                        registro: "Para registrarte, visita el portal electoral oficial con tu identificación vigente.",
+                        horario: "Las votaciones están abiertas de 8:00 AM a 5:00 PM en todo el país.",
+                        documentos: "Necesitas presentar cédula de identidad o pasaporte vigente para ejercer tu voto.",
+                        ubicacion: "Tu centro de votación se asigna según tu domicilio registrado. Verifícalo en el portal electoral.",
+                        estado: "Puedes consultar tu estado de registro en el sitio web del tribunal electoral.",
+                        seguridad: "El proceso cuenta con medidas de seguridad biométricas y auditorías constantes.",
+                        requisitos: "Requisitos básicos: ser mayor de 18 años y tener registro electoral vigente.",
+                        fraude: "Reporta cualquier irregularidad al 0800-ELECIONES con pruebas documentadas."
+                    },
+                    default: "Lo siento, no entendí tu pregunta. ¿Podrías reformularla?"
+                }
+            },
+            en: {
+                simulationTitle: 'Voting Simulation',
+                helpTitle: 'Help Center',
+                chatTitle: 'Virtual Assistant',
+                sendButton: 'Send',
+                goToVoting: 'Go to Real Voting',
+                helpPlaceholder: 'Type your query or comment...',
+                chatPlaceholder: 'Type your question...',
+                responses: {
+                    greeting: "Hello! How can I help you?",
+                    preguntas: {
+                        hello: "How can I start?",
+                        register: "How do I register to vote?",
+                        schedule: "What are the voting hours?",
+                        documents: "What documents do I need?",
+                        location: "Where is my polling station?",
+                        status: "How do I check my registration status?",
+                        security: "Is the voting process secure?",
+                        requirements: "What are the voting requirements?",
+                        fraud: "What to do if I suspect fraud?"
+                    },
+                    respuestas: {
+                        hello: "Welcome! I'm here to help you with the electoral process. How can I assist you?",
+                        register: "To register, visit the official electoral portal with valid identification.",
+                        schedule: "Voting is open from 8:00 AM to 5:00 PM nationwide.",
+                        documents: "You need to present a valid ID card or passport to vote.",
+                        location: "Your polling station is assigned based on your registered address. Check it on the electoral portal.",
+                        status: "You can check your registration status on the electoral tribunal website.",
+                        security: "The process includes biometric security measures and constant audits.",
+                        requirements: "Basic requirements: be over 18 years old and have valid electoral registration.",
+                        fraud: "Report any irregularities to 0800-ELECTIONS with documented evidence."
+                    },
+                    default: "Sorry, I didn't understand your question. Could you rephrase it?"
+                }
+            },
+            fr: {
+                simulationTitle: 'Simulation de Vote',
+                helpTitle: 'Centre d\'Aide',
+                chatTitle: 'Assistant Virtuel',
+                sendButton: 'Envoyer',
+                goToVoting: 'Aller au Vote Réel',
+                helpPlaceholder: 'Écrivez votre question ou commentaire...',
+                chatPlaceholder: 'Écrivez votre question...',
+                responses: {
+                    greeting: "Bonjour! Comment puis-je vous aider?",
+                    preguntas: {
+                        bonjour: "Comment puis-je commencer?",
+                        inscription: "Comment m'inscrire pour voter?",
+                        horaire: "Quels sont les horaires de vote?",
+                        documents: "Quels documents sont nécessaires?",
+                        emplacement: "Où est mon bureau de vote?",
+                        statut: "Comment vérifier mon statut d'inscription?",
+                        securite: "Le processus de vote est-il sécurisé?",
+                        exigences: "Quelles sont les conditions pour voter?",
+                        fraude: "Que faire en cas de suspicion de fraude?"
+                    },
+                    respuestas: {
+                        bonjour: "Bienvenue! Je suis ici pour vous aider avec le processus électoral. Comment puis-je vous assister?",
+                        inscription: "Pour vous inscrire, visitez le portail électoral officiel avec une pièce d'identité valide.",
+                        horaire: "Les élections sont ouvertes de 8h00 à 17h00 dans tout le pays.",
+                        documents: "Vous devez présenter une carte d'identité ou un passeport valide pour voter.",
+                        emplacement: "Votre bureau de vote est assigné selon votre adresse enregistrée. Vérifiez-le sur le portail électoral.",
+                        statut: "Vous pouvez vérifier votre statut d'inscription sur le site du tribunal électoral.",
+                        securite: "Le processus inclut des mesures de sécurité biométriques et des audits constants.",
+                        exigences: "Conditions de base: avoir plus de 18 ans et être inscrit au registre électoral.",
+                        fraude: "Signalez toute irrégularité au 0800-ELECTIONS avec des preuves documentées."
+                    },
+                    default: "Désolé, je n'ai pas compris votre question. Pourriez-vous la reformuler?"
+                }
+            }
+        };
+
+        class App {
+            constructor() {
+                this.currentLang = 'es';
+                this.init();
+            }
+
+            init() {
+                this.cacheDOM();
+                this.initEventListeners();
+                this.loadPreferences();
+                this.initChat();
+                this.initComments();
+            }
+
+            cacheDOM() {
+                this.elements = {
+                    body: document.body,
+                    langSelector: document.querySelector('[data-action="change-language"]'),
+                    contrastToggle: document.querySelector('[data-action="toggle-contrast"]'),
+                    chatInput: document.getElementById('chatInput'),
+                    chatHistory: document.getElementById('chatHistory'),
+                    sendButton: document.getElementById('sendButton'),
+                    feedbackForm: document.getElementById('feedbackForm'),
+                    commentsSection: document.getElementById('commentsSection')
+                };
+            }
+
+            initEventListeners() {
+                document.querySelector('.accessibility-trigger').addEventListener('click', this.toggleAccessibilityMenu);
+                this.elements.contrastToggle.addEventListener('click', this.toggleContrastMode);
+                this.elements.langSelector.addEventListener('change', (e) => this.changeLanguage(e.target.value));
+                
+                this.elements.sendButton.addEventListener('click', (e) => this.handleChatInput(e));
+                this.elements.chatInput.addEventListener('keypress', (e) => {
+                    if (e.key === 'Enter') this.handleChatInput(e);
+                });
+
+                this.elements.feedbackForm.addEventListener('submit', (e) => this.handleCommentSubmit(e));
+            }
+
+            toggleAccessibilityMenu = () => {
+                const menu = document.querySelector('.accessibility-menu');
+                menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+            }
+
+            toggleContrastMode = () => {
+                this.elements.body.classList.toggle('high-contrast');
+                localStorage.setItem('highContrast', this.elements.body.classList.contains('high-contrast'));
+            }
+
+            changeLanguage = (lang) => {
+                this.currentLang = lang;
+                document.documentElement.lang = lang;
+                this.updateTranslations();
+                localStorage.setItem('language', lang);
+                this.initChat();
+            }
+
+            updateTranslations() {
+                document.querySelectorAll('[data-translate]').forEach(el => {
+                    const key = el.dataset.translate;
+                    el.textContent = translations[this.currentLang][key];
+                });
+
+                document.querySelectorAll('[data-translate-placeholder]').forEach(el => {
+                    el.placeholder = translations[this.currentLang][el.dataset.translatePlaceholder];
+                });
+            }
+
+            initChat() {
+                this.clearChat();
+                const langData = translations[this.currentLang].responses;
+                this.addChatMessage('bot', langData.greeting);
+                
+                const preguntas = Object.values(langData.preguntas);
+                this.addChatMessage('bot', `Puedes preguntar:\n${preguntas.map(p => `• ${p}`).join('\n')}`);
+            }
+
+            addChatMessage(sender, text) {
+                const messageDiv = document.createElement('div');
+                messageDiv.className = `message ${sender}-message`;
+                messageDiv.textContent = text;
+                this.elements.chatHistory.appendChild(messageDiv);
+                this.elements.chatHistory.scrollTop = this.elements.chatHistory.scrollHeight;
+            }
+
+            clearChat() {
+                this.elements.chatHistory.innerHTML = '';
+            }
+
+            handleChatInput(e) {
+                e.preventDefault();
+                const userInput = this.elements.chatInput.value.trim().toLowerCase();
+                if (!userInput) return;
+
+                this.addChatMessage('user', userInput);
+                this.processQuery(userInput);
+                this.elements.chatInput.value = '';
+            }
+
+            processQuery(query) {
+                const response = this.getResponse(query);
+                setTimeout(() => {
+                    this.addChatMessage('bot', response);
+                }, 800);
+            }
+
+            getResponse(query) {
+                const langData = translations[this.currentLang].responses;
+                const preguntaKey = Object.keys(langData.preguntas).find(key => 
+                    query.includes(key) || 
+                    langData.preguntas[key].toLowerCase().includes(query)
+                );
+
+                return preguntaKey ? langData.respuestas[preguntaKey] : langData.default;
+            }
+
+            initComments() {
+                const savedComments = JSON.parse(localStorage.getItem('comments')) || [];
+                savedComments.forEach(comment => this.displayComment(comment));
+            }
+
+            handleCommentSubmit(e) {
+                e.preventDefault();
+                const textarea = this.elements.feedbackForm.querySelector('textarea');
+                const comment = textarea.value.trim();
+                
+                if (comment) {
+                    this.saveComment(comment);
+                    this.displayComment(comment);
+                    textarea.value = '';
+                }
+            }
+
+            saveComment(comment) {
+                const comments = JSON.parse(localStorage.getItem('comments')) || [];
+                comments.push(comment);
+                localStorage.setItem('comments', JSON.stringify(comments));
+            }
+
+            displayComment(comment) {
+                const commentDiv = document.createElement('div');
+                commentDiv.className = 'message bot-message';
+                commentDiv.textContent = comment;
+                this.elements.commentsSection.appendChild(commentDiv);
+            }
+
+            loadPreferences() {
+                if (localStorage.getItem('highContrast') === 'true') {
+                    this.elements.body.classList.add('high-contrast');
+                }
+                this.changeLanguage(localStorage.getItem('language') || 'es');
+            }
+        }
+
+        new App();
+    </script>
+</body>
+</html>
