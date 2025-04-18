@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Validación de Autoridades</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      crossorigin="anonymous"
+    />
+    <style>
+        body {
+            font-family: "Arial", sans-serif;
+            background-color: #f8f9fa;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+          }
+          input[type="number"]::-webkit-outer-spin-button,
+          input[type="number"]::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+          }
+          
+          input[type="number"] {
+            text-align: center;
+            font-size: 1.1em;
+          }
+          
+          .card {
+            border: 4px solid hsl(0, 100%, 44%);
+          }
+          
+          .card-header {
+            background-color: #002b7f;
+            color: white;
+          }
+          
+          .btn-primary {
+            background-color: #002b7f;
+            border: none;
+            transition: all 0.3s ease-in-out;
+          }
+          
+          .btn-primary:hover {
+            background-color: #001f5b;
+            transform: scale(1.05);
+          }
+          
+          .alert {
+            transition: opacity 0.5s ease-in-out;
+          } 
+          
+          .background-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            overflow: hidden;
+            z-index: -1;
+          }
+          
+          .background-container::before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-image: url("../assets/background.jpg");
+            background-size: cover;
+            background-position: center;
+            filter: blur(10px);
+          }
+          
+          .main-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+          }
+          
+    </style>
+  </head>
+  <body>
+    <div class="background-container"></div>
+    <div class="main-container">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-6">
+            <div class="card shadow">
+              <div class="card-header text-center">
+                <h2 class="card-title">Registro Votantes</h2>
+              </div>
+              <div class="card-body">
+                <!-- Campo para ingresar cédula -->
+                <label for="cedula" class="form-label">Ingrese su número de Cédula</label>
+                <input
+                  type="number"
+                  class="form-control"
+                  id="cedula"
+                  placeholder="Exactamente como aparece en su cédula de identidad"
+                  required
+                />
+                <!-- Campo para seleccionar fecha -->
+                <label for="fecha" class="form-label mt-3">Seleccione la fecha</label>
+                <input
+                  type="date"
+                  class="form-control"
+                  id="fecha"
+                  required
+                />
+                <div class="text-center mt-3">
+                  <button
+                    class="btn btn-primary rounded-pill px-4"
+                    onclick="capturarDatos()">Generar</button><br>
+                  <p data-key="registroPregunta">¿Ya tienes credenciales?</p>
+                  <a href="login.html" data-key="registroEnlace">Haga click aquí para Iniciar</a><br><br><br>
+                  <p data-key="registroPregunta">Más información al 88888888</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Alertas -->
+            <div
+              id="alertaRoja"
+              class="alert alert-danger mt-3 d-none alert-dismissible fade show"
+            >
+              <strong>Error:</strong> La cédula ingresada no está en la base de
+              datos.
+            </div>
+
+            <div
+              id="alertaAmarilla"
+              class="alert alert-warning mt-3 d-none alert-dismissible fade show"
+            >
+              <strong>Atención:</strong> Por favor, ingrese una cédula válida.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      async function capturarDatos() {
+        const cedula = document.getElementById("cedula").value;
+        const fecha = document.getElementById("fecha").value;
+    
+        try {
+          const response = await fetch("http://localhost:3000/generar-credenciales", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ cedula, fecha })
+          });
+    
+          const resultado = document.getElementById("resultado");
+    
+          if (response.ok) {
+            const data = await response.json();
+            resultado.textContent = data.mensaje;
+            resultado.style.color = "green";
+          } else {
+            const error = await response.json();
+            resultado.textContent = error.mensaje;
+            resultado.style.color = "red";
+          }
+        } catch (err) {
+          console.error("Error en la conexión:", err);
+          document.getElementById("resultado").textContent = "Error en la conexión al servidor.";
+        }
+      }
+    </script>
+  </body>
+</html>

@@ -40,7 +40,7 @@ INSERT INTO FIDE_VOTO_ELECTRONICO.FIDE_DISTRITOS_TB (Nombre) VALUES ('HerediaCen
 INSERT INTO FIDE_VOTO_ELECTRONICO.FIDE_DISTRITOS_TB (Nombre) VALUES ('LiberiaCentro');
 INSERT INTO FIDE_VOTO_ELECTRONICO.FIDE_DISTRITOS_TB (Nombre) VALUES ('Barranca');
 INSERT INTO FIDE_VOTO_ELECTRONICO.FIDE_DISTRITOS_TB (Nombre) VALUES ('LimonCentro'); 
-
+COMMIT;
 ------------------------FIDE_DIRECCIONES_TB-----------------------------------------
 INSERT INTO FIDE_VOTO_ELECTRONICO.FIDE_DIRECCIONES_TB (Provincia_ID, Canton_ID, Distrito_ID) VALUES (1, 1, 1);
 INSERT INTO FIDE_VOTO_ELECTRONICO.FIDE_DIRECCIONES_TB (Provincia_ID, Canton_ID, Distrito_ID) VALUES (2, 2, 2); 
@@ -59,12 +59,12 @@ INSERT INTO FIDE_VOTO_ELECTRONICO.FIDE_USUARIOS_TB (User_name, Password, Email, 
 INSERT INTO FIDE_VOTO_ELECTRONICO.FIDE_USUARIOS_TB (User_name, Password, Email, Rol_ID, Estado_ID) VALUES ('visitante1', '123', 'visitante1@ufide.com', 3, 2);
 INSERT INTO FIDE_VOTO_ELECTRONICO.FIDE_USUARIOS_TB (User_name, Password, Email, Rol_ID, Estado_ID) VALUES ('usuario1', '123', 'usuario1@ufide.com', 4, 1);
 INSERT INTO FIDE_VOTO_ELECTRONICO.FIDE_USUARIOS_TB (User_name, Password, Email, Rol_ID, Estado_ID) VALUES ('yreyes', '123', 'yreyes@ufide.com', 1, 1);
-
+COMMIT;
 ------------------------FIDE_VOTANTES_TB-----------------------------------------
-INSERT INTO FIDE_VOTO_ELECTRONICO.FIDE_VOTANTES_TB (Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, Direccion_ID, Estado_ID) VALUES ('Juan', 'Perez', TO_DATE('1990-01-01', 'YYYY-MM-DD'), 'juan@fide.com', '88888888', 1, 1, 1);
-INSERT INTO FIDE_VOTO_ELECTRONICO.FIDE_VOTANTES_TB (Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, Direccion_ID, Estado_ID) VALUES ('Maria', 'Lopez', TO_DATE('1985-05-15', 'YYYY-MM-DD'), 'maria@fide.com', '89999999', 2, 2, 1);
-INSERT INTO FIDE_VOTO_ELECTRONICO.FIDE_VOTANTES_TB (Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, Direccion_ID, Estado_ID) VALUES ('Carlos', 'Gomez', TO_DATE('1978-11-23', 'YYYY-MM-DD'), 'carlos@fide.com', '87777777', 1, 3, 1);
-INSERT INTO FIDE_VOTO_ELECTRONICO.FIDE_VOTANTES_TB (Nombre, Apellido, Fecha_Nacimiento, Email, Telefono, Genero_ID, Direccion_ID, Estado_ID) VALUES ('Ana', 'Ramirez', TO_DATE('1995-02-14', 'YYYY-MM-DD'), 'ana@fide.com', '86666666', 2, 4, 1);
+INSERT INTO FIDE_VOTO_ELECTRONICO.FIDE_VOTANTES_TB (Cedula, Nombre, Apellido, Segundo_Apellido, Fecha_Vence, Fecha_Nacimiento, Email, Telefono, Genero_ID, Direccion_ID, Estado_ID) VALUES (2089809898, 'Juan', 'Perez', 'Perez', TO_DATE('1990-01-01', 'YYYY-MM-DD'), TO_DATE('2030-01-01', 'YYYY-MM-DD'), 'juan@fide.com', '88888888', 1, 1, 1);
+INSERT INTO FIDE_VOTO_ELECTRONICO.FIDE_VOTANTES_TB (Cedula, Nombre, Apellido, Segundo_Apellido, Fecha_Vence, Fecha_Nacimiento, Email, Telefono, Genero_ID, Direccion_ID, Estado_ID) VALUES (2089809891, 'Maria', 'Lopez', 'Perez', TO_DATE('1990-01-01', 'YYYY-MM-DD'), TO_DATE('2029-05-15', 'YYYY-MM-DD'), 'maria@fide.com', '89999999', 2, 2, 1);
+INSERT INTO FIDE_VOTO_ELECTRONICO.FIDE_VOTANTES_TB (Cedula, Nombre, Apellido, Segundo_Apellido, Fecha_Vence, Fecha_Nacimiento, Email, Telefono, Genero_ID, Direccion_ID, Estado_ID) VALUES (2089809892, 'Carlos', 'Gomez', 'Perez', TO_DATE('1990-01-01', 'YYYY-MM-DD'), TO_DATE('2028-11-23', 'YYYY-MM-DD'), 'carlos@fide.com', '87777777', 1, 3, 1);
+INSERT INTO FIDE_VOTO_ELECTRONICO.FIDE_VOTANTES_TB (Cedula, Nombre, Apellido, Segundo_Apellido, Fecha_Vence, Fecha_Nacimiento, Email, Telefono, Genero_ID, Direccion_ID, Estado_ID) VALUES (2089809893, 'Ana', 'Ramirez', 'Perez', TO_DATE('1990-01-01', 'YYYY-MM-DD'), TO_DATE('2027-02-14', 'YYYY-MM-DD'), 'ana@fide.com', '86666666', 2, 4, 1);
 
 ------------------------FIDE_ELECCIONES_TB-----------------------------------------
 INSERT INTO FIDE_VOTO_ELECTRONICO.FIDE_ELECCIONES_TB (Nombre, Fecha_Inicio, Fecha_Fin, Descripcion, Estado_ID) VALUES ('Elecciones Presidenciales 2022', TO_DATE('2022-01-01', 'YYYY-MM-DD'), TO_DATE('2022-01-15', 'YYYY-MM-DD'), 'Eleccion para presidente de la republica', 2);

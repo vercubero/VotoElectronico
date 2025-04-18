@@ -194,7 +194,6 @@ app.put('/actualizar-usuario', async (req, res) => {
       }
     }
   });
-  
 
 // Endpoint para obtener todos los usuarios
 app.get('/usuarios', async (req, res) => {
@@ -544,6 +543,62 @@ app.get('/candidatos', async (req, res) => {
         }
     }
 });
+
+// Endpoint para validar cedula ingresada 
+app.post('/generar-credenciales', async (req, res) => {
+    const { cedula, fecha } = req.body;
+    const fechaActual = new Date(); // Fecha de emisión
+  
+    let connection;
+    try {
+      connection = await oracledb.getConnection(dbConfig);
+  
+      // Valida cedula en E_VOTANTES_TB
+      const votanteResult = await connection.execute(
+        `BEGIN FIDE_VOTANTES_OBTENER_ID(:p_cedula); END;`,
+        { p_cedula: cedula }
+      );
+  
+      if (votanteResult.rows.length === 0) {
+        return res.status(404).json({ mensaje: "Cédula no encontrada." });
+      }
+  
+      const votanteId = votanteResult.rows[0][0];
+  
+      // Get Eleccion_ID from FIDE_ELECCIONES_TB based on fecha
+      const eleccionResult = await connection.execute(
+        `SELECT ELECCION_ID FROM FIDE_ELECCIONES_TB WHERE FECHA_INICIO = TO_DATE(:fecha, 'YYYY-MM-DD')`,
+        { fecha }
+      );
+  
+      if (eleccionResult.rows.length === 0) {
+        return res.status(404).json({ mensaje: "Fecha de elección no encontrada." });
+      }
+  
+      const eleccionId = eleccionResult.rows[0][0];
+  
+      // Call stored procedure FIDE_CREDENCIALES_INSERTAR_SP
+      await connection.execute(
+        `BEGIN FIDE_CREDENCIALES_INSERTAR_SP(:votanteId, :eleccionId, :fechaActual); END;`,
+        { votanteId, eleccionId, fechaActual }
+      );
+  
+      res.json({ mensaje: "Credenciales generadas exitosamente." });
+  
+    } catch (err) {
+      console.error("Error al generar credenciales:", err);
+      res.status(500).json({ mensaje: "Error interno del servidor." });
+    } finally {
+      if (connection) {
+        try {
+          await connection.close();
+        } catch (closeErr) {
+          console.error("Error al cerrar la conexión:", closeErr);
+        }
+      }
+    }
+  });
+  
 
 // Iniciar el servidor en el puerto correspondiente
 app.listen(3000, '0.0.0.0', () => {
