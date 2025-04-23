@@ -1,39 +1,38 @@
-/*
-// Endpoint para insertar candidato en server.js
-app.post('/insertar-candidato', async (req, res) => {
+
+// Endpoint para insertar eleccion en server.js
+app.post('/insertar-eleccion', async (req, res) => {
     console.log("Llega a insertar datos");
     console.log("Datos recibidos:", req.body);
-    const { CandidatoID, nombre, apellido, PartidoID, EleccionID, EstadoID} = req.body;
+    const { nombre, fecha_inicio, fecha_fin, descripcion, estadoID} = req.body;
     let connection;
 
     try {
         connection = await oracledb.getConnection(dbConfig);
         console.log("Llega al try del PS");
         console.log("Parámetros enviados al procedimiento:", {
-            p_Candidato_ID: candidatoID,
+            
             p_Nombre: nombre,
-            p_Apellido: apellido,
-            p_Partido_ID: PartidoID,
-            p_Eleccion_ID: EleccionID,
-            p_Estado_ID: EstadoID
+            p_fecha_inicio: fecha_inicio,
+            p_fecha_fin: fecha_fin,
+            p_descripcion: descripcion,
+            p_Estado_ID: estadoID
         });
         
         // Llamada al procedimiento almacenado
         const result = await connection.execute(
-            `BEGIN FIDE_CADIDATOS_INSERTAR_SP(:p_candidato_ID, :p_Nombre, :p_Apellido, 
-            :p_Partido_ID, :p_Eleccion_ID, :p_Estado_ID); END;`,
+            `BEGIN FIDE_ELECCIONES_INSERT_SP(:p_Nombre, :p_fecha_inicio, 
+            :p_fecha_fin, :p_descripcion, :p_Estado_ID); END;`,
             {
-                p_candidato_ID: candidatoID,
                 p_Nombre: nombre,
-                p_Apellido: apellido,
-                p_Partido_ID: PartidoID,
-                p_Eleccion_ID: EleccionID,
-                p_Estado_ID: EstadoID
+                p_fecha_inicio: fecha_inicio,
+                p_fecha_fin: fecha_fin,
+                p_descripcion: descripcion,
+                p_Estado_ID: estadoID
             }
         );
         
     } catch (err) {
-        console.error("Error al Insertar candidato:", err);
+        console.error("Error al Insertar eleccion:", err);
         res.status(500).json({ message: "Error interno del servidor." });
     } finally {
         if (connection) {
@@ -44,13 +43,13 @@ app.post('/insertar-candidato', async (req, res) => {
             }
         }
     }
-    res.status(200).json({ message: 'candidato insertado correctamente.' });
+    res.status(200).json({ message: 'eleccion insertado correctamente.' });
 });
 
-// Endpoint para eliminar candidatoes utilizando el procedimiento almacenado
-app.delete('/eliminar-candidato/:id', async (req, res) => {
+// Endpoint para eliminar elecciones utilizando el procedimiento almacenado
+app.delete('/eliminar-eleccion/:id', async (req, res) => {
     console.log("Datos recibidos:");
-    const candidatoID = req.params.id; // Recuperar el ID del candidato desde los parámetros de la URL
+    const eleccionID = req.params.id; // Recuperar el ID del eleccion desde los parámetros de la URL
     let connection;
 
     try {
@@ -58,14 +57,14 @@ app.delete('/eliminar-candidato/:id', async (req, res) => {
 
         // Llamamos al procedimiento almacenado para eliminar el usuario
         await connection.execute(
-            `BEGIN FIDE_candidatoES_ELIMINAR_SP(:p_candidato_ID); END;`,
-            { p_candidato_ID: Number(candidatoID) } // Enviamos el ID como parámetro
+            `BEGIN FIDE_eleccionES_ELIMINAR_SP(:p_eleccion_ID); END;`,
+            { p_eleccion_ID: Number(eleccionID) } // Enviamos el ID como parámetro
         );
 
-        res.json({ message: 'candidato eliminado exitosamente.' });
+        res.json({ message: 'eleccion eliminado exitosamente.' });
     } catch (err) {
-        console.error('Error al eliminar candidato:', err);
-        res.status(500).send({ message: 'Error al eliminar candidato.' });
+        console.error('Error al eliminar eleccion:', err);
+        res.status(500).send({ message: 'Error al eliminar eleccion.' });
     } finally {
         if (connection) {
             try {
@@ -77,33 +76,33 @@ app.delete('/eliminar-candidato/:id', async (req, res) => {
     }
 });
 
-// Endpoint para actualizar candidato utilizando el procedimiento almacenado
-app.put('/actualizar-candidato', async (req, res) => {
+// Endpoint para actualizar eleccion utilizando el procedimiento almacenado
+app.put('/actualizar-eleccion', async (req, res) => {
     console.log("Datos recibidos para actualización:", req.body);
-    const { CandidatoID, nombre, apellido, PartidoID, EleccionID, EstadoID } = req.body;
+    const { eleccionID, nombre, fecha_inicio, fecha_fin, descripcion, estadoID } = req.body;
     let connection;
   
     try {
       connection = await oracledb.getConnection(dbConfig);
   
-      console.log("Ejecutando procedimiento para actualizar candidatoes...");
+      console.log("Ejecutando procedimiento para actualizar elecciones...");
       await connection.execute(
-        `BEGIN FIDE_CADIDATOS_ACTUALIZAR_SP(:p_candidato_ID, :p_Nombre, :p_Apellido, 
-            :p_Partido_ID, :p_Eleccion_ID, :p_Estado_ID); END;`,
+        `BEGIN FIDE_CADIDATOS_ACTUALIZAR_SP(:p_eleccion_ID, :p_Nombre, :p_fecha_inicio, 
+            :p_fecha_fin, :p_descripcion, :p_Estado_ID); END;`,
 
             {
-                p_candidato_ID: candidatoID,
+                p_eleccion_ID: eleccionID,
                 p_Nombre: nombre,
-                p_Apellido: apellido,
-                p_Partido_ID: PartidoID,
-                p_Eleccion_ID: EleccionID,
-                p_Estado_ID: EstadoID
+                p_fecha_inicio: fecha_inicio,
+                p_fecha_fin: fecha_fin,
+                p_descripcion: descripcion,
+                p_Estado_ID: estadoID
             }
       );
   
-      res.json({ message: "candidato actualizado correctamente." });
+      res.json({ message: "eleccion actualizado correctamente." });
     } catch (err) {
-      console.error("Error al actualizar candidato:", err);
+      console.error("Error al actualizar eleccion:", err);
       res.status(500).json({ message: "Error interno del servidor." });
     } finally {
       if (connection) {
@@ -117,8 +116,8 @@ app.put('/actualizar-candidato', async (req, res) => {
   });
   
 
-// Endpoint para obtener todos los candidatos
-app.get('/candidatos', async (req, res) => {
+// Endpoint para obtener todos los eleccions
+app.get('/eleccions', async (req, res) => {
     let connection;
 
     try {
@@ -126,15 +125,15 @@ app.get('/candidatos', async (req, res) => {
 
         // Ejecutar una consulta directa desde la tabla, porque el procedimiento actual solo imprime texto
         const result = await connection.execute(
-            `SELECT Candidato_ID, Nombre, Apellido, Partido_ID, Eleccion_ID, Estado_ID FROM FIDE_CANDIDATOS_TB`,
+            `SELECT eleccion_ID, Nombre, Apellido, Partido_ID, Eleccion_ID, Estado_ID FROM FIDE_eleccionS_TB`,
             [], // Sin parámetros en este caso
             { outFormat: oracledb.OUT_FORMAT_OBJECT } // Formato de salida como objeto
         );
 
         res.json(result.rows); // Devuelve los datos al frontend
     } catch (err) {
-        console.error('Error al obtener candidatos:', err);
-        res.status(500).send('Error al obtener candidatos.');
+        console.error('Error al obtener eleccions:', err);
+        res.status(500).send('Error al obtener eleccions.');
     } finally {
         if (connection) {
             try {
@@ -144,4 +143,4 @@ app.get('/candidatos', async (req, res) => {
             }
         }
     }
-});*/
+});

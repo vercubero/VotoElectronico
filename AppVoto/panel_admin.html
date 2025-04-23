@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de Inicio - Admin</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .sidebar {
+            height: 100vh;
+            width: 250px;
+            background-color: #1abc9c;
+            color: white;
+            position: fixed;
+            display: flex;
+            flex-direction: column;
+            padding-top: 20px;
+        }
+        .sidebar a {
+            text-decoration: none;
+            color: white;
+            padding: 15px 20px;
+            display: block;
+            transition: background-color 0.3s;
+        }
+        .sidebar a:hover {
+            background-color: #16a085;
+        }
+        .content {
+            margin-left: 250px;
+            padding: 20px;
+        }
+    </style>
+    
+</head>
+<body>
+    <header style="background-color: #18997f; color: white; padding: 15px; display: flex; align-items: center;">
+        <h1 style="margin: 0;">FIDEVOTO-admin</h1>
+    </header>
+    <div class="sidebar">
+        <a href="#">Nueva Elección</a>
+        <a href="#">Usuarios</a>
+        <a href="#">Auditorias</a>
+        <a href="admin.html">Tablas</a>
+        <a href="#" onclick="cerrarSesion()">Cerrar Sesión</a>
+    </div>
+    <div class="content">
+        <h1>Panel de Administración</h1>
+        <p>Navega por las opciones del menú lateral para gestionar el sistema.</p>
+    </div>
+    <script>
+        async function cerrarSesion() {
+            try {
+                const response = await fetch('http://localhost:3000/cerrar-sesion', {
+                    method: 'POST',
+                    credentials: 'include' // Permite que se envíen las cookies de sesión
+                });
+                const data = await response.json();
+                alert(data.mensaje);
+                window.location.href = "login.html";
+            } catch (error) {
+                console.error("Error al cerrar sesión:", error);
+            }
+        }
+    </script>
+</body>
+
+</html>

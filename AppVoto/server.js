@@ -1,9 +1,21 @@
 const express = require('express');
+const session = require('express-session');
 const oracledb = require('oracledb');
 const cors = require('cors');
 const bodyParser = require('body-parser');
+const cookieParser = require('cookie-parser');
 
 const app = express();
+
+// Configurar sesiones en Express
+app.use(session({
+    secret: 'clave-secreta',  // Clave secreta para firmar la sesión
+    resave: false,
+    saveUninitialized: true,
+    cookie: { secure: false } // Si usas HTTPS, pon `secure: true`
+  }));
+
+
 
 // Lista de orígenes permitidos
 const allowedOrigins = ['http://192.168.100.23:5501', 'http://localhost:5500', 'http://localhost', 
@@ -27,6 +39,8 @@ app.use(bodyParser.json());
 // Otras configuraciones
 app.use(express.json());
 app.use(express.static('public'));
+app.use(cookieParser());
+
 
 oracledb.outFormat = oracledb.OUT_FORMAT_OBJECT;
 
@@ -43,39 +57,105 @@ app.post('/validar-usuario', async (req, res) => {
     console.log("Datos recibidos:", req.body);
     const { username, password } = req.body;
     let connection;
-
+  
     try {
-        connection = await oracledb.getConnection(dbConfig);
-
-        // Llamada al procedimiento almacenado
-        const result = await connection.execute(
-            `BEGIN FIDE_PROYECTO_FINAL_PKG.FIDE_USUARIOS_VALIDAR_USUARIO_SP(:p_username, :p_password, :p_valido); END;`,
-            {
-                p_username: username,
-                p_password: password,
-                p_valido: { dir: oracledb.BIND_OUT, type: oracledb.NUMBER }
-            }
+      connection = await oracledb.getConnection(dbConfig);
+  
+      // Validación del usuario con nombre de usuario y contraseña
+      const usuarioResult = await connection.execute(
+        `BEGIN FIDE_PROYECTO_FINAL_PKG.FIDE_USUARIOS_VALIDAR_USUARIO_SP(:p_username, :p_password, :p_valido); END;`,
+        {
+          p_username: username,
+          p_password: password,
+          p_valido: { dir: oracledb.BIND_OUT, type: oracledb.NUMBER }
+        }
+      );
+      
+      const usuarioValido = usuarioResult.outBinds.p_valido;
+      console.log(`🔹 Usuario válido: ${usuarioValido}`);
+  
+      if (usuarioValido > 0) {
+        // Obtener Usuario_ID usando un bloque anónimo PL/SQL
+        const usuarioIDResult = await connection.execute(
+          `DECLARE 
+             v_usuarioID NUMBER;
+           BEGIN 
+             v_usuarioID := FIDE_USUARIOS_OBTENERID_FN(:p_username);
+             :p_usuarioID := v_usuarioID;
+           END;`,
+          {
+            p_username: username,
+            p_usuarioID: { dir: oracledb.BIND_OUT, type: oracledb.NUMBER }
+          }
         );
+  
+        const usuarioID = usuarioIDResult.outBinds.p_usuarioID;
+        console.log(`✅ Usuario ID obtenido: ${usuarioID}`);
 
-        const valido = result.outBinds.p_valido;
-        if (valido > 0) {
-            res.json({ mensaje: "Usuario válido." });
+         // Guardar el usuarioID en la sesión
+         req.session.usuarioID = usuarioID;
+         console.log(`📝 Usuario ID guardado en sesión: ${req.session.usuarioID}`);
+
+        if (usuarioID) {
+          // Insertar sesión con el Usuario_ID obtenido
+          await connection.execute(
+            `BEGIN FIDE_PROYECTO_FINAL_PKG.FIDE_SESIONES_INSERTAR_SP(:p_Usuario_ID); END;`,
+            { p_Usuario_ID: usuarioID }
+          );
+          await connection.commit();
+        }
+  
+        res.json({
+          mensaje: "Usuario válido. Redirigiendo a admin.html.",
+          redireccion: "http://192.168.100.23:5501/panel_admin.html"
+        });
+  
+      } else {
+        // Validación de credenciales
+        const cedulaNumero = Number(username);
+  
+        const credencialResult = await connection.execute(
+          `BEGIN FIDE_CREDENCIALES_VALIDAR_CREDENCIAL_SP(:p_cedula, :p_codigo, :p_resultado); END;`,
+          {
+            p_cedula: cedulaNumero,
+            p_codigo: password,
+            p_resultado: { dir: oracledb.BIND_OUT, type: oracledb.NUMBER }
+          }
+        );
+  
+        const credencialValida = credencialResult.outBinds.p_resultado;
+  
+        if (credencialValida === 1) {
+          res.json({
+            mensaje: "Credencial válida. Redirigiendo a proceso_voto.html.",
+            redireccion: "http://192.168.100.23:5501/panel_v.html"
+          });
         } else {
-            res.status(401).json({ mensaje: "Usuario o contraseña incorrectos." });
+          res.status(401).json({ mensaje: "Cédula o código incorrectos." });
         }
+      }
     } catch (err) {
-        console.error("Error al validar usuario:", err);
-        res.status(500).json({ mensaje: "Error interno del servidor." });
+      console.error("Error en la validación:", err);
+      res.status(500).json({ mensaje: "Error interno del servidor." });
     } finally {
-        if (connection) {
-            try {
-                await connection.close();
-            } catch (closeErr) {
-                console.error("Error al cerrar la conexión:", closeErr);
-            }
+      if (connection) {
+        try {
+          await connection.close();
+        } catch (closeErr) {
+          console.error("Error al cerrar la conexión:", closeErr);
         }
+      }
     }
-});
+  });  
+
+// Endpoint para obtener el Usuario_ID desde la sesión
+app.get('/obtener-usuario-id', (req, res) => {
+    if (req.session.usuarioID) {
+      res.json({ usuarioID: req.session.usuarioID });
+    } else {
+      res.status(401).json({ mensaje: "No hay sesión activa." });
+    }
+  });
 
 // Endpoint para insertar usuario en server.js
 app.post('/insertar-usuario', async (req, res) => {
@@ -544,61 +624,371 @@ app.get('/candidatos', async (req, res) => {
     }
 });
 
-// Endpoint para validar cedula ingresada 
-app.post('/generar-credenciales', async (req, res) => {
-    const { cedula, fecha } = req.body;
-    const fechaActual = new Date(); // Fecha de emisión
-  
+app.post('/generar-y-obtener-credenciales', async (req, res) => {
+    const { cedula, fecha } = req.body; // Recibe cédula y fecha como parámetros
+    console.log("Datos recibidos:", { cedula, fecha });
     let connection;
+
+    try {
+        connection = await oracledb.getConnection(dbConfig);
+
+        // Validar la cédula con el procedimiento almacenado para obtener el VOTANTE_ID
+        const votanteResult = await connection.execute(
+            `BEGIN FIDE_VOTANTES_VALIDA_CEDULA_SP(:p_cedula, :v_votante_id); END;`,
+            {
+                p_cedula: cedula,
+                v_votante_id: { dir: oracledb.BIND_OUT, type: oracledb.NUMBER }
+            }
+        );
+
+        const votanteId = votanteResult.outBinds.v_votante_id;
+
+        if (!votanteId) {
+            return res.status(404).json({ mensaje: "Cédula no encontrada." });
+        }
+
+        // Consultar el Eleccion_ID basándose en la fecha proporcionada
+        const eleccionResult = await connection.execute(
+            `BEGIN :eleccionId := FIDE_ELECCIONES_OBTENER_ID_POR_FECHA_FN(TO_DATE(:fecha, 'DD/MM/YYYY')); END;`,
+            {
+                fecha,
+                eleccionId: { dir: oracledb.BIND_OUT, type: oracledb.NUMBER }
+            }
+        );
+
+        const eleccionId = eleccionResult.outBinds.eleccionId;
+
+        if (!eleccionId) {
+            return res.status(404).json({ mensaje: "Fecha de elección no encontrada." });
+        }
+
+        // Insertar las credenciales en la base de datos usando el procedimiento almacenado
+        await connection.execute(
+            `BEGIN FIDE_CREDENCIALES_INSERTAR_SP(:votanteId, :eleccionId); END;`,
+            { votanteId, eleccionId }
+        );
+
+        console.log("Credenciales generadas correctamente.");
+
+        // Obtener las credenciales generadas (Código y Fecha de Emisión)
+        const credencialesResult = await connection.execute(
+            `BEGIN FIDE_CREDENCIALES_SELEC_CODIGO_SP(:p_votante_id, :p_cursor); END;`,
+            {
+                p_votante_id: votanteId,
+                p_cursor: { dir: oracledb.BIND_OUT, type: oracledb.CURSOR }
+            }
+            
+        );
+
+        const resultSet = credencialesResult.outBinds.p_cursor;
+        const credenciales = [];
+        console.log("Contenido de credencialesA:", credenciales);
+
+        let row;
+        while ((row = await resultSet.getRow())) {
+            console.log("Datos obtenidos del cursor EN EL WILE:", row);
+            credenciales.push({ codigo: row.CODIGO, fechaEmision: row.FECHAEMISION });
+
+        }
+        console.log("Contenido de credencialesD:", credenciales);
+
+        // Cerrar el cursor
+        await resultSet.close();
+
+        if (credenciales.length > 0) {
+            const ultimaCredencial = credenciales[credenciales.length - 1];
+            res.json(ultimaCredencial);
+            console.log("ultimacredencial ",ultimaCredencial);
+        } else {
+            res.status(404).json({ mensaje: "No se encontraron credenciales para el votante." });
+        }
+    } catch (err) {
+        console.error("Error al generar o obtener credenciales:", err);
+        res.status(500).json({ mensaje: "Error interno del servidor." });
+    } finally {
+        if (connection) {
+            try {
+                await connection.close();
+            } catch (closeErr) {
+                console.error("Error al cerrar la conexión:", closeErr);
+            }
+        }
+    }
+});
+
+app.post('/proceso-votacion', async (req, res) => {
+    let connection;
+    const { tipo, eleccionId, candidatoId, votanteId } = req.body;
+
+    console.log("Solicitud recibida:", req.body); // Para depuración
+
+    try {
+        connection = await oracledb.getConnection(dbConfig);
+
+        if (tipo === "cargar-candidatos") {
+            console.log("Cargando candidatos para eleccionId:", eleccionId);
+
+            const result = await connection.execute(
+                `BEGIN FIDE_CANDIDATOS_SELEC_POR_ELECCIONID_SP(:eleccionId, :cursor); END;`,
+                {
+                    eleccionId: eleccionId,
+                    cursor: { dir: oracledb.BIND_OUT, type: oracledb.CURSOR }
+                }
+            );
+
+            const resultSet = result.outBinds.cursor;
+            const candidatos = [];
+            let row;
+
+            while ((row = await resultSet.getRow())) {
+                console.log("Candidato encontrado:", row);
+                candidatos.push({
+                    id: row.CANDIDATO_ID,
+                    nombre: row.NOMBRE,
+                    apellido: row.APELLIDO
+                });
+            }
+
+            await resultSet.close();
+            res.json(candidatos);
+        } else if (tipo === "insertar-voto") {
+            console.log("Insertando voto para votanteId:", votanteId, "EleccionId:",eleccionId, "candidatoId:", candidatoId);
+
+            await connection.execute(
+                `BEGIN FIDE_VOTOS_INSERT_SP(:votanteId, :eleccionId, :candidatoId); END;`,
+                { votanteId, eleccionId, candidatoId }
+            );
+
+            res.json({ exito: true });
+        } else {
+            res.status(400).json({ mensaje: "Tipo de operación no válida." });
+        }
+    } catch (error) {
+        console.error("Error en el endpoint:", error);
+        res.status(500).json({ mensaje: "Error interno del servidor." });
+    } finally {
+        if (connection) {
+            try {
+                await connection.close();
+                console.log("Conexión cerrada.");
+            } catch (closeErr) {
+                console.error("Error al cerrar la conexión:", closeErr);
+            }
+        }
+    }
+});
+
+app.post('/cerrar-sesion', cors({ origin: "http://192.168.100.23:5501", credentials: true }), async (req, res) => {
+    console.log("📌 Iniciando proceso de cierre de sesión...");
+    let connection;
+
+    try {
+        connection = await oracledb.getConnection(dbConfig);
+        console.log("✅ Conexión a la base de datos establecida.");
+
+        let usuarioID;
+
+        // Ejecutar el procedimiento FIDE_SESIONES_OBTENER_ULTIMO_USERID_SP
+        const obtenerUsuario = await connection.execute(
+            `BEGIN 
+                FIDE_SESIONES_OBTENER_ULTIMO_USERID_SP(:p_usuarioID);
+            END;`,
+            { p_usuarioID: { dir: oracledb.BIND_OUT, type: oracledb.NUMBER } }
+        );
+
+        usuarioID = obtenerUsuario.outBinds.p_usuarioID;
+        console.log(`🔹 Usuario ID obtenido: ${usuarioID}`);
+
+        if (!usuarioID) {
+            console.log("⚠️ No se pudo recuperar el Usuario ID.");
+            return res.status(401).json({ mensaje: "No hay sesión activa." });
+        }
+
+        // Ejecutar FIDE_SESIONES_ACTUALIZAR_SP para cerrar la sesión
+        const fechaFin = new Date().toISOString(); // Obtener fecha/hora actual en formato ISO
+        await connection.execute(
+            `BEGIN 
+                FIDE_SESIONES_ACTUALIZAR_SP(:p_Usuario_ID, :p_FechaFin);
+            END;`,
+            {
+                p_Usuario_ID: usuarioID,
+                p_FechaFin: null
+            }
+        );
+        await connection.commit();
+        console.log("🔄 Procedimiento FIDE_SESIONES_ACTUALIZAR_SP ejecutado con éxito.");
+
+        // Destruir la sesión del usuario
+        req.session.destroy((err) => {
+            if (err) {
+                console.error("❌ Error al cerrar sesión:", err);
+                return res.status(500).json({ mensaje: "Error al cerrar sesión." });
+            }
+            console.log("✅ Sesión destruida correctamente.");
+            res.json({ mensaje: "Sesión cerrada correctamente." });
+        });
+
+    } catch (err) {
+        console.error("❌ Error en el procedimiento de cierre de sesión:", err);
+        res.status(500).json({ mensaje: "Error interno del servidor." });
+    } finally {
+        if (connection) {
+            try {
+                await connection.close();
+                console.log("🔒 Conexión cerrada correctamente.");
+            } catch (closeErr) {
+                console.error("❌ Error al cerrar la conexión:", closeErr);
+            }
+        }
+    }
+});
+
+// Endpoint para insertar eleccion en server.js
+app.post('/insertar-eleccion', async (req, res) => {
+    console.log("Llega a insertar datos");
+    console.log("Datos recibidos:", req.body);
+    const { nombre, fecha_inicio, fecha_fin, descripcion, estadoID} = req.body;
+    let connection;
+
+    try {
+        connection = await oracledb.getConnection(dbConfig);
+        console.log("Llega al try del PS");
+        console.log("Parámetros enviados al procedimiento:", {
+            
+            p_Nombre: nombre,
+            p_fecha_inicio: fecha_inicio,
+            p_fecha_fin: fecha_fin,
+            p_descripcion: descripcion,
+            p_Estado_ID: estadoID
+        });
+        
+        // Llamada al procedimiento almacenado
+        const result = await connection.execute(
+            `BEGIN FIDE_ELECCIONES_INSERT_SP(:p_Nombre, :p_fecha_inicio, 
+            :p_fecha_fin, :p_descripcion, :p_Estado_ID); END;`,
+            {
+                p_Nombre: nombre,
+                p_fecha_inicio: fecha_inicio,
+                p_fecha_fin: fecha_fin,
+                p_descripcion: descripcion,
+                p_Estado_ID: estadoID
+            }
+        );
+        
+    } catch (err) {
+        console.error("Error al Insertar eleccion:", err);
+        res.status(500).json({ message: "Error interno del servidor." });
+    } finally {
+        if (connection) {
+            try {
+                await connection.close();
+            } catch (closeErr) {
+                console.error("Error al cerrar la conexión:", closeErr);
+            }
+        }
+    }
+    res.status(200).json({ message: 'eleccion insertado correctamente.' });
+});
+
+// Endpoint para eliminar elecciones utilizando el procedimiento almacenado
+app.delete('/eliminar-eleccion/:id', async (req, res) => {
+    console.log("Datos recibidos:");
+    const eleccionID = req.params.id; // Recuperar el ID del eleccion desde los parámetros de la URL
+    let connection;
+
+    try {
+        connection = await oracledb.getConnection(dbConfig);
+
+        // Llamamos al procedimiento almacenado para eliminar el usuario
+        await connection.execute(
+            `BEGIN FIDE_eleccionES_ELIMINAR_SP(:p_eleccion_ID); END;`,
+            { p_eleccion_ID: Number(eleccionID) } // Enviamos el ID como parámetro
+        );
+
+        res.json({ message: 'eleccion eliminado exitosamente.' });
+    } catch (err) {
+        console.error('Error al eliminar eleccion:', err);
+        res.status(500).send({ message: 'Error al eliminar eleccion.' });
+    } finally {
+        if (connection) {
+            try {
+                await connection.close();
+            } catch (err) {
+                console.error('Error al cerrar conexión:', err);
+            }
+        }
+    }
+});
+
+// Endpoint para actualizar eleccion utilizando el procedimiento almacenado
+app.put('/actualizar-eleccion', async (req, res) => {
+    console.log("Datos recibidos para actualización:", req.body);
+    const { eleccionID, nombre, fecha_inicio, fecha_fin, descripcion, estadoID } = req.body;
+    let connection;
+  
     try {
       connection = await oracledb.getConnection(dbConfig);
   
-      // Valida cedula en E_VOTANTES_TB
-      const votanteResult = await connection.execute(
-        `BEGIN FIDE_VOTANTES_OBTENER_ID(:p_cedula); END;`,
-        { p_cedula: cedula }
-      );
-  
-      if (votanteResult.rows.length === 0) {
-        return res.status(404).json({ mensaje: "Cédula no encontrada." });
-      }
-  
-      const votanteId = votanteResult.rows[0][0];
-  
-      // Get Eleccion_ID from FIDE_ELECCIONES_TB based on fecha
-      const eleccionResult = await connection.execute(
-        `SELECT ELECCION_ID FROM FIDE_ELECCIONES_TB WHERE FECHA_INICIO = TO_DATE(:fecha, 'YYYY-MM-DD')`,
-        { fecha }
-      );
-  
-      if (eleccionResult.rows.length === 0) {
-        return res.status(404).json({ mensaje: "Fecha de elección no encontrada." });
-      }
-  
-      const eleccionId = eleccionResult.rows[0][0];
-  
-      // Call stored procedure FIDE_CREDENCIALES_INSERTAR_SP
+      console.log("Ejecutando procedimiento para actualizar elecciones...");
       await connection.execute(
-        `BEGIN FIDE_CREDENCIALES_INSERTAR_SP(:votanteId, :eleccionId, :fechaActual); END;`,
-        { votanteId, eleccionId, fechaActual }
+        `BEGIN FIDE_CADIDATOS_ACTUALIZAR_SP(:p_eleccion_ID, :p_Nombre, :p_fecha_inicio, 
+            :p_fecha_fin, :p_descripcion, :p_Estado_ID); END;`,
+
+            {
+                p_eleccion_ID: eleccionID,
+                p_Nombre: nombre,
+                p_fecha_inicio: fecha_inicio,
+                p_fecha_fin: fecha_fin,
+                p_descripcion: descripcion,
+                p_Estado_ID: estadoID
+            }
       );
   
-      res.json({ mensaje: "Credenciales generadas exitosamente." });
-  
+      res.json({ message: "eleccion actualizado correctamente." });
     } catch (err) {
-      console.error("Error al generar credenciales:", err);
-      res.status(500).json({ mensaje: "Error interno del servidor." });
+      console.error("Error al actualizar eleccion:", err);
+      res.status(500).json({ message: "Error interno del servidor." });
     } finally {
       if (connection) {
         try {
           await connection.close();
         } catch (closeErr) {
-          console.error("Error al cerrar la conexión:", closeErr);
+          console.error("Error al cerrar conexión:", closeErr);
         }
       }
     }
   });
   
+
+// Endpoint para obtener todos los eleccions
+app.get('/elecciones', async (req, res) => {
+    let connection;
+
+    try {
+        connection = await oracledb.getConnection(dbConfig);
+
+        // Ejecutar una consulta directa desde la tabla, porque el procedimiento actual solo imprime texto
+        const result = await connection.execute(
+            `SELECT eleccion_ID, Nombre, Apellido, Partido_ID, Eleccion_ID, Estado_ID FROM FIDE_eleccionS_TB`,
+            [], // Sin parámetros en este caso
+            { outFormat: oracledb.OUT_FORMAT_OBJECT } // Formato de salida como objeto
+        );
+
+        res.json(result.rows); // Devuelve los datos al frontend
+    } catch (err) {
+        console.error('Error al obtener eleccions:', err);
+        res.status(500).send('Error al obtener eleccions.');
+    } finally {
+        if (connection) {
+            try {
+                await connection.close();
+            } catch (err) {
+                console.error('Error al cerrar conexión:', err);
+            }
+        }
+    }
+});
+
 
 // Iniciar el servidor en el puerto correspondiente
 app.listen(3000, '0.0.0.0', () => {

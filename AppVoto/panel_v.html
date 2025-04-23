@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de Inicio - Votar</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .sidebar {
+            height: 100%;
+            width: 250px;
+            background-color: #2c3e50;
+            color: white;
+            position: fixed;
+            display: flex;
+            flex-direction: column;
+            padding-top: 20px;
+        }
+
+        .sidebar a {
+            text-decoration: none;
+            color: white;
+            padding: 15px 20px;
+            display: block;
+            transition: background-color 0.3s;
+        }
+
+        .sidebar a:hover {
+            background-color: #34495e;
+        }
+
+        .content {
+            margin-left: 250px;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header style="background-color: #34495e; color: white; padding: 15px; display: flex; align-items: center;">
+        <h1 style="margin: 0;">FIDEVOTO</h1>
+    </header>
+    <div class="sidebar">
+        <a href="#" onclick="mostrarVotar()">Votar</a>
+        <a href="#">Resultados</a>
+        <a href="ayuda.html">Ayuda</a>
+        <a href="reporte.html">Reportar</a>
+        <a href="login.html">Cerrar Sesión</a>
+    </div>
+    <div class="content" id="content">
+        <style>
+            .electronic-voting-container {
+                font-family: Arial, sans-serif;
+                color: #2c3e50;
+                line-height: 1.6;
+                padding: 20px;
+                background-color: #f9f9f9;
+                border-radius: 8px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            }
+    
+            .electronic-voting-container h2 {
+                text-align: center;
+                color: #2980b9;
+            }
+    
+            .electronic-voting-container ul {
+                margin-left: 20px;
+            }
+    
+            .electronic-voting-container img {
+                display: block;
+                margin: 20px auto;
+                max-width: 100%;
+                height: auto;
+                border-radius: 8px;
+            }
+    
+            .electronic-voting-container p {
+                text-align: justify;
+            }
+            .small-image {
+                width: 300px; /* Cambia el ancho de la imagen */
+                height: auto; /* Mantiene la proporción de la imagen */
+                border-radius: 10px; /* Opcional: añade esquinas redondeadas */
+                box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Opcional: añade un efecto visual */
+            }
+        </style>
+    
+        <div class="electronic-voting-container">
+            <h2>¿Qué es el Voto Electrónico?</h2>
+            <p>El voto electrónico es un sistema moderno que utiliza tecnología digital para facilitar el proceso de votación. Puede incluir dispositivos como urnas electrónicas, sistemas en línea seguros y softwares diseñados para garantizar la transparencia y la precisión en los resultados.</p>
+    
+            <h3>Beneficios del Voto Electrónico</h3>
+            <ul>
+                <li><b>Rapidez:</b> El conteo de votos es casi instantáneo, reduciendo el tiempo necesario para conocer los resultados.</li>
+                <li><b>Accesibilidad:</b> Facilita la participación de personas con discapacidades o que residen en lugares remotos.</li>
+                <li><b>Seguridad:</b> Sistemas modernos garantizan la confidencialidad y el resguardo de los datos de los votantes.</li>
+                <li><b>Reducción de errores:</b> Minimiza los errores humanos al contar votos.</li>
+                <li><b>Sostenibilidad:</b> Reduce el uso de papel, contribuyendo al cuidado del medio ambiente.</li>
+            </ul>
+    
+            <h3>Desafíos del Voto Electrónico</h3>
+            <p>Si bien tiene numerosos beneficios, el voto electrónico enfrenta desafíos como garantizar la ciberseguridad y prevenir ataques malintencionados, educar a la población sobre su uso y asegurar su implementación en regiones con menor acceso a tecnología.</p>
+    
+            <h3>Ejemplo de Implementación</h3>
+            <p>Países como Estonia han adoptado con éxito el voto electrónico, permitiendo a sus ciudadanos participar en elecciones nacionales de manera remota y segura.</p>
+    
+        
+            <img src="https://th.bing.com/th/id/OIP.TGJunDqpLrXzF-mObj3AsAHaDo?w=3333&h=1633&rs=1&pid=ImgDetMain" alt="Voto Electrónico" class="small-image">
+            </div>
+            
+            
+        </div>
+    </div>
+    
+
+    <script>
+        function mostrarVotar() {
+            const content = document.getElementById("content");
+            content.innerHTML = `
+                
+                <main class="container mt-4">
+                    <div class="mb-3">
+                        <label for="eleccion-id" class="form-label">Ingrese ID de Elección</label>
+                        <input type="number" id="eleccion-id" class="form-control" placeholder="ID de Elección">
+                    </div>
+                    <div class="mb-3">
+                        <label for="votante-id" class="form-label">Ingrese ID del Votante</label>
+                        <input type="number" id="votante-id" class="form-control" placeholder="ID del Votante">
+                    </div>
+                    <button id="cargar-candidatos-btn" class="btn btn-primary mb-4">Cargar Candidatos</button>
+
+                    <h2>Seleccione su Candidato</h2>
+                    <table class="table table-bordered" id="tabla-candidatos">
+                        <thead>
+                            <tr>
+                                <th>Nombre</th>
+                                <th>Acción</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Los candidatos se cargarán dinámicamente -->
+                        </tbody>
+                    </table>
+                    <button id="confirmar-btn" class="btn btn-success" disabled>Confirmar</button>
+                </main>
+            `;
+
+            inicializarEventos();
+        }
+
+        function inicializarEventos() {
+            let eleccionId, votanteId, candidatoSeleccionado = null;
+
+            document.getElementById("cargar-candidatos-btn").addEventListener("click", async () => {
+                eleccionId = document.getElementById("eleccion-id").value;
+                votanteId = document.getElementById("votante-id").value;
+
+                if (!eleccionId || !votanteId) {
+                    alert("Por favor, ingrese el ID de Elección y el ID del Votante.");
+                    return;
+                }
+
+                try {
+                    const response = await fetch("http://localhost:3000/proceso-votacion", {
+                        method: "POST",
+                        headers: { "Content-Type": "application/json" },
+                        body: JSON.stringify({ tipo: "cargar-candidatos", eleccionId })
+                    });
+
+                    if (!response.ok) throw new Error(`Error al obtener los candidatos: ${response.status}`);
+
+                    const candidatos = await response.json();
+                    const tbody = document.querySelector("#tabla-candidatos tbody");
+                    tbody.innerHTML = "";
+
+                    candidatos.forEach(candidato => {
+                        const fila = document.createElement("tr");
+                        fila.innerHTML = `
+                            <td>${candidato.nombre} ${candidato.apellido}</td>
+                            <td><button class="btn btn-success btn-seleccionar" data-id="${candidato.id}">Seleccionar</button></td>
+                        `;
+                        tbody.appendChild(fila);
+                    });
+
+                    document.querySelectorAll(".btn-seleccionar").forEach(btn => {
+                        btn.addEventListener("click", () => {
+                            candidatoSeleccionado = {
+                                id: btn.dataset.id,
+                                nombre: btn.closest("tr").children[0].textContent
+                            };
+                            document.getElementById("confirmar-btn").disabled = false;
+                        });
+                    });
+                } catch (error) {
+                    alert("Error al cargar candidatos.");
+                }
+            });
+
+            document.getElementById("confirmar-btn").addEventListener("click", async () => {
+                if (!candidatoSeleccionado) return;
+
+                try {
+                    const response = await fetch("http://localhost:3000/proceso-votacion", {
+                        method: "POST",
+                        headers: { "Content-Type": "application/json" },
+                        body: JSON.stringify({
+                            tipo: "insertar-voto",
+                            eleccionId,
+                            votanteId,
+                            candidatoId: candidatoSeleccionado.id
+                        })
+                    });
+
+                    const resultado = await response.json();
+
+                    if (resultado.exito) {
+                        alert("¡Voto registrado exitosamente!");
+                    } else {
+                        alert("Error al registrar el voto.");
+                    }
+                } catch (error) {
+                    alert("Error al confirmar voto.");
+                }
+            });
+        }
+
+    </script>
+</body>
+</html>

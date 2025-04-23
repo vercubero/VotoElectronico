@@ -3,178 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>FIDEVOTO</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css">
 </head>
-<style>
-    /* General */
-body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f8f9fa;
-    color: #333;
-    
-}
-
-/* Contenedor principal */
-.container-votacion {
-    max-width: 800px;
-    margin: 50px auto;
-    padding: 20px;
-    background-color: #ffffff;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
-}
-
-/* Título */
-h2 {
-    font-size: 1.8em;
-    margin-bottom: 20px;
-    color: #007bff;
-}
-
-/* Tabla */
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 20px 0;
-}
-
-table th, table td {
-    padding: 10px 15px;
-    border: 1px solid #ddd;
-    text-align: center;
-}
-
-table th {
-    background-color: #007bff;
-    color: white;
-    font-weight: bold;
-}
-
-table tr:nth-child(even) {
-    background-color: #f2f2f2;
-}
-
-/* Botón en la tabla */
-table .btn {
-    padding: 8px 16px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-table .btn:hover {
-    background-color: #0056b3;
-}
-
-table .seleccionado {
-    background-color: #28a745 !important;
-    color: white !important;
-}
-
-/* Botón confirmar */
-#confirmar-btn {
-    padding: 10px 20px;
-    background-color: #28a745;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    font-size: 1em;
-}
-
-#confirmar-btn:disabled {
-    background-color: #aaa;
-    cursor: not-allowed;
-}
-
-#confirmar-btn:hover:not(:disabled) {
-    background-color: #218838;
-}
-
-/* Modales */
-.overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    display: none;
-    z-index: 10;
-}
-
-.modal-custom {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 90%;
-    max-width: 400px;
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    padding: 20px;
-    z-index: 20;
-    display: none;
-    text-align: center;
-}
-
-.modal-custom h2 {
-    margin-bottom: 15px;
-    font-size: 1.5em;
-    color: #007bff;
-}
-
-.modal-custom p {
-    margin: 15px 0;
-    font-size: 1.1em;
-    color: #333;
-}
-
-.modal-custom .btn {
-    padding: 10px 20px;
-    margin: 10px 5px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1em;
-    transition: background-color 0.3s ease;
-}
-
-.modal-custom .btn-primary {
-    background-color: #007bff;
-    color: white;
-}
-
-.modal-custom .btn-primary:hover {
-    background-color: #0056b3;
-}
-
-.modal-custom .btn-danger {
-    background-color: #dc3545;
-    color: white;
-}
-
-.modal-custom .btn-danger:hover {
-    background-color: #c82333;
-}
-
-/* Respuesta de resultados */
-#modal-resultado strong {
-    color: #007bff;
-}
-</style>
 <body>
-    <div class="container-votacion">
+    <header class="bg-dark text-white text-center py-3">
+        <h1>FIDEVOTO</h1>
+    </header>
+    <main class="container mt-4">
+        <div class="mb-3">
+            <label for="eleccion-id" class="form-label">Ingrese ID de Elección</label>
+            <input type="number" id="eleccion-id" class="form-control" placeholder="ID de Elección">
+        </div>
+        <div class="mb-3">
+            <label for="votante-id" class="form-label">Ingrese ID del Votante</label>
+            <input type="number" id="votante-id" class="form-control" placeholder="ID del Votante">
+        </div>
+        <button id="cargar-candidatos-btn" class="btn btn-primary mb-4">Cargar Candidatos</button>
+
         <h2>Seleccione su Candidato</h2>
-        <table id="tabla-candidatos" class="table table-bordered">
+        <table class="table table-bordered" id="tabla-candidatos">
             <thead>
                 <tr>
                     <th>Nombre</th>
@@ -182,113 +30,102 @@ table .seleccionado {
                 </tr>
             </thead>
             <tbody>
-                <!-- Los candidatos serán cargados dinámicamente -->
+                <!-- Los candidatos se cargarán dinámicamente -->
             </tbody>
         </table>
-        <button id="confirmar-btn" class="btn btn-success mt-3" onclick="mostrarModal()" disabled>Confirmar Voto</button>
-    </div>
+        <button id="confirmar-btn" class="btn btn-success" disabled>Confirmar</button>
+    </main>
 
-    <!-- Modales -->
-    <div class="overlay" id="overlay"></div>
-    <div class="modal-custom" id="modal">
-        <h2>Confirmar Voto</h2>
-        <p>¿Está seguro de que quiere votar por <span id="candidato-seleccionado"></span>?</p>
-        <button class="btn btn-primary" onclick="confirmarVoto()">Sí, Confirmar</button>
-        <button class="btn btn-danger" onclick="cerrarModal()">Cancelar</button>
-    </div>
-
-    <div class="modal-custom" id="modal-resultado">
-        <h2>Voto Registrado</h2>
-        <p>Ha votado por: <br><strong id="candidato-votado"></strong></p>
-        <p>Código de verificación: <br><strong id="codigo-verificacion"></strong></p>
-        <button class="btn btn-primary" onclick="cerrarModalResultado()">Cerrar</button>
-    </div>
     <script>
-        document.addEventListener("DOMContentLoaded", async function () {
-            let candidatoSeleccionado = "";
-        
-            async function cargarCandidatos() {
-                try {
-                    // Simulación de llamada a la base de datos (puedes reemplazar esta parte con fetch desde tu API)
-                    const candidatos = await fetch("/api/candidatos") // Endpoint para obtener candidatos
-                        .then(response => response.json())
-                        .catch(() => [
-                            { id: 1, nombre: "Candidato A" },
-                            { id: 2, nombre: "Candidato B" },
-                            { id: 3, nombre: "Candidato C" },
-                            { id: 4, nombre: "Candidato D" }
-                        ]);
-        
-                    const tbody = document.getElementById("tabla-candidatos").querySelector("tbody");
-                    tbody.innerHTML = ""; // Limpiar la tabla
-        
-                    candidatos.forEach(candidato => {
-                        const fila = document.createElement("tr");
-                        fila.innerHTML = `
-                            <td>${candidato.nombre}</td>
-                            <td><button class="btn btn-primary" onclick="seleccionarCandidato('${candidato.nombre}', this)">Seleccionar</button></td>
-                        `;
-                        tbody.appendChild(fila);
+        let eleccionId, votanteId, candidatoSeleccionado = null;
+
+        document.getElementById("cargar-candidatos-btn").addEventListener("click", async () => {
+            eleccionId = document.getElementById("eleccion-id").value;
+            votanteId = document.getElementById("votante-id").value;
+
+            console.log("eleccionId ingresado:", eleccionId); // Validar el ID de Elección
+            console.log("votanteId ingresado:", votanteId);
+
+            if (!eleccionId || !votanteId) {
+                alert("Por favor, ingrese el ID de Elección y el ID del Votante.");
+                return;
+            }
+
+            try {
+                console.log("Enviando solicitud para cargar candidatos..."); // Antes de la solicitud
+                console.log("Cargando candidatos...");
+                const response = await fetch("http://localhost:3000/proceso-votacion", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({ tipo: "cargar-candidatos", eleccionId })
+                });
+
+                if (!response.ok) throw new Error(`Error al obtener los candidatos: ${response.status}`);
+
+                const candidatos = await response.json();
+                console.log("Candidatos recibidos:", candidatos);
+
+                const tbody = document.querySelector("#tabla-candidatos tbody");
+                tbody.innerHTML = "";
+
+                candidatos.forEach(candidato => {
+                    const fila = document.createElement("tr");
+                    fila.innerHTML = `
+                        <td>${candidato.nombre} ${candidato.apellido}</td>
+                        <td><button class="btn btn-success btn-seleccionar" data-id="${candidato.id}">Seleccionar</button></td>
+                    `;
+                    tbody.appendChild(fila);
+                });
+
+                document.querySelectorAll(".btn-seleccionar").forEach(btn => {
+                    btn.addEventListener("click", () => {
+                        candidatoSeleccionado = {
+                            id: btn.dataset.id,
+                            nombre: btn.closest("tr").children[0].textContent
+                        };
+                        console.log("Candidato seleccionado:", candidatoSeleccionado);
+                        document.getElementById("confirmar-btn").disabled = false;
                     });
-                } catch (error) {
-                    console.error("Error al cargar los candidatos:", error);
-                }
+                });
+            } catch (error) {
+                console.error("Error al cargar candidatos:", error);
             }
-        
-            function seleccionarCandidato(nombre, boton) {
-                document.querySelectorAll(".btn.btn-primary").forEach(btn => btn.classList.remove("seleccionado"));
-                boton.classList.add("seleccionado");
-                candidatoSeleccionado = nombre;
-                document.getElementById("confirmar-btn").disabled = false;
-            }
-        
-            function mostrarModal() {
-                if (!candidatoSeleccionado) return;
-                document.getElementById("candidato-seleccionado").textContent = candidatoSeleccionado;
-                document.getElementById("modal").style.display = "block";
-                document.getElementById("overlay").style.display = "block";
-            }
-        
-            function cerrarModal() {
-                document.getElementById("modal").style.display = "none";
-                document.getElementById("overlay").style.display = "none";
-            }
-        
-            function generarCodigoVerificacion() {
-                const caracteres = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
-                let codigo = '';
-                for (let i = 0; i < 8; i++) {
-                    codigo += caracteres.charAt(Math.floor(Math.random() * caracteres.length));
-                }
-                return `${Math.floor(Math.random() * 9) + 1}.${codigo}`;
-            }
-        
-            function confirmarVoto() {
-                const codigo = generarCodigoVerificacion();
-                
-                document.getElementById("modal").style.display = "none";
-                document.getElementById("candidato-votado").textContent = candidatoSeleccionado;
-                document.getElementById("codigo-verificacion").textContent = codigo;
-                document.getElementById("modal-resultado").style.display = "block";
-                
-                candidatoSeleccionado = "";
-                document.getElementById("confirmar-btn").disabled = true;
-            }
-        
-            function cerrarModalResultado() {
-                document.getElementById("modal-resultado").style.display = "none";
-                document.getElementById("overlay").style.display = "none";
-            }
-        
-            window.seleccionarCandidato = seleccionarCandidato;
-            window.mostrarModal = mostrarModal;
-            window.cerrarModal = cerrarModal;
-            window.confirmarVoto = confirmarVoto;
-            window.cerrarModalResultado = cerrarModalResultado;
-        
-            // Cargar candidatos al iniciar
-            await cargarCandidatos();
         });
-        </script>
+
+        document.getElementById("confirmar-btn").addEventListener("click", async () => {
+            if (!candidatoSeleccionado) return;
+
+            console.log("Confirmando voto con los siguientes datos:"); 
+            console.log("eleccionId:", eleccionId); // Validar eleccionId
+            console.log("votanteId:", votanteId);   // Validar votanteId
+            console.log("candidatoId:", candidatoSeleccionado.id);
+
+            try {
+                console.log("Confirmando voto...");
+                const response = await fetch("http://localhost:3000/proceso-votacion", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({
+                        tipo: "insertar-voto",
+                        eleccionId,
+                        votanteId,
+                        candidatoId: candidatoSeleccionado.id
+                    })
+                });
+
+                const resultado = await response.json();
+                console.log("Resultado del voto:", resultado);
+
+                if (resultado.exito) {
+                    alert("¡Voto registrado exitosamente!");
+                    window.location.href = "panel_v.html";
+                } else {
+                    alert("Error al registrar el voto.");
+                }
+            } catch (error) {
+                console.error("Error al confirmar voto:", error);
+            }
+        });
+    </script>
 </body>
 </html>

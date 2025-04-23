@@ -124,36 +124,40 @@
         
         <p id="resultado"></p>
     </div>
+
     <script>
         async function validarUsuario() {
-            try {
-                const username = document.getElementById("username").value;
-                const password = document.getElementById("password").value;
-                console.log("inicia try de validacion");
-                const response = await fetch("http://localhost:3000/validar-usuario", {
-                    method: "POST",
-                    headers: { "Content-Type": "application/json" },
-                    body: JSON.stringify({ username, password })
-                });
-        
-                const resultado = document.getElementById("resultado");
-        
-                if (response.ok) {
-                    const data = await response.json();
-                    resultado.textContent = data.mensaje;
-                    window.location.href = "http://192.168.100.10:5501/admin.html";
-                } else {
-                    const error = await response.json();
-                    resultado.textContent = error.mensaje;
-                    resultado.style.color = "red";
-                }
-            } catch (err) {
-                console.error("Error en la validación:", err);
-                document.getElementById("resultado").textContent = "Error en la conexión al servidor..";
+          try {
+            const username = document.getElementById("username").value; // Campo usado como cédula
+            const password = document.getElementById("password").value; // Campo usado como código
+      
+            console.log("Inicia validación de usuario y credencial...");
+            const response = await fetch("http://localhost:3000/validar-usuario", {
+              method: "POST",
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify({ username, password })
+            });
+      
+            const resultado = document.getElementById("resultado");
+      
+            if (response.ok) {
+              const data = await response.json();
+              resultado.textContent = data.mensaje;
+              resultado.style.color = "green";
+              window.location.href = data.redireccion; // Redirige según la respuesta del servidor
+            } else {
+              const error = await response.json();
+              resultado.textContent = error.mensaje;
+              resultado.style.color = "red";
             }
+          } catch (err) {
+            console.error("Error en la validación:", err);
+            document.getElementById("resultado").textContent = "Error en la conexión al servidor.";
+          }
         }
-        
-    </script>
+      </script>
+      
+
     
 </body>
 </html>
